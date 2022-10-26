@@ -1,0 +1,303 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BetterWorld" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+<!--For night Mode  copied All Styles-->
+    <style name="noah_regular_white" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_regular_bold_black_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+    </style>
+
+    <style name="noah_bold_black_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_bold_black_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+    </style>
+
+
+
+    <style name="noah_secondary_bold_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+
+    </style>
+
+    <style name="noah_secondary_bold_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+
+    </style>
+
+
+    <style name="noah_secondary_bold_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+
+    </style>
+
+
+
+
+    <style name="title_regular" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+
+    </style>
+
+
+    <style name="noah_regular_heading" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_regular_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_regular_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_regular_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_medium_Extra_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="noah_medium_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_medium_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_medium_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="secondary_regular_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="secondary_regular_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="secondary_regular_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="secondary_regular_extra_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+
+    <style name="secondary_medium_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="secondary_medium_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="secondary_medium_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="alpha">0.4</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="secondary_medium_extra_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="alpha">0.4</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+
+    <style name="primaryDark_light_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimaryDarkLight</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="primaryDark_light_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimaryDarkLight</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="primaryDark_light_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimaryDarkLight</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+
+    <style name="secondary_light_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+
+    <style name="secondary_light_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+
+    <style name="secondary_light_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+
+
+    <style name="noah_light_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+    <style name="noah_light_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+    <style name="noah_light_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+
+    <style name="noah_light_extra_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="android:fontFamily">@font/manrope_light</item>
+    </style>
+
+    <style name="hint_color" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/textPrimaryColor</item>
+        <item name="fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_light_white_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_light_white_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+    </style>
+
+    <style name="noah_light_white_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+
+    <style name="noah_white_bold_large" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_white_bold_medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+    <style name="noah_white_bold_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/noah_regular</item>
+    </style>
+
+
+
+    <style name="noah_medium_medium_dark" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/upperGredient</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+
+    <style name="noah_secondary_bold_medium_dark" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/upperGredient</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+    </style>
+
+    <style name="noah_dark" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/upperGredient</item>
+        <item name="android:fontFamily">@font/noah_bold</item>
+
+    </style>
+
+
+
+
+</resources>
