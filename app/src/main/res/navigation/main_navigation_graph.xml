@@ -5,13 +5,14 @@
     android:id="@+id/main_navigation_graph"
     app:startDestination="@id/tempFragment">
 
-
-
-
     <fragment
         android:id="@+id/tempFragment"
         android:name="com.teamx.raseef.ui.fragments.temp.TempFragment"
         android:label="TempFragment"
         tools:layout="@layout/fragment_temp"/>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.LogInFragment"
+        android:label="LogInFragment" />
 
 </navigation>

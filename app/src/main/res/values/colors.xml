@@ -19,7 +19,9 @@
     <color name="ratingBarColor">#fcaf17</color>
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="upperGredient">#152B8C</color>
-    <color name="lowerGredient">#000000</color>
     <color name="grey">#94959B</color>
+    <color name="orange">#FA6109</color>
+
+
+
 </resources>
