@@ -108,6 +108,7 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/car.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/card.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/card_background.xml" value="0.3415" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/card_background_grey.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/checkmark.xml" value="0.1965" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/dialog_bg.xml" value="0.2775" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/document.xml" value="0.1975" />
@@ -126,6 +127,9 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/dialog_layout_error.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/dialog_layout_loading.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_code.xml" value="0.365625" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_create_pass.xml" value="0.365625" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_forgot.xml" value="0.365625" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_login.xml" value="0.30541141586360265" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_temp.xml" value="0.22" />

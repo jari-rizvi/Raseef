@@ -8,16 +8,17 @@ import androidx.navigation.navOptions
 import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
+import com.teamx.raseef.databinding.FragmentForgotBinding
 import com.teamx.raseef.databinding.FragmentLoginBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
+class ForgotFragment() : BaseFragment<FragmentForgotBinding, LoginViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_login
+        get() = R.layout.fragment_forgot
     override val viewModel: Class<LoginViewModel>
         get() = LoginViewModel::class.java
     override val bindingVariable: Int
@@ -38,17 +39,6 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
                 popExit = R.anim.nav_default_pop_exit_anim
             }
         }
-
-        mViewDataBinding.btnSignup.setOnClickListener {
-            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.signupFragment, null, options)
-        }
-
-        mViewDataBinding.btnForgot.setOnClickListener {
-            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.forgotFragment, null, options)
-        }
-
 
 
     }
