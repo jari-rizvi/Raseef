@@ -42,5 +42,9 @@
         android:id="@+id/orderSucessFragment"
         android:name="com.teamx.rassef.ui.fragments.login.OrderSucessFragment"
         android:label="OrderSucessFragment" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.AboutUsFragment"
+        android:label="AboutUsFragment" />
 
 </navigation>

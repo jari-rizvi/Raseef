@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_top_orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:text="About Us"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintVertical_bias="0.07"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus massa at nisi aliquam venenatis. Curabitur efficitur augue a metus lacinia rhoncus eget a felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eget erat est. Vestibulum a nibh enim. Vivamus ac sem eget sapien feugiat fermentum malesuada et lacus. Cras rutrum lorem sit amet elit pretium, sodales pulvinar lacus congue. Ut egestas ultrices pulvinar. Morbi cursus cursus tellus, a porttitor lectus condimentum ac. Quisque posuere arcu vehicula, placerat nulla vel, rhoncus purus. Cras nibh erat, lacinia at viverra vel, cursus quis odio. Pellentesque ex odio, tempor semper luctus vel, tristique non tellus.
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum, mauris lacus ultricies augue, et posuere magna eros vel diam.
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum, mauris lacus ultricies augue, et posuere magna eros vel diam.
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum, mauris lacus ultricies augue, et posuere magna eros vel diam.
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum,
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum, mauris lacus ultricies augue, et posuere magna eros vel diam.
+Suspendisse potenti. Praesent consectetur dui aliquam, egestas arcu vel, cursus nulla. Duis interdum, massa eu rutrum interdum, "
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintVertical_bias="0.13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
