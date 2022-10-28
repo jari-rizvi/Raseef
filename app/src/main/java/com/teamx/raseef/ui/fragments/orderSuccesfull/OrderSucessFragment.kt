@@ -11,15 +11,16 @@ import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentCodeBinding
 import com.teamx.raseef.databinding.FragmentForgotBinding
 import com.teamx.raseef.databinding.FragmentLoginBinding
+import com.teamx.raseef.databinding.FragmentSucessBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class OrderSucessFragment() : BaseFragment<FragmentCodeBinding, LoginViewModel>() {
+class OrderSucessFragment() : BaseFragment<FragmentSucessBinding, LoginViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_allow_location
+        get() = R.layout.fragment_sucess
     override val viewModel: Class<LoginViewModel>
         get() = LoginViewModel::class.java
     override val bindingVariable: Int
