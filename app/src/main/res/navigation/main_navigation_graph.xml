@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/tempFragment">
+    app:startDestination="@id/orderSucessFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -34,5 +34,13 @@
         android:id="@+id/passwordChangeFragment"
         android:name="com.teamx.rassef.ui.fragments.login.PasswordChangeFragment"
         android:label="PasswordChangeFragment" />
+    <fragment
+        android:id="@+id/allowLocationFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.AllowLocationFragment"
+        android:label="AllowLocationFragment" />
+    <fragment
+        android:id="@+id/orderSucessFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.OrderSucessFragment"
+        android:label="OrderSucessFragment" />
 
 </navigation>

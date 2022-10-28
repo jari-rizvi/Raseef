@@ -213,7 +213,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/btnFb"
                 app:layout_constraintStart_toEndOf="@+id/btnFb"
                 app:layout_constraintTop_toTopOf="@+id/btnFb"
-                app:srcCompat="@drawable/apple" />
+                app:srcCompat="@drawable/google" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
