@@ -40,6 +40,12 @@ class ForgotFragment() : BaseFragment<FragmentForgotBinding, LoginViewModel>() {
             }
         }
 
+        mViewDataBinding.btnPhone.setOnClickListener {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+            navController.navigate(R.id.createPassFragment, null, options)
+        }
+
+
 
     }
 

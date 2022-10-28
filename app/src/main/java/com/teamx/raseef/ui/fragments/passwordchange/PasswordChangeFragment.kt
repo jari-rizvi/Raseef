@@ -8,18 +8,17 @@ import androidx.navigation.navOptions
 import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.databinding.FragmentCreatePassBinding
-import com.teamx.raseef.databinding.FragmentForgotBinding
 import com.teamx.raseef.databinding.FragmentLoginBinding
+import com.teamx.raseef.databinding.FragmentPasswordChangeBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class CreatePassFragment() : BaseFragment<FragmentCreatePassBinding, LoginViewModel>() {
+class PasswordChangeFragment() : BaseFragment<FragmentPasswordChangeBinding, LoginViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_create_pass
+        get() = R.layout.fragment_password_change
     override val viewModel: Class<LoginViewModel>
         get() = LoginViewModel::class.java
     override val bindingVariable: Int
@@ -41,10 +40,8 @@ class CreatePassFragment() : BaseFragment<FragmentCreatePassBinding, LoginViewMo
             }
         }
 
-        mViewDataBinding.btnVerify.setOnClickListener {
-            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.passwordChangeFragment, null, options)
-        }
+
+
 
 
     }
