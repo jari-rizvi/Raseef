@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/orderSucessFragment">
+    app:startDestination="@id/settingsFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -46,5 +46,21 @@
         android:id="@+id/aboutUsFragment"
         android:name="com.teamx.rassef.ui.fragments.login.AboutUsFragment"
         android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.teamx.raseef.ui.fragments.notification.NotificationFragment"
+        android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.ContactUsFragment"
+        android:label="ContactUsFragment" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.teamx.raseef.ui.fragments.language.LanguageFragment"
+        android:label="LanguageFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.teamx.raseef.fragments.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 
 </navigation>

@@ -68,6 +68,7 @@
     <string name="logout">Logout</string>
     <string name="email_address">Email address</string>
     <string name="change">Change</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
 
 
 </resources>
