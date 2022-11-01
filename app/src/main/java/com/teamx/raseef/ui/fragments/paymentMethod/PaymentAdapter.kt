@@ -11,7 +11,6 @@ class PaymentAdapter(val arrayList: ArrayList<PaymentMethod>, val onTopSellerLis
 
     var row_index = -1
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaymentViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemPaymentViewedBinding =   ItemPaymentBinding.inflate(inflater,parent,false)
@@ -22,7 +21,7 @@ class PaymentAdapter(val arrayList: ArrayList<PaymentMethod>, val onTopSellerLis
         val payment : PaymentMethod = arrayList[position]
         holder.binding.paymentName.text = payment.paymentName
         holder.binding.paymentImage.setImageResource(payment.paymentImage)
-//        holder.binding.paymentType.setChecked(row_index == position)
+        holder.binding.paymentType.setChecked(row_index == position)
 //        holder.binding.paymentType.isChecked = payment.value
 
         holder.itemView.setOnClickListener {
@@ -33,6 +32,8 @@ class PaymentAdapter(val arrayList: ArrayList<PaymentMethod>, val onTopSellerLis
         }
 
     }
+
+
 
     override fun getItemCount(): Int {
         return if (arrayList == null) 0 else arrayList.size

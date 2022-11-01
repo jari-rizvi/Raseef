@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/settingsFragment">
+    app:startDestination="@id/paymentMethodCard">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -62,5 +62,13 @@
         android:id="@+id/settingsFragment"
         android:name="com.teamx.raseef.fragments.settings.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.teamx.raseef.ui.fragments.paymentMethod.PaymentFragment"
+        android:label="PaymentFragment" />
+    <fragment
+        android:id="@+id/paymentMethodCard"
+        android:name="com.teamx.raseef.ui.fragments.paymentMethodCard.PaymentMethodCard"
+        android:label="PaymentMethodCard" />
 
 </navigation>
