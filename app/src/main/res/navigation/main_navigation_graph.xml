@@ -70,5 +70,9 @@
         android:id="@+id/paymentMethodCard"
         android:name="com.teamx.raseef.ui.fragments.paymentMethodCard.PaymentMethodCard"
         android:label="PaymentMethodCard" />
+    <fragment
+        android:id="@+id/currentOrderFragment"
+        android:name="com.teamx.raseef.ui.fragments.currentOrder.CurrentOrderFragment"
+        android:label="CurrentOrderFragment" />
 
 </navigation>

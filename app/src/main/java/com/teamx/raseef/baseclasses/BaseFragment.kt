@@ -23,7 +23,8 @@ import com.teamx.raseef.ui.activity.mainActivity.MainActivity
 import com.teamx.raseef.utils.DialogHelperClass
 
 
-abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment() {
+abstract class
+BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment() {
 
     lateinit var sharedViewModel: SharedViewModel
     lateinit var navController: NavController
