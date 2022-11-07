@@ -9,7 +9,7 @@
         android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Zeus"
+        android:label="Raseef"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/NoAppTheme"
@@ -30,9 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-<!--        <activity android:name="com.teamx.multivendor.ui.activity.mainActivity.MainActivity"-->
-<!--            />-->
 
     </application>
 

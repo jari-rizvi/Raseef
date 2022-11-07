@@ -1,19 +1,24 @@
 package com.teamx.raseef.ui.fragments.shopHomePage
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.navOptions
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.teamx.raseef.BR
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.*
+import com.teamx.raseef.dummyData.Categories
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.math.log
 
 @AndroidEntryPoint
-class shopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopBySlugViewModel>(),
-    OnTopProductListener {
+class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopBySlugViewModel>(),
+    OnTopProductListener, OnTopCategoriesListener {
 
     override val layoutId: Int
         get() = R.layout.fragment_shop_home_page
@@ -23,6 +28,9 @@ class shopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
         get() = BR.viewModel
 
     private lateinit var options: NavOptions
+
+    lateinit var categoriesAdapter: CategoriesAdapter
+    lateinit var categoriesArrayList2: ArrayList<Categories>
 
 //    lateinit var productAdapter: ProductByShopAdapter
 //    lateinit var productArrayList: ArrayList<Doc>
@@ -47,6 +55,7 @@ class shopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
 
         productRecyclerview()
+        categoriesRecyclerview()
 
     }
 
@@ -61,6 +70,22 @@ class shopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     }
 
+
+    private fun categoriesRecyclerview() {
+        categoriesArrayList2 = ArrayList()
+        categoriesArrayList2.add(Categories("Popular", true))
+        categoriesArrayList2.add(Categories("Discounts", false))
+        categoriesArrayList2.add(Categories("Drinks", false))
+        categoriesArrayList2.add(Categories("Snacks",false))
+
+        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        mViewDataBinding.CatRecycler.layoutManager = linearLayoutManager
+
+        categoriesAdapter = CategoriesAdapter(categoriesArrayList2,this)
+        mViewDataBinding.CatRecycler.adapter = categoriesAdapter
+    }
+
+
     override fun onTopproductClick(position: Int) {
 //        sharedViewModel.setProductBySlug(productArrayList[position].slug)
 //
@@ -70,4 +95,12 @@ class shopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 //        )
 //        navController.navigate(R.id.productFragment, null, options)
     }
+
+    override fun onTopSellerClick(position: Int) {
+        for(cat in categoriesArrayList2){
+            cat.isChecked = false
+        }
+    }
+
+
 }

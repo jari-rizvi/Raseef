@@ -7,33 +7,32 @@
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_63sdp"
+        android:layout_width="@dimen/_70sdp"
         android:layout_height="@dimen/_25sdp"
-        android:background="@drawable/item_background"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:orientation="horizontal">
+        android:layout_marginStart="@dimen/_5sdp">
 
         <CheckedTextView
             android:id="@+id/checkedTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:checked="false"
             android:background="@drawable/checked_item"
+            android:checked="false"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <CheckedTextView
             android:id="@+id/categoryName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:checked="false"
             android:elevation="@dimen/_4sdp"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:text="Resturant"
-            app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
-            app:layout_constraintEnd_toStartOf="@+id/checkedTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

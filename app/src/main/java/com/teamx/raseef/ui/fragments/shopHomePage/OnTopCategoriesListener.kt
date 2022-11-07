@@ -1,4 +1,4 @@
-package com.teamx.raseef.ui.fragments.Home
+package com.teamx.raseef.ui.fragments.shopHomePage
 
 interface OnTopCategoriesListener {
 

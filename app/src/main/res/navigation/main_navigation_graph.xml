@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/paymentMethodCard">
+    app:startDestination="@id/shopHomePageFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -74,5 +74,14 @@
         android:id="@+id/currentOrderFragment"
         android:name="com.teamx.raseef.ui.fragments.currentOrder.CurrentOrderFragment"
         android:label="CurrentOrderFragment" />
+    <fragment
+        android:id="@+id/pastOrderFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.PastOrderFragment"
+        android:label="PastOrderFragment" />
+    <fragment
+        android:id="@+id/shopHomePageFragment"
+        android:name="com.teamx.raseef.ui.fragments.shopHomePage.ShopHomePageFragment"
+        android:label="ShopHomePageFragment" />
+
 
 </navigation>
