@@ -71,6 +71,13 @@
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
     <string name="view_all">View All</string>
     <string name="paid">Paid</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="my_orders">My Orders</string>
+    <string name="current_orders">Current Orders</string>
+    <string name="past_orders">Past Orders</string>
+    <string name="my_service">My Service</string>
+    <string name="messages">Messages</string>
+    <string name="payment_options">Payment Options</string>
 
 
 </resources>

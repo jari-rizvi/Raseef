@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/shopHomePageFragment">
+    app:startDestination="@id/userProfileFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -82,6 +82,10 @@
         android:id="@+id/shopHomePageFragment"
         android:name="com.teamx.raseef.ui.fragments.shopHomePage.ShopHomePageFragment"
         android:label="ShopHomePageFragment" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.UserProfileFragment"
+        android:label="UserProfileFragment" />
 
 
 </navigation>
