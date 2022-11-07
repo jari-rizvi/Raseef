@@ -385,9 +385,13 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="409dp"
-            android:layout_height="240dp"
+            android:layout_width="match_parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_service"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView53" />
