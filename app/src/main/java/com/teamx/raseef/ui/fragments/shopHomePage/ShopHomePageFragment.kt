@@ -32,8 +32,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
     lateinit var categoriesAdapter: CategoriesAdapter
     lateinit var categoriesArrayList2: ArrayList<Categories>
 
-//    lateinit var productAdapter: ProductByShopAdapter
-//    lateinit var productArrayList: ArrayList<Doc>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

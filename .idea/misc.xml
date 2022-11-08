@@ -105,6 +105,8 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/at.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/border_background.xml" value="0.299" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/border_filled.xml" value="0.1975" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/button_border_orange.xml" value="0.308" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/button_border_orange_filled.xml" value="0.308" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/button_gredient.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/camera_one.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/car.xml" value="0.1975" />
@@ -156,6 +158,7 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_pastorders.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_payment_method.xml" value="0.18958333333333333" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_payment_method_card.xml" value="0.18333333333333332" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_product.xml" value="0.20707070707070707" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_reviewlist.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_settings.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_shop_home_page.xml" value="0.36666666666666664" />

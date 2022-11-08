@@ -79,6 +79,8 @@
     <string name="messages">Messages</string>
     <string name="payment_options">Payment Options</string>
     <string name="write_a_review">Write a Review</string>
+    <string name="description">Description</string>
+    <string name="similar_services">Similar Services</string>
 
 
 </resources>
