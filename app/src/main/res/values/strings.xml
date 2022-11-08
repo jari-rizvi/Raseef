@@ -81,6 +81,10 @@
     <string name="write_a_review">Write a Review</string>
     <string name="description">Description</string>
     <string name="similar_services">Similar Services</string>
+    <string name="special_instruction">Special Instruction</string>
+    <string name="points">Points</string>
+    <string name="total">Total</string>
+    <string name="check_out">Check Out</string>
 
 
 </resources>
