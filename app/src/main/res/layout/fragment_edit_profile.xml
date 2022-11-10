@@ -35,7 +35,7 @@
                 app:layout_constraintVertical_bias="0.3" />
 
             <TextView
-                android:id="@+id/userName"
+                android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jari Rizvi"
@@ -50,14 +50,14 @@
                 app:layout_constraintVertical_bias="0.27" />
 
             <TextView
-                android:id="@+id/userPhone"
+                android:id="@+id/textView44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:text="0336-6830224"
                 android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="@+id/userName"
-                app:layout_constraintTop_toBottomOf="@+id/userName" />
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
             <TextView
                 android:id="@+id/textView45"
@@ -69,7 +69,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/view"
                 app:layout_constraintHorizontal_bias="0.7"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textView44"
                 app:layout_constraintVertical_bias="0.4" />
 
 
@@ -123,14 +123,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
             <ImageView
-                android:id="@+id/btnSetting"
+                android:id="@+id/imageView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.84"
                 app:layout_constraintVertical_bias="0.38"
-                app:layout_constraintStart_toEndOf="@+id/userPhone"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_setting" />
 

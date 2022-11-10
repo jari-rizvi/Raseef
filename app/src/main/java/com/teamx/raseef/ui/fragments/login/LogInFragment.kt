@@ -1,5 +1,6 @@
 package com.teamx.rassef.ui.fragments.login
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -64,15 +65,23 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
             signIn()
         }
 
+        // Configure sign-in to request the user's ID, email address, and basic
+// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        // Configure sign-in to request the user's ID, email address, and basic
+// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
             .build()
 
-
         // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
+        mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso);
 
-        val acct = GoogleSignIn.getLastSignedInAccount(requireContext())
+        // Check for existing Google Sign In account, if the user is already signed in
+// the GoogleSignInAccount will be non-null.
+        // Check for existing Google Sign In account, if the user is already signed in
+// the GoogleSignInAccount will be non-null.
+        val account = GoogleSignIn.getLastSignedInAccount(requireContext())
+//        updateUI(account)
     }
 
     private fun signIn() {
@@ -80,34 +89,34 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             // The Task returned from this call is always completed, no need to attach
             // a listener.
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleSignInResult(task)
         }
     }
 
+
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
-            val account = completedTask.getResult(ApiException::class.java)
+            val account: GoogleSignInAccount = completedTask.getResult(ApiException::class.java)
 
             // Signed in successfully, show authenticated UI.
             navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.shopHomePageFragment, null, options)
-//            startActivity(Intent(requireContext(), HomeScreenActivity::class.java))
+            navController.navigate(R.id.userProfileFragment, null, options)
+
+//            updateUI(account)
         } catch (e: ApiException) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w("Error", "signInResult:failed code=" + e.statusCode)
+            Log.w(TAG, "signInResult:failed code=" + e.statusCode)
+//            updateUI(null)
         }
     }
-
-
-
-
-
-
 }

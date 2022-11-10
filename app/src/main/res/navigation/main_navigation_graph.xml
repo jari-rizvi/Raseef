@@ -98,6 +98,14 @@
         android:id="@+id/cartFragment"
         android:name="com.teamx.raseef.ui.fragments.cart.CartFragment"
         android:label="CartFragment" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.teamx.raseef.ui.fragments.checkout.CheckoutFragment"
+        android:label="CheckoutFragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.teamx.raseef.ui.fragments.editProfile.EditProfileFragment"
+        android:label="EditProfileFragment" />
 
 
 </navigation>

@@ -2,10 +2,11 @@ package com.teamx.rassef.ui.fragments.login
 
 import android.os.Bundle
 import android.view.View
-import com.teamx.raseef.R
+import androidx.databinding.adapters.TextViewBindingAdapter.setText
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.teamx.raseef.BR
+import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.databinding.FragmentSignupBinding
 import com.teamx.raseef.databinding.FragmentUserProfileBinding
 import com.teamx.raseef.ui.fragments.singup.SignupViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,7 +28,19 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, SignupVie
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val acct = GoogleSignIn.getLastSignedInAccount(requireContext())
 
+        if (acct != null) {
+            val personName = acct.displayName
+            val personEmail = acct.email
+            val personId = acct.id
+            val personPhoto = acct.photoUrl
+
+
+            mViewDataBinding.userName.setText(personName)
+            mViewDataBinding.userPhone.setText(personEmail)
+
+        }
 
     }
 
