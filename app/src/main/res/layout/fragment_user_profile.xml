@@ -22,17 +22,48 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-            <ImageView
-                android:id="@+id/btnBack"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userProfile"
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="@dimen/_45sdp"
-                android:background="@drawable/border_background"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.04"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.3" />
+                app:layout_constraintVertical_bias="0.3">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilePicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/border_background"
+                    android:elevation="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/btnAddPicture"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/camera"
+                    app:layout_constraintBottom_toBottomOf="@id/profilePicture"
+                    app:layout_constraintEnd_toEndOf="@id/profilePicture"
+                    app:layout_constraintStart_toStartOf="@+id/profilePicture"
+                    app:layout_constraintTop_toTopOf="@id/profilePicture" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <TextView
                 android:id="@+id/userName"
@@ -45,7 +76,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintStart_toEndOf="@+id/userProfile"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.27" />
 
@@ -104,8 +135,8 @@
                 android:layout_height="wrap_content"
                 android:text="05"
                 android:textColor="@color/white"
-                app:layout_constraintHorizontal_bias="0.25"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
                 app:layout_constraintStart_toEndOf="@+id/view"
                 app:layout_constraintTop_toTopOf="@+id/textView45" />
 
@@ -113,12 +144,12 @@
                 android:id="@+id/textView48"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="My Merchants"
                 android:layout_marginTop="@dimen/_3sdp"
+                android:text="My Merchants"
                 android:textColor="@color/white"
-                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintBottom_toBottomOf="@+id/textView46"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toEndOf="@+id/view"
                 app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
@@ -129,9 +160,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.84"
-                app:layout_constraintVertical_bias="0.38"
                 app:layout_constraintStart_toEndOf="@+id/userPhone"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.38"
                 app:srcCompat="@drawable/ic_setting" />
 
 
@@ -378,23 +409,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Keep Shopping"
-            app:layout_constraintVertical_bias="0.05"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+            app:layout_constraintVertical_bias="0.05" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            app:layout_constraintVertical_bias="0.0"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/item_service"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+            app:layout_constraintTop_toBottomOf="@+id/textView53"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/item_service" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
