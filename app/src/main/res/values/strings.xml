@@ -86,6 +86,13 @@
     <string name="total">Total</string>
     <string name="check_out">Check Out</string>
     <string name="delete">Delete</string>
+    <string name="enter_email">Enter email</string>
+    <string name="password_8_character">Password must have atleast 8 character</string>
+    <string name="enter_name">Enter name</string>
+    <string name="name_must_have_atleast_3_character_long">Name must have atleast 3 character long</string>
+    <string name="name_maximum">Name should not exceed 15 character</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="enter_Number_with_Country_Code">Enter Number with Country Code (e.g +92)</string>
 
 
 </resources>

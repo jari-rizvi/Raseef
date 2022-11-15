@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/editProfileFragment">
+    app:startDestination="@id/tempFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -106,6 +106,10 @@
         android:id="@+id/editProfileFragment"
         android:name="com.teamx.raseef.ui.fragments.editProfile.EditProfileFragment"
         android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.teamx.raseef.ui.fragments.intro.IntroFragment"
+        android:label="IntroFragment" />
 
 
 </navigation>

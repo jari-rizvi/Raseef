@@ -45,6 +45,9 @@ class ForgotFragment() : BaseFragment<FragmentForgotBinding, LoginViewModel>() {
             navController.navigate(R.id.createPassFragment, null, options)
         }
 
+        mViewDataBinding.btnBack.setOnClickListener {
+           popUpStack()
+        }
 
 
     }

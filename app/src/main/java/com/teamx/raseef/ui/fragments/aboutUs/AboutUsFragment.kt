@@ -3,15 +3,11 @@ package com.teamx.rassef.ui.fragments.login
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.NavOptions
-import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentAboutUsBinding
-import com.teamx.raseef.databinding.FragmentCodeBinding
-import com.teamx.raseef.databinding.FragmentForgotBinding
-import com.teamx.raseef.databinding.FragmentLoginBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

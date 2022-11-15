@@ -165,6 +165,8 @@ dependencies {
     // For Preferences
     implementation 'com.pixplicity.easyprefs:EasyPrefs:1.10.0'
 
+
+
 }
 
 protobuf {

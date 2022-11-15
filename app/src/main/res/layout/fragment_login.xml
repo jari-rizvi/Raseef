@@ -144,7 +144,7 @@
 
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/btnLogin"
                 android:layout_width="286dp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -166,7 +166,7 @@
                 android:textColor="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
             <ImageView
                 android:id="@+id/btnFb"

@@ -59,20 +59,21 @@
 
             <TextView
                 android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:text="Full Name"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.06"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail3" />
 
             <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="wrap_content"
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/account"
@@ -88,18 +89,18 @@
 
             <View
                 android:id="@+id/view2"
-                android:layout_width="@dimen/_250sdp"
+                android:layout_width="@dimen/_240sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Email Address"
                 android:textColor="@color/black"
@@ -108,15 +109,16 @@
 
             <EditText
                 android:id="@+id/etemail"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/at"
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your email"
                 android:imeOptions="actionNext"
-                android:inputType="textPassword"
+                android:inputType="textEmailAddress"
+                android:maxLength="20"
                 android:maxLines="1"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -124,7 +126,7 @@
 
             <View
                 android:id="@+id/view3"
-                android:layout_width="@dimen/_250sdp"
+                android:layout_width="@dimen/_240sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -134,8 +136,8 @@
 
             <TextView
                 android:id="@+id/tvMob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Mobile Number"
                 android:textColor="@color/black"
@@ -145,15 +147,16 @@
 
             <EditText
                 android:id="@+id/etMob"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/mobile"
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your Phone Number"
                 android:imeOptions="actionNext"
-                android:inputType="textPassword"
+                android:inputType="phone"
+                android:maxLength="20"
                 android:maxLines="1"
                 app:layout_constraintStart_toStartOf="@+id/tvMob"
                 app:layout_constraintTop_toBottomOf="@+id/tvMob" />
@@ -161,7 +164,7 @@
 
             <View
                 android:id="@+id/view4"
-                android:layout_width="@dimen/_250sdp"
+                android:layout_width="@dimen/_240sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -172,8 +175,8 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Password"
                 android:textColor="@color/black"
@@ -183,8 +186,8 @@
 
             <EditText
                 android:id="@+id/etPass"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_35sdp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/_15sdp"                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/padlock"
@@ -192,6 +195,7 @@
                 android:hint="Enter your password"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
+                android:maxLength="20"
                 android:maxLines="1"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -199,7 +203,7 @@
 
             <View
                 android:id="@+id/view5"
-                android:layout_width="@dimen/_250sdp"
+                android:layout_width="@dimen/_240sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -209,7 +213,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/etPass" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/btnSignup"
                 android:layout_width="286dp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="20dp"
@@ -231,11 +235,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.325"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignup"
                 app:layout_constraintVertical_bias="0.7" />
 
             <TextView
-                android:id="@+id/btnSignup"
+                android:id="@+id/btnLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/_5sdp"
