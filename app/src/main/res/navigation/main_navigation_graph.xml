@@ -22,10 +22,7 @@
         android:id="@+id/forgotFragment"
         android:name="com.teamx.rassef.ui.fragments.login.ForgotFragment"
         android:label="ForgotFragment" />
-    <fragment
-        android:id="@+id/codeFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.CodeFragment"
-        android:label="CodeFragment" />
+
     <fragment
         android:id="@+id/createPassFragment"
         android:name="com.teamx.rassef.ui.fragments.login.CreatePassFragment"
@@ -110,6 +107,18 @@
         android:id="@+id/introFragment"
         android:name="com.teamx.raseef.ui.fragments.intro.IntroFragment"
         android:label="IntroFragment" />
+    <fragment
+        android:id="@+id/forgotEmailFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.ForgotEmailFragment"
+        android:label="ForgotEmailFragment" />
+    <fragment
+        android:id="@+id/otpRegisterFragment"
+        android:name="com.teamx.raseef.ui.fragments.otp.OtpRegisterFragment"
+        android:label="OtpRegisterFragment" />
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.OtpFragment"
+        android:label="OtpFragment" />
 
 
 </navigation>

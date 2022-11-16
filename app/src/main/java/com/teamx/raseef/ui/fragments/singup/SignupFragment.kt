@@ -67,18 +67,18 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
 
     }
 
-    override fun subscribeToNetworkLiveData() {
-        super.subscribeToNetworkLiveData()
+     fun signup() {
 
         initialization()
 
-        if (!userNumber!!.isEmpty() || !password!!.isEmpty() || name!!.isNotEmpty()) {
+        if (!userNumber!!.isEmpty() || !password!!.isEmpty() || name!!.isNotEmpty() || !userEmail!!.isNotEmpty()) {
 
             val params = JsonObject()
             try {
                 params.addProperty("name", name.toString())
                 params.addProperty("contact", userNumber.toString())
                 params.addProperty("password", password.toString())
+                params.addProperty("email", userEmail.toString())
                 params.addProperty("permission", "customer")
                 Log.e("UserData", params.toString())
             } catch (e: JSONException) {
@@ -103,7 +103,7 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
 
 
                             navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                            navController.navigate(R.id.codeFragment, bundle,options)
+                            navController.navigate(R.id.otpRegisterFragment, bundle,options)
                         }
                     }
                     Resource.Status.ERROR -> {
@@ -154,7 +154,7 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
             mViewDataBinding.root.snackbar(getString(R.string.password_8_character))
             return false
         }
-        subscribeToNetworkLiveData()
+        signup()
         return true
     }
 

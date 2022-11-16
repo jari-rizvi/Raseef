@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.databinding.adapters.TextViewBindingAdapter.setText
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.squareup.picasso.Picasso
 import com.teamx.raseef.BR
@@ -12,6 +14,8 @@ import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentUserProfileBinding
 import com.teamx.raseef.ui.fragments.singup.SignupViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -44,11 +48,13 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, SignupVie
 
         }
 
+
+        mViewDataBinding.btnAddPicture.setOnClickListener {
+                navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+                navController.navigate(R.id.logInFragment, null, null)
+
+
+            }
+        }
+
     }
-
-
-
-
-
-
-}

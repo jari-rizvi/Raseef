@@ -1,8 +1,7 @@
-package com.teamx.rassef.ui.fragments.login
+package com.teamx.raseef.ui.fragments.otp
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContentProviderCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
@@ -12,25 +11,26 @@ import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.remote.Resource
+import com.teamx.raseef.databinding.FragmentOTPRegisterBinding
 import com.teamx.raseef.databinding.FragmentOtpBinding
-import com.teamx.raseef.ui.fragments.login.LoginViewModel
-import com.teamx.raseef.ui.fragments.otp.OtpViewModel
 import com.teamx.raseef.utils.DialogHelperClass
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_forgot.*
 import org.json.JSONException
 
+
 @AndroidEntryPoint
-class OtpFragment() : BaseFragment<FragmentOtpBinding, OtpViewModel>() {
+class OtpRegisterFragment() : BaseFragment<FragmentOTPRegisterBinding, OtpViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_otp
+        get() = R.layout.fragment_o_t_p_register
     override val viewModel: Class<OtpViewModel>
         get() = OtpViewModel::class.java
     override val bindingVariable: Int
         get() = BR.viewModel
 
-    private var email: String? = null
+    private var phoneNumber: String? = null
+    private var sid: String? = null
+    private var otpid: String? = null
 
     private lateinit var options: NavOptions
 
@@ -47,36 +47,44 @@ class OtpFragment() : BaseFragment<FragmentOtpBinding, OtpViewModel>() {
         }
 
         mViewDataBinding.btnVerify.setOnClickListener {
-            verifyotpForgot()
+
+            verifyotp()
         }
 
+        mViewDataBinding.btnResend.setOnClickListener {
+            resendOtp()
+
+        }
     }
 
     fun initialization() {
         val bundle = arguments
         if (bundle != null) {
-            email = bundle.getString("email").toString()
+            phoneNumber = bundle.getString("phone").toString()
+            sid = bundle.getString("Sid").toString()
+            otpid = bundle.getString("otpid")
+
         }
     }
 
-    fun verifyotpForgot() {
+    fun verifyotp() {
         initialization()
 
         val code = mViewDataBinding.pinView.text.toString()
-
-        if (email!!.isNotEmpty() ) {
+        if (sid!!.isNotEmpty() || otpid!!.isNotEmpty() || phoneNumber!!.isNotEmpty()) {
             val params = JsonObject()
             try {
-                params.addProperty("email", email)
-                params.addProperty("token", code)
-
+                params.addProperty("sid", sid.toString())
+                params.addProperty("otp_id", otpid.toString())
+                params.addProperty("phone_number", phoneNumber.toString())
+                params.addProperty("code", code)
             } catch (e: JSONException) {
                 e.printStackTrace()
             }
 
-            mViewModel.otpVerifyForgot(params)
+            mViewModel.otpVerify(params)
 
-            mViewModel.otpVerifyForogtResponse.observe(requireActivity(), Observer {
+            mViewModel.otpVerifyResponse.observe(requireActivity(), Observer {
                 when (it.status) {
                     Resource.Status.LOADING -> {
                         loadingDialog.show()
@@ -84,15 +92,12 @@ class OtpFragment() : BaseFragment<FragmentOtpBinding, OtpViewModel>() {
                     Resource.Status.SUCCESS -> {
                         loadingDialog.dismiss()
                         it.data?.let { data ->
-                            val bundle = Bundle()
-                            bundle.putString("email", email)
-                            bundle.putString("token",code)
 
                             navController = Navigation.findNavController(
                                 requireActivity(),
                                 R.id.nav_host_fragment
                             )
-                            navController.navigate(R.id.createPassFragment, bundle, options)
+                            navController.navigate(R.id.userProfileFragment, null, options)
 
                         }
                     }
@@ -107,8 +112,40 @@ class OtpFragment() : BaseFragment<FragmentOtpBinding, OtpViewModel>() {
         }
     }
 
+    fun resendOtp() {
+
+        initialization()
+
+        if (phoneNumber!!.isNotEmpty()) {
+            val params = JsonObject()
+            try {
+                params.addProperty("contact", phoneNumber)
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+
+            mViewModel.resendOtp(params)
+
+            mViewModel.resendOtpResponse.observe(requireActivity(), Observer {
+                when (it.status) {
+                    Resource.Status.LOADING -> {
+                        loadingDialog.show()
+                    }
+                    Resource.Status.SUCCESS -> {
+                        loadingDialog.dismiss()
+                        it.data?.let { data ->
+                            showToast(data.message)
+
+                        }
+                    }
+                    Resource.Status.ERROR -> {
+                        loadingDialog.dismiss()
+                        DialogHelperClass.errorDialog(requireContext(), it.message!!)
+                    }
+                }
+            })
 
 
+        }
     }
-
-
+}

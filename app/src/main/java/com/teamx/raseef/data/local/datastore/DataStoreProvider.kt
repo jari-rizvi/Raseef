@@ -79,11 +79,10 @@ class DataStoreProvider(context: Context) {
         }
     }
 
-    suspend fun saveUserDetails(firstname: String, email: String, avatar: String,number:String) {
+    suspend fun saveUserDetails(firstname: String, email: String,number:String) {
        dataStore.edit {
             it[NAME] = firstname
             it[DETAILS] = email
-            it[AVATAR] = avatar
             it[NUMBER] = number
         }
     }

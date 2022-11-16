@@ -1,5 +1,6 @@
 package com.teamx.raseef
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.teamx.raseef.baseclasses.BaseViewModel
 import com.teamx.raseef.data.models.ProductModel
@@ -45,4 +46,6 @@ class SharedViewModel : BaseViewModel() {
             }
         }
     }
+
+
 }

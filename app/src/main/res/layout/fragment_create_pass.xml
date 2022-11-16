@@ -73,8 +73,9 @@
 
         <EditText
             android:id="@+id/etNewPass"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/padlock"
             android:drawablePadding="@dimen/_8sdp"
@@ -101,15 +102,16 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="Confirm Password"
             android:textColor="@color/black"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="@+id/etNewPass"
+            app:layout_constraintStart_toStartOf="@+id/tvNewPass"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <EditText
             android:id="@+id/etCnfrmPass"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_height="@dimen/_35sdp"
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/padlock"

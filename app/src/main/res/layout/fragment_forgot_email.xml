@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -57,41 +58,35 @@
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <com.chaos.view.PinView
-            android:id="@+id/pinView"
-            style="@style/PinWidget.PinView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:cursorVisible="true"
-            android:inputType="number"
-            android:itemBackground="@color/colorAccent"
-            app:cursorColor="@color/black"
-            app:hideLineWhenFilled="false"
-            app:itemCount="6"
-            app:itemHeight="50dp"
-            app:layout_constraintVertical_bias="0.16"
-            app:itemRadius="8dp"
-            app:itemWidth="50dp"
+
+        <EditText
+            android:id="@+id/usermail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/at"
+            android:drawablePadding="@dimen/_8sdp"
+            android:hint="Enter your Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="20"
+            android:maxLines="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:lineColor="@color/colorBlack"
-            app:lineWidth="1dp" />
+            app:layout_constraintVertical_bias="0.1" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/btnResend"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Resend Again?"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="@color/orange"-->
-<!--            app:layout_constraintVertical_bias="0.18"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/pinView" />-->
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usermail" />
 
 
         <TextView
@@ -100,16 +95,15 @@
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/button_gredient"
             android:gravity="center"
-            android:text="Verify"
+            android:text="Send"
+            app:layout_constraintVertical_bias="0.3"
             android:textColor="@color/white"
-            app:layout_constraintVertical_bias="0.28"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pinView" />
-
+            app:layout_constraintTop_toBottomOf="@+id/usermail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

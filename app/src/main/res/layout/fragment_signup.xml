@@ -219,7 +219,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button_gredient"
                 android:gravity="center"
-                android:text="Log In"
+                android:text="Register"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

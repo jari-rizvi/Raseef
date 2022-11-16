@@ -148,30 +148,26 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
                     Resource.Status.SUCCESS -> {
                         loadingDialog.dismiss()
                         it.data?.let { data ->
-//                            if (data.flag == 1) {
                             lifecycleScope.launch(Dispatchers.IO) {
                                 dataStoreProvider.saveUserToken(data.token)
                                 dataStoreProvider.saveUserID(data.user._id)
 
                                 val name = data.user.name
                                 val email = data.user.email
-                                val avatar = data.user.profile.avatar
                                 val number = data.user.contact
 
                                 dataStoreProvider.saveUserDetails(
                                     name,
                                     email,
-                                    avatar,
                                     number
                                 )
                             }
-//                            sharedViewModel._profileData.value = it
 
                             navController = Navigation.findNavController(
                                 requireActivity(),
                                 R.id.nav_host_fragment
                             )
-                            navController.navigate(R.id.editProfileFragment, null, options)
+                            navController.navigate(R.id.userProfileFragment, null, options)
 //                            } else {
 //                                showToast(data.message)
 //                            }
