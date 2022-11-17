@@ -31,4 +31,10 @@ class MainRepository @Inject constructor(
     suspend fun forogtPass(@Body param: JsonObject) = apiService.forgotPass(param)
 
     suspend fun resetPass(@Body param: JsonObject) = apiService.resetPass(param)
+
+    suspend fun shopBySlug(@Path("slug") slug: String) = apiService.shopBySlug(slug)
+
+    suspend fun productsByShopId(@Query("shop") id: String) = apiService.productsByShopID(id)
+
+
 }

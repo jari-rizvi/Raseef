@@ -8,44 +8,45 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_210sdp"
-        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_140sdp"
         android:backgroundTint="@android:color/transparent"
-        android:background="@drawable/card_background">
+        android:layout_marginStart="@dimen/_10sdp"
+        android:elevation="@dimen/_1sdp"
+        android:background="@drawable/card_background"
+        android:layout_marginTop="@dimen/_5sdp"
+       >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout8"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_190sdp"
+            android:layout_width="0dp"
+            android:background="@drawable/card_background"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
 
-            <ImageView
-                android:id="@+id/cvrimg"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/starbuc" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                <ImageView
+                    android:id="@+id/cvrimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/wishlist" />
 
                 <TextView
                     android:id="@+id/serivceName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_70sdp"
                     android:layout_height="wrap_content"
                     android:text="Formal Shirts"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.92" />
@@ -57,6 +58,7 @@
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:gravity="end"
                     android:text="Aed 9"
+                    android:maxLines="1"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/serivceName"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,18 +116,10 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/constraintLayout8"
-            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

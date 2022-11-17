@@ -11,6 +11,8 @@ import com.teamx.raseef.data.models.otpVerify.OtpVerifyData
 import com.teamx.raseef.data.models.otpVerifyForgot.OtpVerifyForgotData
 import com.teamx.raseef.data.models.resendOtp.ResendOtpData
 import com.teamx.raseef.dataclasses.login.LoginData
+import com.teamx.zeus.data.models.productsShop.ShopProductsData
+import com.teamx.zeus.data.models.shopBySlug.ShopBySlugData
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -39,4 +41,13 @@ interface ApiService {
 
     @POST(NetworkCallPoints.RESET_PASS)
     suspend fun resetPass(@Body params: JsonObject?): Response<ResetPassData>
+
+    @GET(NetworkCallPoints.SHOP_BY_SLUG)
+    suspend fun shopBySlug(
+        @Path("slug") slug: String): Response<ShopBySlugData>
+
+    @GET(NetworkCallPoints.PRODUCTS_BY_SHOP_ID)
+    suspend fun productsByShopID(
+        @Query("shop") id: String
+    ): Response<ShopProductsData>
 }

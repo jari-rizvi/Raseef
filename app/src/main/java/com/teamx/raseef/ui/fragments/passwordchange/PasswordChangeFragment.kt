@@ -40,8 +40,10 @@ class PasswordChangeFragment() : BaseFragment<FragmentPasswordChangeBinding, Log
             }
         }
 
-
-
+        mViewDataBinding.btnLogin.setOnClickListener {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+            navController.navigate(R.id.userProfileFragment, null, options)
+        }
 
 
     }
