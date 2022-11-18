@@ -279,5 +279,20 @@
     </style>
 
 
+    <style name="open_sans_secondary_grey_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/searchBackgroundColor</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+
+    </style>
+
+    <style name="open_sans_secondary_red_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+
+    </style>
+
+
 
 </resources>

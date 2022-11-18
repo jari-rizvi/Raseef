@@ -81,7 +81,7 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
                             mViewDataBinding.shopName.text = it.name
                             mViewDataBinding.shopDistance.text = it.address.street_address
                             mViewDataBinding.ratingBar.rating = it.rating.toFloat()
-                            mViewDataBinding.totalRating.text = it.ratings_count.toString() + " + ratings"
+                            mViewDataBinding.totalRating.text = it.ratings_count.toString() + " + Ratings"
                         }
                     }
                 }

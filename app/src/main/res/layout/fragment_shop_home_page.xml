@@ -11,8 +11,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        >
+        android:background="@color/colorAccent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
@@ -27,22 +26,22 @@
 
             <TextView
                 android:id="@+id/shopName"
+                style="@style/open_sans_secondary_bold_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:text="StromFiber"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/shopDistance"
                 app:layout_constraintStart_toEndOf="@+id/shopImg"
                 app:layout_constraintTop_toTopOf="@+id/shopImg" />
 
             <TextView
                 android:id="@+id/shopDistance"
+                style="@style/open_sans_secondary_grey_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
                 android:ellipsize="end"
+                android:maxLines="2"
                 android:text="Umm Hurair 2 - Dubai Healthcare City - Dubai - \nUnited Arab Emirates"
                 app:layout_constraintBottom_toTopOf="@+id/totalRating"
                 app:layout_constraintStart_toStartOf="@+id/shopName"
@@ -50,6 +49,7 @@
 
             <TextView
                 android:id="@+id/totalRating"
+                style="@style/open_sans_secondary_grey_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -76,10 +76,10 @@
                 android:layout_marginTop="4dp"
                 android:numStars="5"
                 android:rating="2"
-                app:layout_constraintVertical_bias="0.1"
                 app:layout_constraintBottom_toTopOf="@+id/CatRecycler"
                 app:layout_constraintStart_toStartOf="@+id/shopDistance"
                 app:layout_constraintTop_toBottomOf="@+id/shopDistance"
+                app:layout_constraintVertical_bias="0.1"
                 app:mrb_progressTint="@color/ratingBarColor" />
 
 
@@ -147,12 +147,13 @@
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:background="@drawable/card_background"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:padding="@dimen/_15sdp"
-                app:layout_constraintVertical_bias="0.2"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/CatRecycler"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/coverImg" />
+                app:layout_constraintTop_toBottomOf="@+id/coverImg"
+                app:layout_constraintVertical_bias="0.2" />
 
             <ImageView
                 android:id="@+id/imageView12"
@@ -166,6 +167,7 @@
 
             <TextView
                 android:id="@+id/textView39"
+                style="@style/open_sans_secondary_grey_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1 Km"
@@ -201,21 +203,24 @@
 
             <TextView
                 android:id="@+id/textView40"
+                style="@style/open_sans_regular_large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                android:text="POPULAR"
+                android:text="Popular"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView13"
                 app:layout_constraintStart_toEndOf="@+id/imageView13"
                 app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
             <TextView
                 android:id="@+id/textView41"
+                style="@style/open_sans_orange_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:text="@string/view_all"
-                android:textColor="@color/orange"
                 app:layout_constraintBottom_toTopOf="@+id/ProductRecycler"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -224,8 +229,8 @@
                 android:id="@+id/ProductRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView13"

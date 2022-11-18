@@ -67,11 +67,10 @@
 
             <TextView
                 android:id="@+id/userName"
+                style="@style/open_sans_light_white_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jari Rizvi"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,20 +81,21 @@
 
             <TextView
                 android:id="@+id/userPhone"
+                style="@style/open_sans_light_white_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:text="0336-6830224"
-                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
                 app:layout_constraintStart_toStartOf="@+id/userName"
                 app:layout_constraintTop_toBottomOf="@+id/userName" />
 
             <TextView
                 android:id="@+id/textView45"
+                style="@style/open_sans_white_bold_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="05"
-                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/view"
                 app:layout_constraintHorizontal_bias="0.7"
@@ -119,10 +119,11 @@
 
             <TextView
                 android:id="@+id/textView46"
+                style="@style/open_sans_light_white_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_wishlist"
-                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/view"
                 app:layout_constraintHorizontal_bias="0.79"
@@ -131,10 +132,10 @@
 
             <TextView
                 android:id="@+id/textView47"
+                style="@style/open_sans_white_bold_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="05"
-                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.25"
                 app:layout_constraintStart_toEndOf="@+id/view"
@@ -142,11 +143,12 @@
 
             <TextView
                 android:id="@+id/textView48"
+                style="@style/open_sans_light_white_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:text="My Merchants"
-                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView46"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
@@ -184,10 +186,10 @@
 
             <TextView
                 android:id="@+id/textView49"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_orders"
-                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -210,9 +212,11 @@
 
             <TextView
                 android:id="@+id/textView50"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/current_orders"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.16"
@@ -250,15 +254,17 @@
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/view1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toEndOf="@+id/textView51"
                 app:layout_constraintTop_toTopOf="@+id/view1" />
 
             <TextView
                 android:id="@+id/textView51"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/past_orders"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView17"
                 app:layout_constraintStart_toStartOf="@+id/imageView17"
@@ -276,9 +282,11 @@
 
             <TextView
                 android:id="@+id/textView52"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Reviews"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView18"
                 app:layout_constraintStart_toStartOf="@+id/imageView18"
@@ -302,10 +310,10 @@
 
             <TextView
                 android:id="@+id/tvServices"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_service"
-                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -328,9 +336,11 @@
 
             <TextView
                 android:id="@+id/tvMsg"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/messages"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.16"
@@ -368,15 +378,17 @@
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/view10"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toEndOf="@+id/tvPayment"
                 app:layout_constraintTop_toTopOf="@+id/view10" />
 
             <TextView
                 android:id="@+id/tvPayment"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/payment_options"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imgPayment"
                 app:layout_constraintStart_toStartOf="@+id/imgPayment"
@@ -394,9 +406,11 @@
 
             <TextView
                 android:id="@+id/tvSupport"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/support"
+                android:textSize="@dimen/_9sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imgSupport"
                 app:layout_constraintStart_toStartOf="@+id/imgSupport"
@@ -404,28 +418,32 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Keep Shopping"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
-            app:layout_constraintVertical_bias="0.05" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53"
-            app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_service" />
+
+            <TextView
+                android:id="@+id/textView53"
+                style="@style/open_sans_regular_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep Shopping"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView53"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/item_service" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

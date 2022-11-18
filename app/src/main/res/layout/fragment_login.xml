@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="Or Signin With"
-                android:textColor="@color/grey"
+                style="@style/open_sans_secondary_grey_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
