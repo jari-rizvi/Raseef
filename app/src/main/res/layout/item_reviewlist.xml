@@ -203,11 +203,6 @@
 
             </LinearLayout>
 
-
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
@@ -218,8 +213,8 @@
             android:text="Completed"
             android:backgroundTint="@color/light_purple"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_8sdp"
+            android:textSize="@dimen/_10sdp"
+            style="@style/open_sans_light_white_small"
             android:background="@drawable/card_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView26" />

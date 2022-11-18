@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="master Card end **00"
+                style="@style/open_sans_regular_small"
                 android:layout_marginStart="@dimen/_7sdp"/>
 
         </LinearLayout>

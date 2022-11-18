@@ -46,15 +46,17 @@
                     <TextView
                         android:id="@+id/notificationDescription"
                         android:layout_width="wrap_content"
-                        android:maxLines="1"
                         android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        style="@style/open_sans_regular_small"
                         android:text="@string/your_order_has_been_placed_successfully" />
 
                     <TextView
                         android:id="@+id/notification_time"
-                        android:layout_below="@id/notificationDescription"
                         android:layout_width="wrap_content"
+                        style="@style/open_sans_secondary_grey_small"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/notificationDescription"
                         android:text="2 days ago" />
 
 

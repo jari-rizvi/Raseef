@@ -36,8 +36,8 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Language"
-                android:textColor="@color/white"
+                android:text="Support"
+               style="@style/open_sans_light_white_large"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnBack"
@@ -89,13 +89,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/search" />
+                        android:src="@drawable/internet" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -136,7 +136,8 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_weight="1.5"
+                        style="@style/open_sans_regular_medium"
                         android:background="@android:color/transparent"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
@@ -185,13 +186,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/search" />
+                        android:src="@drawable/star" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -234,7 +235,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -271,13 +272,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/faq" />
+                        android:src="@drawable/information_button" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -314,13 +315,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/faq" />
+                        android:src="@drawable/document" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -357,13 +358,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/faq" />
+                        android:src="@drawable/privacy_policy" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -400,13 +401,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/faq" />
+                        android:src="@drawable/support" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@android:color/transparent"
+                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
