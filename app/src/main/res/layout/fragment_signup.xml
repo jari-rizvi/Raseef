@@ -60,7 +60,7 @@
                 style="@style/open_sans_regular_small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Full Name"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/account"
@@ -88,7 +88,7 @@
 
             <View
                 android:id="@+id/view2"
-                android:layout_width="@dimen/_240sdp"
+                android:layout_width="@dimen/_220sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -101,7 +101,7 @@
                 style="@style/open_sans_regular_small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Email Address"
                 app:layout_constraintStart_toStartOf="@+id/view2"
@@ -111,7 +111,7 @@
                 android:id="@+id/etemail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/at"
@@ -128,7 +128,7 @@
 
             <View
                 android:id="@+id/view3"
-                android:layout_width="@dimen/_240sdp"
+                android:layout_width="@dimen/_230sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -141,7 +141,7 @@
                 style="@style/open_sans_regular_small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Mobile Number"
                 app:layout_constraintStart_toStartOf="@+id/etemail"
@@ -152,7 +152,7 @@
                 android:id="@+id/etMob"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/mobile"
@@ -169,7 +169,7 @@
 
             <View
                 android:id="@+id/view4"
-                android:layout_width="@dimen/_240sdp"
+                android:layout_width="@dimen/_230sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -183,7 +183,7 @@
                 style="@style/open_sans_regular_small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="Password"
                 app:layout_constraintStart_toStartOf="@+id/etMob"
@@ -194,7 +194,7 @@
                 android:id="@+id/etPass"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/padlock"
@@ -211,7 +211,7 @@
 
             <View
                 android:id="@+id/view5"
-                android:layout_width="@dimen/_240sdp"
+                android:layout_width="@dimen/_230sdp"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/grey"
@@ -223,9 +223,9 @@
             <TextView
                 android:id="@+id/btnSignup"
                 style="@style/open_sans_light_white_large"
-                android:layout_width="286dp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_17sdp"
                 android:background="@drawable/button_gredient"
                 android:gravity="center"
                 android:text="Register"
@@ -244,7 +244,7 @@
                 app:layout_constraintHorizontal_bias="0.325"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnSignup"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.5" />
 
             <TextView
                 android:id="@+id/btnLogin"

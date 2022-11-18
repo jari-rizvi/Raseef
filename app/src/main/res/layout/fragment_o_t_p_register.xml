@@ -48,10 +48,10 @@
 
         <TextView
             android:id="@+id/textView6"
+            style="@style/open_sans_secondary_medium_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_8sdp"
-            style="@style/open_sans_secondary_medium_small"
+            android:layout_marginTop="8dp"
             android:text="The recovery code was sent to your \nmobile number,please enter the code:"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -94,8 +94,8 @@
 
         <TextView
             android:id="@+id/btnVerify"
-            android:layout_width="286dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_35sdp"
             android:background="@drawable/button_gredient"
             android:gravity="center"
             android:text="Verify"

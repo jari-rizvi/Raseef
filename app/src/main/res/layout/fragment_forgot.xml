@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8sdp"
             style="@style/open_sans_secondary_medium_small"
-            android:text="Select which contact details should we use to reset your password:"
+            android:text="Select which contact details should we \nuse to reset your password:"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
