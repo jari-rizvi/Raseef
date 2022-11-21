@@ -95,5 +95,6 @@
     <string name="enter_Number_with_Country_Code">Enter Number with Country Code (e.g +92)</string>
     <string name="enter_Password">Enter Password</string>
     <string name="password_does_not_match">Password does not match</string>
+    <string name="add_to_cart">Add to Cart</string>
 
 </resources>

@@ -71,12 +71,15 @@
 
                 <TextView
                     android:id="@+id/productName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_150sdp"
                     android:layout_height="wrap_content"
                     android:text="Formal Pants"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    style="@style/open_sans_secondary_bold_small"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintHorizontal_bias="0.16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.023" />
@@ -87,6 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Laundary"
+                    style="@style/open_sans_secondary_grey_small"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
@@ -99,6 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="| 2 Km"
+                    style="@style/open_sans_secondary_grey_small"
                     app:layout_constraintBottom_toBottomOf="@+id/productType"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.04"
@@ -124,6 +129,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="55"
+                    android:textSize="@dimen/_18sdp"
+                    style="@style/open_sans_bold_medium"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/ratingBar"
                     app:layout_constraintTop_toBottomOf="@+id/ratingBar"
@@ -134,9 +141,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AED"
+                    android:textSize="@dimen/_9sdp"
+                    style="@style/open_sans_light_small"
                     app:layout_constraintBottom_toBottomOf="@+id/textView58"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.04"
+                    app:layout_constraintHorizontal_bias="0.02"
                     app:layout_constraintStart_toEndOf="@+id/textView58"
                     app:layout_constraintTop_toTopOf="@+id/textView58" />
 
@@ -156,6 +165,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Description"
+                        android:textSize="@dimen/_12sdp"
+                        style="@style/open_sans_orange_bold_small"
                         android:textColor="@color/orange"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -164,6 +175,7 @@
                         android:id="@+id/textView61"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        style="@style/open_sans_secondary_grey_small"
                         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique tincidunt nunc eget venenatis. Duis accumsan lobortis sagittis. Cras sed eleifend purus, et condimentum augue. Aenean laoreet lacus quis"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -199,7 +211,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout8"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_25sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/view"
@@ -211,7 +223,9 @@
                         android:id="@+id/review"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Review"
+                        android:text="@string/reviews"
+                        android:textSize="@dimen/_12sdp"
+                        style="@style/open_sans_orange_bold_small"
                         android:textColor="@color/orange"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -272,7 +286,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_border_orange_filled"
                         android:gravity="center"
-                        android:text="Log In"
+                        android:text="@string/add_to_cart"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -297,7 +311,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="@string/similar_services"
-                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    style="@style/open_sans_secondary_regular_medium"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
@@ -320,9 +336,11 @@
                     android:id="@+id/btnremove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/add"
-                    tools:layout_editor_absoluteX="259dp"
-                    tools:layout_editor_absoluteY="11dp" />
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    app:layout_constraintStart_toEndOf="@+id/productName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/add" />
 
                 <ImageView
                     android:id="@+id/btnadd"
