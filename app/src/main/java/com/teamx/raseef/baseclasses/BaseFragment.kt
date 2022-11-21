@@ -65,7 +65,6 @@ BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment() {
         subscribeToNetworkLiveData()
         subscribeToViewLiveData()
 
-
     }
 
     override fun onAttach(context: Context) {
