@@ -52,7 +52,7 @@ BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment() {
         return mViewDataBinding.root
 
     }
-
+    
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mViewDataBinding.setVariable(bindingVariable, mViewModel)
