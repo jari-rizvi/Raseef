@@ -162,13 +162,13 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
 
     override fun onTopproductClick(position: Int) {
-//        sharedViewModel.setProductBySlug(productArrayList[position].slug)
-//
-//        navController = Navigation.findNavController(
-//            requireActivity(),
-//            R.id.nav_host_fragment
-//        )
-//        navController.navigate(R.id.productFragment, null, options)
+        sharedViewModel.setProductBySlug(productArrayList[position].slug)
+
+        navController = Navigation.findNavController(
+            requireActivity(),
+            R.id.nav_host_fragment
+        )
+        navController.navigate(R.id.productPreviewFragment, null, options)
     }
 
     override fun onTopSellerClick(position: Int) {

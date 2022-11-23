@@ -47,5 +47,31 @@ class SharedViewModel : BaseViewModel() {
         }
     }
 
+    private val _productBySlug = MutableLiveData<String>()
+    val productBySlug: LiveData<String>
+        get() = _productBySlug
+
+    fun setProductBySlug(_productBySlug: String) {
+        this._productBySlug.value = _productBySlug
+    }
+
+    private val _shopBySlug = MutableLiveData<String>()
+    val shopBySlug: LiveData<String>
+        get() = _shopBySlug
+
+    fun setShopBySlug(_shopBySlug: String) {
+        this._shopBySlug.value = _shopBySlug
+    }
+
+
+    private val _shopById = MutableLiveData<String>()
+    val shopById: LiveData<String>
+        get() = _shopById
+
+    fun setShopById(_shopById: String) {
+        this._shopById.value = _shopById
+    }
+
+
 
 }

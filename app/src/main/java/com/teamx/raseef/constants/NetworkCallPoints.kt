@@ -13,7 +13,14 @@ class NetworkCallPoints {
         const val FORGOT_PASS ="forget-password";
         const val SHOP_BY_SLUG ="shops/{slug}";
         const val PRODUCTS_BY_SHOP_ID ="products";
+        const val PRODUCTS_BY_SLUG ="products/{slug}";
 
 
+
+        //Reviews
+        const val GET_ALL_REVIEWS = "reviews"
+
+
+        var TOKENER = ""
     }
 }

@@ -3,6 +3,8 @@ package com.teamx.raseef.data.remote
 
 import com.google.gson.JsonObject
 import com.teamx.raseef.constants.NetworkCallPoints
+import com.teamx.raseef.constants.NetworkCallPoints.Companion.TOKENER
+import com.teamx.raseef.data.dataclasses.dashboard.DashboardData
 import com.teamx.raseef.data.models.ResetPass.ResetPassData
 import com.teamx.raseef.data.models.SignIn.SignInResponse
 import com.teamx.raseef.data.models.SignUp.RegisterData
@@ -10,7 +12,9 @@ import com.teamx.raseef.data.models.forgotPass.ForgotData
 import com.teamx.raseef.data.models.otpVerify.OtpVerifyData
 import com.teamx.raseef.data.models.otpVerifyForgot.OtpVerifyForgotData
 import com.teamx.raseef.data.models.resendOtp.ResendOtpData
+import com.teamx.raseef.dataclasses.allreviews.AllReviews
 import com.teamx.raseef.dataclasses.login.LoginData
+import com.teamx.zeus.data.models.productBySlug.ProductBySlugData
 import com.teamx.zeus.data.models.productsShop.ShopProductsData
 import com.teamx.zeus.data.models.shopBySlug.ShopBySlugData
 import retrofit2.Response
@@ -50,4 +54,23 @@ interface ApiService {
     suspend fun productsByShopID(
         @Query("shop") id: String
     ): Response<ShopProductsData>
+
+
+    @GET(NetworkCallPoints.PRODUCTS_BY_SLUG)
+    suspend fun productsBySlug(
+        @Path("slug") slug: String,
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER" ?: ""
+    ): Response<ProductBySlugData>
+
+    @GET(NetworkCallPoints.GET_ALL_REVIEWS)
+    suspend fun getRatingList(
+        /*       @Path("id") id: String,
+               @Query("page") page: Int,
+               @Query("limit") limit: Int,*/
+        @Header("Authorization") basicCredentials: String =
+            "Bearer $TOKENER" ?: ""
+    ): Response<AllReviews>
+
+    @GET(NetworkCallPoints.HOME)
+    suspend fun home(): Response<DashboardData>
 }
