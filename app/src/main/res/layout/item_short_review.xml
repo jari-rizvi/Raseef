@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/notificationImage"
+                android:layout_width="@dimen/_39sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/starbuc" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/lnRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        style="@style/open_sans_orange_regular_small"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="103dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="Lorem " />
+
+                    <TextView
+                        android:id="@+id/months"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/open_sans_secondary_grey_small"
+                        android:text="2 days ago" />
+
+                </LinearLayout>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_below="@+id/lnRating"
+                    style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/ratingBarColor"
+                    app:mrb_progressTint="@color/ratingBarColor"
+                    />
+
+                <TextView
+                    android:id="@+id/userReview"
+                    style="@style/open_sans_secondary_grey_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingBar"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text="I can’t say enough about this place. The batista’s coffee and it shows." />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
