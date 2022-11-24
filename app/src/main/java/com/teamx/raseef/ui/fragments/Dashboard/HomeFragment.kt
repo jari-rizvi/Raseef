@@ -8,18 +8,13 @@ import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.teamx.raseef.BR
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.data.dataclasses.dashboard.PopularProduct
 import com.teamx.raseef.data.dataclasses.dashboard.PopularShop
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.*
-import com.teamx.raseef.dummyData.Categories
-import com.teamx.raseef.ui.fragments.product.ProductAdapter
-import com.teamx.raseef.ui.fragments.shopHomePage.CategoriesAdapter
 import com.teamx.raseef.utils.DialogHelperClass
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -73,6 +68,7 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
                     it.data?.let {
                         it.let {
 
+                            shopArrayList.clear()
                             shopArrayList.addAll(it.popularShops)
                             shopAdapter.notifyDataSetChanged()
 

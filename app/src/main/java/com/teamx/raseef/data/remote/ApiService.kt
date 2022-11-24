@@ -12,6 +12,7 @@ import com.teamx.raseef.data.models.forgotPass.ForgotData
 import com.teamx.raseef.data.models.otpVerify.OtpVerifyData
 import com.teamx.raseef.data.models.otpVerifyForgot.OtpVerifyForgotData
 import com.teamx.raseef.data.models.resendOtp.ResendOtpData
+import com.teamx.raseef.dataclasses.allorders.AllOrdersData
 import com.teamx.raseef.dataclasses.allreviews.AllReviews
 import com.teamx.raseef.dataclasses.login.LoginData
 import com.teamx.zeus.data.models.productBySlug.ProductBySlugData
@@ -73,4 +74,12 @@ interface ApiService {
 
     @GET(NetworkCallPoints.HOME)
     suspend fun home(): Response<DashboardData>
+
+    @GET(NetworkCallPoints.ORDER_LIST)
+    suspend fun getOrders(
+        @Query("page") page: Int,
+        @Query("limit") limit: Int,
+        @Header("Authorization") basicCredentials: String =
+            "Bearer $TOKENER"
+    ): Response<AllOrdersData>
 }

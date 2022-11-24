@@ -9,16 +9,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_180sdp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:background="@drawable/card_border">
 
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/orderId"
             style="@style/open_sans_regular_small"
-            android:textSize="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -28,18 +28,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/img"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_65sdp"
             android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
             android:background="@drawable/card_background"
             android:padding="@dimen/_15sdp"
-            app:layout_constraintStart_toStartOf="@+id/textView26"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
+            app:layout_constraintStart_toStartOf="@+id/orderId"
+            app:layout_constraintTop_toBottomOf="@+id/orderId"
             app:srcCompat="@drawable/add" />
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/ProductName"
             style="@style/open_sans_regular_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,32 +48,32 @@
             android:textSize="@dimen/_11sdp"
             android:layout_marginStart="7dp"
             android:text="Formal Pants"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+            app:layout_constraintStart_toEndOf="@+id/img"
+            app:layout_constraintTop_toTopOf="@+id/img" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/orderType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:text="TextView"
             style="@style/open_sans_secondary_grey_small"
-            app:layout_constraintStart_toStartOf="@+id/textView29"
-            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            app:layout_constraintStart_toStartOf="@+id/ProductName"
+            app:layout_constraintTop_toBottomOf="@+id/ProductName" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/orderPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:text="55"
             style="@style/open_sans_orange_bold_small"
             android:textSize="@dimen/_14sdp"
-            app:layout_constraintStart_toStartOf="@+id/textView31"
-            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+            app:layout_constraintStart_toStartOf="@+id/orderType"
+            app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/pickupdate"
             style="@style/open_sans_secondary_red_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,12 +82,12 @@
             app:layout_constraintHorizontal_bias="0.01"
             android:ellipsize="end"
             android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@+id/textView35"
-            app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+            app:layout_constraintEnd_toStartOf="@+id/orderQty"
+            app:layout_constraintStart_toStartOf="@+id/img"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
@@ -95,21 +96,21 @@
             android:textSize="@dimen/_10sdp"
             android:ellipsize="end"
             style="@style/open_sans_regular_small"
-            app:layout_constraintEnd_toEndOf="@+id/textView33"
-            app:layout_constraintStart_toStartOf="@+id/textView33"
-            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+            app:layout_constraintEnd_toEndOf="@+id/pickupdate"
+            app:layout_constraintStart_toStartOf="@+id/pickupdate"
+            app:layout_constraintTop_toBottomOf="@+id/pickupdate" />
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/orderQty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Qty: 1"
             style="@style/open_sans_regular_small"
-            app:layout_constraintBottom_toBottomOf="@+id/textView32"
+            app:layout_constraintBottom_toBottomOf="@+id/orderPrice"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toEndOf="@+id/textView32"
-            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+            app:layout_constraintStart_toEndOf="@+id/orderPrice"
+            app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
 
         <View
@@ -121,7 +122,7 @@
             android:background="@color/textSecondaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+            app:layout_constraintTop_toBottomOf="@+id/note" />
 
         <TextView
             android:id="@+id/textView36"
@@ -129,13 +130,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:text="Total"
+            android:layout_marginBottom="@dimen/_5sdp"
             style="@style/open_sans_regular_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <TextView
-            android:id="@+id/textView37"
+            android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AED 6.9"
@@ -159,7 +161,7 @@
             android:textSize="@dimen/_10sdp"
             style="@style/open_sans_light_white_small"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView26" />
+            app:layout_constraintTop_toTopOf="@+id/orderId" />
 
         <TextView
             android:id="@+id/textView9"
@@ -169,9 +171,9 @@
             android:paddingStart="@dimen/_3sdp"
             android:textSize="@dimen/_10sdp"
             style="@style/open_sans_orange_bold_small"
-            app:layout_constraintBottom_toBottomOf="@+id/textView32"
-            app:layout_constraintStart_toEndOf="@+id/textView32"
-            app:layout_constraintTop_toTopOf="@+id/textView32" />
+            app:layout_constraintBottom_toBottomOf="@+id/orderPrice"
+            app:layout_constraintStart_toEndOf="@+id/orderPrice"
+            app:layout_constraintTop_toTopOf="@+id/orderPrice" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,7 +13,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_130sdp"
             android:background="@drawable/user_topbar"
@@ -171,279 +171,328 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout5"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:background="@drawable/card_background"
-            android:elevation="@dimen/_2sdp"
+        <ScrollView
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            app:layout_constraintVertical_bias="0.04">
+            app:layout_constraintTop_toBottomOf="@+id/main">
 
-            <TextView
-                android:id="@+id/textView49"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/my_orders"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.06"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.1" />
-
-            <ImageView
-                android:id="@+id/imageView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView49"
-                app:layout_constraintVertical_bias="0.3"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <TextView
-                android:id="@+id/textView50"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/current_orders"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
-
-            <View
-                android:id="@+id/view1"
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:background="@color/textSecondaryColor"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/textView50"
-                app:layout_constraintTop_toTopOf="@+id/imageView16"
-                app:layout_constraintVertical_bias="0.07" />
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-                app:layout_constraintEnd_toStartOf="@+id/view2"
-                app:layout_constraintStart_toEndOf="@+id/view1"
-                app:layout_constraintTop_toTopOf="@+id/imageView16"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <View
-                android:id="@+id/view2"
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:background="@color/textSecondaryColor"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/view1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/textView51"
-                app:layout_constraintTop_toTopOf="@+id/view1" />
-
-            <TextView
-                android:id="@+id/textView51"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/past_orders"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView17"
-                app:layout_constraintStart_toStartOf="@+id/imageView17"
-                app:layout_constraintTop_toBottomOf="@+id/imageView17" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/view2"
-                app:layout_constraintTop_toTopOf="@+id/imageView17"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <TextView
-                android:id="@+id/textView52"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reviews"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView18"
-                app:layout_constraintStart_toStartOf="@+id/imageView18"
-                app:layout_constraintTop_toBottomOf="@+id/imageView18" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout6"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:background="@drawable/card_background"
-            android:elevation="@dimen/_2sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
-            app:layout_constraintVertical_bias="0.04">
-
-            <TextView
-                android:id="@+id/tvServices"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/my_service"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.06"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.1" />
-
-            <ImageView
-                android:id="@+id/imgMsg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvServices"
-                app:layout_constraintVertical_bias="0.3"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <TextView
-                android:id="@+id/tvMsg"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/messages"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgMsg" />
-
-            <View
-                android:id="@+id/view10"
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:background="@color/textSecondaryColor"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
-                app:layout_constraintStart_toEndOf="@+id/tvMsg"
-                app:layout_constraintTop_toTopOf="@+id/imgMsg"
-                app:layout_constraintVertical_bias="0.07" />
-
-            <ImageView
-                android:id="@+id/imgPayment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imgMsg"
-                app:layout_constraintEnd_toStartOf="@+id/view11"
-                app:layout_constraintStart_toEndOf="@+id/view10"
-                app:layout_constraintTop_toTopOf="@+id/imgMsg"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <View
-                android:id="@+id/view11"
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:background="@color/textSecondaryColor"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/view10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/tvPayment"
-                app:layout_constraintTop_toTopOf="@+id/view10" />
-
-            <TextView
-                android:id="@+id/tvPayment"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/payment_options"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imgPayment"
-                app:layout_constraintStart_toStartOf="@+id/imgPayment"
-                app:layout_constraintTop_toBottomOf="@+id/imgPayment" />
-
-            <ImageView
-                android:id="@+id/imgSupport"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imgPayment"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/view11"
-                app:layout_constraintTop_toTopOf="@+id/imgPayment"
-                app:srcCompat="@drawable/shopping_bag" />
-
-            <TextView
-                android:id="@+id/tvSupport"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/support"
-                android:textSize="@dimen/_9sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imgSupport"
-                app:layout_constraintStart_toStartOf="@+id/imgSupport"
-                app:layout_constraintTop_toBottomOf="@+id/imgSupport" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-            <TextView
-                android:id="@+id/textView53"
-                style="@style/open_sans_regular_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Keep Shopping"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
-                app:layout_constraintVertical_bias="0.05" />
-
-            <androidx.recyclerview.widget.RecyclerView
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView53"
-                app:layout_constraintVertical_bias="0.0"
-                tools:listitem="@layout/item_service" />
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/card_background"
+                    android:elevation="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_orders"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.06"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.1" />
+
+                    <ImageView
+                        android:id="@+id/btnCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView49"
+                        app:layout_constraintVertical_bias="0.3"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_orders"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnCurrent" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@color/textSecondaryColor"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.08"
+                        app:layout_constraintStart_toEndOf="@+id/textView50"
+                        app:layout_constraintTop_toTopOf="@+id/btnCurrent"
+                        app:layout_constraintVertical_bias="0.07" />
+
+                    <ImageView
+                        android:id="@+id/btnPast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnCurrent"
+                        app:layout_constraintEnd_toStartOf="@+id/view2"
+                        app:layout_constraintStart_toEndOf="@+id/view1"
+                        app:layout_constraintTop_toTopOf="@+id/btnCurrent"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@color/textSecondaryColor"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/view1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintStart_toEndOf="@+id/textView51"
+                        app:layout_constraintTop_toTopOf="@+id/view1" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/past_orders"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnPast"
+                        app:layout_constraintStart_toStartOf="@+id/btnPast"
+                        app:layout_constraintTop_toBottomOf="@+id/btnPast" />
+
+                    <ImageView
+                        android:id="@+id/btnReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/btnPast"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view2"
+                        app:layout_constraintTop_toTopOf="@+id/btnPast"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reviews"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnReview"
+                        app:layout_constraintStart_toStartOf="@+id/btnReview"
+                        app:layout_constraintTop_toBottomOf="@+id/btnReview" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@drawable/card_background"
+                    android:elevation="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                    app:layout_constraintVertical_bias="0.04">
+
+                    <TextView
+                        android:id="@+id/tvServices"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_service"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.06"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.1" />
+
+                    <ImageView
+                        android:id="@+id/imgMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.18"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvServices"
+                        app:layout_constraintVertical_bias="0.3"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <TextView
+                        android:id="@+id/tvMsg"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.17"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgMsg" />
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@color/textSecondaryColor"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.08"
+                        app:layout_constraintStart_toEndOf="@+id/tvMsg"
+                        app:layout_constraintTop_toTopOf="@+id/imgMsg"
+                        app:layout_constraintVertical_bias="0.07" />
+
+                    <ImageView
+                        android:id="@+id/imgPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgMsg"
+                        app:layout_constraintEnd_toStartOf="@+id/view11"
+                        app:layout_constraintStart_toEndOf="@+id/view10"
+                        app:layout_constraintTop_toTopOf="@+id/imgMsg"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@color/textSecondaryColor"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/view10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintStart_toEndOf="@+id/tvPayment"
+                        app:layout_constraintTop_toTopOf="@+id/view10" />
+
+                    <TextView
+                        android:id="@+id/tvPayment"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_options"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imgPayment"
+                        app:layout_constraintStart_toStartOf="@+id/imgPayment"
+                        app:layout_constraintTop_toBottomOf="@+id/imgPayment" />
+
+                    <ImageView
+                        android:id="@+id/imgSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgPayment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view11"
+                        app:layout_constraintTop_toTopOf="@+id/imgPayment"
+                        app:srcCompat="@drawable/shopping_bag" />
+
+                    <TextView
+                        android:id="@+id/tvSupport"
+                        style="@style/open_sans_regular_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/support"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imgSupport"
+                        app:layout_constraintStart_toStartOf="@+id/imgSupport"
+                        app:layout_constraintTop_toBottomOf="@+id/imgSupport" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView53"
+                    style="@style/open_sans_regular_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keep_shopping"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView53"
+                    app:layout_constraintVertical_bias="0.05" />
+
+
+                <TextView
+                    android:id="@+id/sdsddsds"
+                    style="@style/open_sans_regular_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_stores"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewRecyclerView"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ShopRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sdsddsds"
+                    app:layout_constraintVertical_bias="0.05" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

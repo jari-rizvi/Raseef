@@ -20,6 +20,11 @@ class NetworkCallPoints {
         //Reviews
         const val GET_ALL_REVIEWS = "reviews"
 
+        //Orders
+        const val ORDER_LIST = "orders"
+        const val GET_ORDER_BY_ID = "orders/{id}"
+
+
 
         var TOKENER = ""
     }

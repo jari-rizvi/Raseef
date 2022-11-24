@@ -12,6 +12,7 @@
         android:layout_height="@dimen/_130sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:elevation="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:background="@drawable/card_background"
         android:layout_marginTop="@dimen/_5sdp">
 
@@ -59,7 +60,6 @@
                 android:layout_marginStart="9dp"
                 android:gravity="end"
                 android:maxLines="1"
-                android:text="Aed 9"
                 style="@style/open_sans_light_white_medium"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/serivceName"
