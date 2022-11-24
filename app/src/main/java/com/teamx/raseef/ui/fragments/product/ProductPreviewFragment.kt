@@ -75,7 +75,6 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
             mViewDataBinding.reviewRecyclerView.visibility = View.GONE
             mViewDataBinding.btnReview.visibility = View.VISIBLE
             mViewDataBinding.btnupp.visibility = View.GONE
-
         }
 
         mViewDataBinding.btnDesc.setOnClickListener {

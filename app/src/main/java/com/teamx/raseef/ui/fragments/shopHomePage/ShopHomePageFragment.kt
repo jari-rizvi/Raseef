@@ -64,7 +64,18 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
             popUpStack()
         }
 
-        mViewModel.shopBySlug("makeup-store")
+        val r = sharedViewModel.shopById
+
+        r.observe(requireActivity()) {
+            mViewModel.productsByShopId(it)
+        }
+
+        val str = sharedViewModel.shopBySlug
+
+        str.observe(requireActivity()) {
+            Log.d("shopByslug", "onViewCreated: $it")
+            mViewModel.shopBySlug(it)
+        }
 
         mViewModel.shopBySlugResponse.observe(requireActivity(), Observer {
             when (it.status) {
@@ -93,8 +104,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
             }
         })
 
-
-        mViewModel.productsByShopId("6318a59c6937e0d2e791d94a")
 
         mViewModel.productsByShopResponse.observe(requireActivity(), Observer {
             when (it.status) {
@@ -131,6 +140,7 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
         productRecyclerview()
         categoriesRecyclerview()
+
 
     }
 

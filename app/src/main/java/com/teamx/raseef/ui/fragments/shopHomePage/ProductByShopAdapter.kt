@@ -25,7 +25,7 @@ class ProductByShopAdapter(val arrayList: ArrayList<Doc>, val onTopProductListen
 
         holder.binding.name.text = product.name
         holder.binding.rating.text = product.ratings.toString()
-        holder.binding.type.text = product.type.toString()
+        holder.binding.type.text = product.slug
         holder.binding.totalAmount.text = product.price.toString()
         Picasso.get().load(product.image).into(holder.binding.img)
 

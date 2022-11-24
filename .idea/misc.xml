@@ -103,6 +103,7 @@
         <entry key="..\:/Ahsan/Github projects/MultiVendor/app/src/main/res/mipmap-hdpi/ic_launcher.xml" value="0.24" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/account.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/at.xml" value="0.3415" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/badge_background_white.xml" value="0.1" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/border_background.xml" value="0.299" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/border_filled.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/border_white_fill.xml" value="0.308" />
@@ -120,6 +121,7 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/credit_card_payment.xml" value="0.327" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/custom_thumb.xml" value="0.347" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/custom_track.xml" value="0.347" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/default_icon.xml" value="0.1" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/dialog_bg.xml" value="0.2775" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/document.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/fb.xml" value="0.1975" />
@@ -131,6 +133,7 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/ic_group_420.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/ic_login_top.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/ic_raseef.xml" value="0.3415" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/ic_search.xml" value="0.32" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/ic_top_orange.xml" value="0.347" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/indicator_default.xml" value="0.308" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/indicator_selected.xml" value="0.308" />
@@ -141,11 +144,13 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/mobile.xml" value="0.1975" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/padlock.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/rectangular_side_rounded.xml" value="0.3415" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/search_background.xml" value="0.32" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/shape_bottom_round.xml" value="0.3415" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/shape_bottom_round_fill.xml" value="0.3675" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/shopping_bag.xml" value="0.299" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/star.xml" value="0.327" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/support.xml" value="0.2315" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/transition_background_drawable.xml" value="0.1" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/drawable/wishlist.xml" value="0.299" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/dialog_layout_error.xml" value="0.36666666666666664" />
@@ -162,6 +167,7 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_edit_profile.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_forgot.xml" value="0.365625" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_forgot_email.xml" value="0.26282051282051283" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_intro.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_language.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_login.xml" value="0.30541141586360265" />
@@ -187,9 +193,10 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_notification.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_pastorder.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_payment.xml" value="0.5" />
-        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_products.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_products.xml" value="0.25" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_reviewlist.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_service.xml" value="0.5" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_shop.xml" value="0.5" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_shop_home_page.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/item_short_review.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/layout_screen.xml" value="0.36666666666666664" />
