@@ -97,7 +97,7 @@ class OtpRegisterFragment() : BaseFragment<FragmentOTPRegisterBinding, OtpViewMo
                                 requireActivity(),
                                 R.id.nav_host_fragment
                             )
-                            navController.navigate(R.id.userProfileFragment, null, options)
+                            navController.navigate(R.id.homeFragment, null, options)
 
                         }
                     }

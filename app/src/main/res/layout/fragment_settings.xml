@@ -34,10 +34,10 @@
 
             <TextView
                 android:id="@+id/textView19"
+                style="@style/open_sans_light_white_large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Support"
-               style="@style/open_sans_light_white_large"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnBack"
@@ -49,13 +49,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_height="wrap_content"
-            app:layout_constraintVertical_bias="0.6"
+            android:layout_marginHorizontal="@dimen/_15sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintVertical_bias="0.25">
 
 
             <LinearLayout
@@ -64,6 +64,7 @@
                 android:background="@drawable/card_background"
                 android:orientation="vertical"
                 android:padding="5dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,10 +93,10 @@
                         android:src="@drawable/internet" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -134,10 +135,10 @@
                         android:src="@drawable/notification" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1.5"
-                        style="@style/open_sans_regular_medium"
                         android:background="@android:color/transparent"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
@@ -148,10 +149,10 @@
                         android:id="@+id/swOnOff"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.9"
                         android:layout_marginStart="@dimen/_75sdp"
-                        android:padding="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="0.9"
+                        android:padding="@dimen/_20sdp"
                         android:thumb="@drawable/custom_thumb"
                         app:track="@drawable/custom_track" />
 
@@ -189,10 +190,10 @@
                         android:src="@drawable/star" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -232,10 +233,10 @@
                         android:src="@drawable/faq" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -275,10 +276,10 @@
                         android:src="@drawable/information_button" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -318,10 +319,10 @@
                         android:src="@drawable/document" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -361,10 +362,10 @@
                         android:src="@drawable/privacy_policy" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -404,10 +405,10 @@
                         android:src="@drawable/support" />
 
                     <TextView
+                        style="@style/open_sans_regular_medium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        style="@style/open_sans_regular_medium"
                         android:gravity="center_vertical"
                         android:paddingStart="@dimen/_7sdp"
                         android:paddingEnd="@dimen/_7sdp"
@@ -417,7 +418,6 @@
 
 
             </LinearLayout>
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

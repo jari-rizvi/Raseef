@@ -3,6 +3,7 @@ package com.teamx.raseef
 import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
+import com.stripe.android.PaymentConfiguration
 import com.teamx.raseef.localization.LocaleManager
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
@@ -31,6 +32,11 @@ class MainApplication : Application() {
             Timber.plant(Timber.DebugTree())
         }
 
+        PaymentConfiguration.init(
+            applicationContext,
+            "pk_test_UGqCEQSFSmhogt9N3hvKS7UA00eopc2Bd4"
+        )
+
     }
 
     override fun attachBaseContext(base: Context?) {
@@ -42,6 +48,8 @@ class MainApplication : Application() {
         super.onConfigurationChanged(newConfig!!)
         localeManager!!.setLocale(this)
     }
+
+
 
 
 

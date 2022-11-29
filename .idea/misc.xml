@@ -178,12 +178,14 @@
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_password_change.xml" value="0.365625" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_pastorders.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_payment_method.xml" value="0.18958333333333333" />
-        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_payment_method_card.xml" value="0.18333333333333332" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_payment_method_card.xml" value="0.33" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_paypal.xml" value="0.365625" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_product.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_reviewlist.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_settings.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_shop_home_page.xml" value="0.33" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_signup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_stripe.xml" value="0.2972222222222222" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_sucess.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_temp.xml" value="0.22" />
         <entry key="..\:/Jari's Projects/Raseef/app/src/main/res/layout/fragment_user_profile.xml" value="0.25" />

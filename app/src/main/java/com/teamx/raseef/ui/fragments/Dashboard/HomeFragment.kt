@@ -51,6 +51,14 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             popUpStack()
         }
 
+        mViewDataBinding.imageView5.setOnClickListener {
+            navController = Navigation.findNavController(
+                requireActivity(),
+                R.id.nav_host_fragment
+            )
+            navController.navigate(R.id.userProfileFragment, null, options)
+        }
+
 
 
         mViewModel.home()

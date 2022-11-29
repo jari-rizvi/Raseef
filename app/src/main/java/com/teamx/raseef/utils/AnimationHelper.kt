@@ -48,14 +48,14 @@ public fun progressBar(progress:View,startValue:Int,stopValue:Int){
     objectAnimator.start()
 }
 
-private fun ObjectAnimator.disableViewDuringAnimation(view: View) {
-    addListener(object : AnimatorListenerAdapter() {
-        override fun onAnimationStart(animation: Animator?) {
-            view.isEnabled = false
-        }
-
-        override fun onAnimationEnd(animation: Animator?) {
-            view.isEnabled = true
-        }
-    })
-}
+//private fun ObjectAnimator.disableViewDuringAnimation(view: View) {
+//    addListener(object : AnimatorListenerAdapter() {
+//        override fun onAnimationStart(animation: Animator?) {
+//            view.isEnabled = false
+//        }
+//
+//        override fun onAnimationEnd(animation: Animator?) {
+//            view.isEnabled = true
+//        }
+//    })
+//}

@@ -76,14 +76,10 @@
 
     </style>
 
-
-
-
     <style name="open_sans_title_regular" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/_21ssp</item>
         <item name="android:textColor">@color/textPrimaryColor</item>
         <item name="android:fontFamily">@font/open_sans_regular</item>
-
     </style>
 
 
@@ -234,6 +230,12 @@
         <item name="android:fontFamily">@font/open_sans_bold</item>
     </style>
 
+    <style name="halvetica_white_bold_small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/helvetica</item>
+    </style>
+
     <style name="open_sans_orange_regular_small" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:textColor">@color/orange</item>
@@ -276,7 +278,6 @@
         <item name="android:fontFamily">@font/open_sans_regular</item>
     </style>
 
-
     <style name="open_sans_bold_medium" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/_10ssp</item>
         <item name="android:textColor">@color/textPrimaryColor</item>
@@ -286,7 +287,6 @@
     <style name="myNavigationView" parent="Base.Theme.AppCompat">
         <item name="android:listDivider">@color/white</item>
     </style>
-
 
     <style name="open_sans_secondary_grey_small" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/_10ssp</item>

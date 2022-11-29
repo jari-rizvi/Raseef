@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <com.stripe.android.view.CardMultilineWidget
+                android:id="@+id/cardInputWidget"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content" />
+            <!--<com.stripe.android.view.CardFormView
+                android:id="@+id/cardInputWidget"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content" />-->
+
+            <Button
+                android:id="@+id/payButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="pay" />
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -13,11 +13,9 @@ import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.FragmentOtpBinding
-import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import com.teamx.raseef.ui.fragments.otp.OtpViewModel
 import com.teamx.raseef.utils.DialogHelperClass
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_forgot.*
 import org.json.JSONException
 
 @AndroidEntryPoint

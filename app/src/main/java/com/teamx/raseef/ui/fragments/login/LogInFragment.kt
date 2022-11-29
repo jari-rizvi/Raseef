@@ -167,7 +167,7 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
                                 requireActivity(),
                                 R.id.nav_host_fragment
                             )
-                            navController.navigate(R.id.userProfileFragment, null, options)
+                            navController.navigate(R.id.homeFragment, null, options)
 //                            } else {
 //                                showToast(data.message)
 //                            }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/currentOrderFragment">
+    app:startDestination="@id/payPalFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -123,6 +123,14 @@
         android:id="@+id/homeFragment"
         android:name="com.teamx.raseef.ui.fragments.Home.HomeFragment"
         android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/stripeFragment"
+        android:name="com.teamx.raseef.ui.fragments.stripe.StripeFragment"
+        android:label="StripeFragment" />
+    <fragment
+        android:id="@+id/payPalFragment"
+        android:name="com.teamx.raseef.ui.fragments.paypal.PayPalFragment"
+        android:label="PayPalFragment" />
 
 
 </navigation>

@@ -28,9 +28,7 @@ class CurrentOrderFragment : BaseFragment<FragmentCurrentordersBinding, CurrentO
         get() = BR.viewModel
 
 
-    lateinit var orderListAdapter: OrderList
-
-    Adapter
+    lateinit var orderListAdapter: OrderListAdapter
     lateinit var orderListArrayList: ArrayList<DocX>
 
 
