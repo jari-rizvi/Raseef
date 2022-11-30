@@ -5,8 +5,10 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
 import com.teamx.raseef.dataclasses.allreviews.Doc
 import androidx.navigation.navOptions
 import androidx.recyclerview.widget.GridLayoutManager
@@ -18,6 +20,8 @@ import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.dataclasses.dashboard.PopularProduct
 import com.teamx.raseef.data.dataclasses.faq.FaqData
+import com.teamx.raseef.data.local.dbModel.CartTable
+import com.teamx.raseef.data.models.MusicModel
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.*
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
@@ -91,6 +95,18 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
         }
 
 
+        mViewDataBinding.btnAddToCart.setOnClickListener {
+            mViewModel.productPreviewResponse.value?.data?.let {
+                mViewModel.insertCartProduct(MusicModel(0, it))
+                navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+                navController.navigate(R.id.cartFragment, null, options)
+
+                Toast.makeText(requireContext(), "Added To Cart Successfully", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+        }
+
 
         val str = sharedViewModel.productBySlug
 //        mViewModel.productPreview("62a3633db41c6704082d77a7")
@@ -150,7 +166,6 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
             }
         })
 
-
         mViewModel.home()
 
         mViewModel.homeResponse.observe(requireActivity(), Observer {
@@ -181,10 +196,9 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
             }
         })
 
-
         reviewAdapter()
-        productRecyclerview()
 
+        productRecyclerview()
 
     }
 

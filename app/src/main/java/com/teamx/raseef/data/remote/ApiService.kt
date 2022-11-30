@@ -15,9 +15,9 @@ import com.teamx.raseef.data.models.resendOtp.ResendOtpData
 import com.teamx.raseef.dataclasses.allorders.AllOrdersData
 import com.teamx.raseef.dataclasses.allreviews.AllReviews
 import com.teamx.raseef.dataclasses.login.LoginData
-import com.teamx.zeus.data.models.productBySlug.ProductBySlugData
-import com.teamx.zeus.data.models.productsShop.ShopProductsData
-import com.teamx.zeus.data.models.shopBySlug.ShopBySlugData
+import com.teamx.raseef.data.models.productBySlug.ProductBySlugData
+import com.teamx.raseef.data.models.productsShop.ShopProductsData
+import com.teamx.raseef.data.models.shopBySlug.ShopBySlugData
 import retrofit2.Response
 import retrofit2.http.*
 

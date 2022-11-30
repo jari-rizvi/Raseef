@@ -1,20 +1,18 @@
 package com.teamx.raseef.data.remote.reporitory
 
 import com.google.gson.JsonObject
-import com.teamx.raseef.constants.NetworkCallPoints
 import com.teamx.raseef.data.local.db.AppDao
-import com.teamx.raseef.data.models.SignUp.RegisterData
+import com.teamx.raseef.data.local.dbModel.CartTable
+import com.teamx.raseef.data.models.MusicModel
 import com.teamx.raseef.data.remote.ApiService
-import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
     private val apiService: ApiService,
-    localDataSource: AppDao
+    var localDataSource: AppDao
 ) {
     suspend fun login(@Body param: JsonObject) = apiService.login(param)
 
@@ -45,5 +43,9 @@ class MainRepository @Inject constructor(
     suspend fun getOrderList(@Query("page") page: Int, @Query("limit") limit: Int) =
         apiService.getOrders(page, limit)
 
+
+    suspend fun getAllProducts2(): List<MusicModel> = localDataSource.getAllProducts2()
+
+    suspend fun insertCartProduct(cartTable: MusicModel) = localDataSource.insert(cartTable)
 
 }

@@ -6,12 +6,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.teamx.raseef.baseclasses.BaseViewModel
 import com.teamx.raseef.data.dataclasses.dashboard.DashboardData
+import com.teamx.raseef.data.local.dbModel.CartTable
+import com.teamx.raseef.data.models.MusicModel
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.data.remote.reporitory.MainRepository
 import com.teamx.raseef.dataclasses.allreviews.AllReviews
 import com.teamx.raseef.utils.NetworkHelper
-import com.teamx.zeus.data.models.productBySlug.ProductBySlugData
+import com.teamx.raseef.data.models.productBySlug.ProductBySlugData
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import javax.inject.Inject
@@ -117,5 +120,19 @@ class ProductPreviewViewModel @Inject constructor(
         }
     }
 
+    fun insertCartProduct(cartTable: MusicModel) {
+        Log.d("TAG", "getCarts:1 ")
+        viewModelScope.launch(Dispatchers.IO) {
+            if (networkHelper.isNetworkConnected()) {
+                try {
+                    mainRepository.insertCartProduct(cartTable)
+                } catch (e: Exception) {
+                    Log.d("TAG", "getCarts:3${e.printStackTrace()} ")
+                }
+            } else {
 
+            }
+
+        }
+    }
 }

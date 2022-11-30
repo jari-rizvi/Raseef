@@ -4,12 +4,12 @@ import android.content.Context
 import com.teamx.raseef.BuildConfig
 import com.teamx.raseef.constants.AppConstants
 import com.teamx.raseef.data.local.datastore.DataStoreProvider
-import com.teamx.raseef.data.local.db.AppDao
 import com.teamx.raseef.data.local.db.AppDatabase
 import com.teamx.raseef.data.remote.ApiService
 import com.teamx.raseef.data.remote.reporitory.MainRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.teamx.raseef.data.local.db.AppDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,6 +24,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
+
 class ApplicationModule {
 
     @Provides
@@ -65,17 +66,12 @@ class ApplicationModule {
     @Provides
     fun provideDataStore(@ApplicationContext appContext: Context) = DataStoreProvider(appContext)
 
-
     @Singleton
     @Provides
     fun provideDao(db: AppDatabase) = db.appDao()
 
     @Singleton
     @Provides
-    fun provideRepository(
-        apiService: ApiService,
-        localDataSource: AppDao
-    ) =
-        MainRepository(apiService, localDataSource)
+    fun provideRepository(apiService: ApiService,localDataSource: AppDao) = MainRepository(apiService,localDataSource)
 
 }

@@ -1,4 +1,4 @@
-package com.teamx.zeus.data.models.shopBySlug
+package com.teamx.raseef.data.models.shopBySlug
 
 data class Review(
     val __v: Int,

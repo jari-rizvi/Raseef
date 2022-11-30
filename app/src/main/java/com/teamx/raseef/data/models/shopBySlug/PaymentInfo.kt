@@ -1,4 +1,4 @@
-package com.teamx.zeus.data.models.shopBySlug
+package com.teamx.raseef.data.models.shopBySlug
 
 data class PaymentInfo(
     val _id: String,

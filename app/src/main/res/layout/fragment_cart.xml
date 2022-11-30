@@ -86,13 +86,13 @@
             android:layout_height="0.5dp"
             android:background="@color/textSecondaryColor"
             app:layout_constraintVertical_bias="0.4"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+            app:layout_constraintBottom_toTopOf="@+id/cartRecyclerview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
+            android:id="@+id/cartRecyclerview"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_100sdp"
             android:layout_marginHorizontal="@dimen/_10sdp"
@@ -113,7 +113,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+            app:layout_constraintTop_toBottomOf="@+id/cartRecyclerview"
             app:layout_constraintVertical_bias="0.05">
 
             <EditText

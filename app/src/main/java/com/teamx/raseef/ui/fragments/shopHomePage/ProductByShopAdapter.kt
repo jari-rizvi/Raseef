@@ -7,7 +7,7 @@ import com.squareup.picasso.Picasso
 import com.teamx.raseef.databinding.ItemProductsBinding
 import com.teamx.raseef.databinding.ItemServiceBinding
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
-import com.teamx.zeus.data.models.productsShop.Doc
+import com.teamx.raseef.data.models.productsShop.Doc
 
 class ProductByShopAdapter(val arrayList: ArrayList<Doc>, val onTopProductListener: OnTopProductListener) : RecyclerView.Adapter<ProductByShopAdapter.ShopProductViewHolder>() {
 

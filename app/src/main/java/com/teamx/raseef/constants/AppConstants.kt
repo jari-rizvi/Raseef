@@ -16,7 +16,7 @@ object AppConstants {
     @StringDef(DbConfiguration.DB_NAME)
     annotation class DbConfiguration {
         companion object {
-            const val DB_NAME = "BaseProject"
+            const val DB_NAME = "RaseefProject"
         }
     }
 

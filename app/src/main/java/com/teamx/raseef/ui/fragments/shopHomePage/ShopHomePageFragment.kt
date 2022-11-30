@@ -21,7 +21,7 @@ import com.teamx.raseef.dummyData.Categories
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
 import com.teamx.raseef.ui.fragments.Home.OnTopShopListener
 import com.teamx.raseef.utils.DialogHelperClass
-import com.teamx.zeus.data.models.productsShop.Doc
+import com.teamx.raseef.data.models.productsShop.Doc
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.log
 

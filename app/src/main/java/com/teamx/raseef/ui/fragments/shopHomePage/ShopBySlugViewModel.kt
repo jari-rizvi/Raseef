@@ -8,8 +8,8 @@ import com.teamx.raseef.baseclasses.BaseViewModel
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.data.remote.reporitory.MainRepository
 import com.teamx.raseef.utils.NetworkHelper
-import com.teamx.zeus.data.models.productsShop.ShopProductsData
-import com.teamx.zeus.data.models.shopBySlug.ShopBySlugData
+import com.teamx.raseef.data.models.productsShop.ShopProductsData
+import com.teamx.raseef.data.models.shopBySlug.ShopBySlugData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

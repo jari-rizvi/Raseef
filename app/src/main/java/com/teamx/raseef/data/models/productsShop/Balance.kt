@@ -1,4 +1,4 @@
-package com.teamx.zeus.data.models.productsShop
+package com.teamx.raseef.data.models.productsShop
 
 import androidx.annotation.Keep
 
