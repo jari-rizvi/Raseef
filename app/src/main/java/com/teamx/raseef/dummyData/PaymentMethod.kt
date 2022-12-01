@@ -1,3 +1,3 @@
 package com.teamx.raseef.dummyData
 
-class PaymentMethod (val paymentId : Int, val paymentImage : Int, val paymentName : String  )
+class PaymentMethod (val paymentId : Int, val paymentImage : Int, val paymentName : String, var value :  Boolean = false )

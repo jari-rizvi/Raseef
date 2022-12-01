@@ -52,20 +52,20 @@ class CartViewModel @Inject constructor(
         }
     }
 
-//    fun deleteCartProduct(Id: Int) {
-//        Log.d("TAG", "getCarts:1 ")
-//        viewModelScope.launch(Dispatchers.IO) {
-//            if (networkHelper.isNetworkConnected()) {
-//                try {
-//                    mainRepository.deleteCartProduct(Id)
-//                } catch (e: Exception) {
-//                    Log.d("TAG", "getCarts:3${e.printStackTrace()} ")
-//                }
-//            } else {
-//
-//            }
-//
-//        }
-//    }
+    fun deleteCartProduct(Id: Int) {
+        Log.d("TAG", "getCarts:1 ")
+        viewModelScope.launch(Dispatchers.IO) {
+            if (networkHelper.isNetworkConnected()) {
+                try {
+                    mainRepository.deleteCartItem(Id)
+                } catch (e: Exception) {
+                    Log.d("TAG", "getCarts:3${e.printStackTrace()} ")
+                }
+            } else {
+
+            }
+
+        }
+    }
 
 }

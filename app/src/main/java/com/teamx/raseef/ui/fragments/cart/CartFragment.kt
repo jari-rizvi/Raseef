@@ -3,8 +3,10 @@ package com.teamx.raseef.ui.fragments.cart
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.util.rangeTo
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,8 +42,6 @@ class CartFragment() : BaseFragment<FragmentCartBinding, CartViewModel>(),
     var cartTableArrayList: ArrayList<MusicModel>? = null
 
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -54,10 +54,18 @@ class CartFragment() : BaseFragment<FragmentCartBinding, CartViewModel>(),
             }
         }
 
+        mViewDataBinding.btnCheckout.setOnClickListener {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+            navController.navigate(R.id.checkoutFragment, null, options)
+        }
+
+        mViewDataBinding.btnBack.setOnClickListener {
+            popUpStack()
+        }
+
         loadCart()
         initializeAdapter()
         mViewModel.getCarts()
-
 
     }
 
@@ -150,5 +158,15 @@ class CartFragment() : BaseFragment<FragmentCartBinding, CartViewModel>(),
 //        mViewModel.updateCartProduct(cartArrayList2!![position])
     }
 
+    override fun onDeleteClickListener(position: Int) {
+//        cartArrayList?.value?.let {
+        cartArrayList2?.get(position)?.let {
+            mViewModel.deleteCartProduct(it.id)
+        }
+//        }
+        cartArrayList2?.removeAt(position)
+//        cartArrayList?.value = cartArrayList2
+        cartArrayList2?.let { it1 -> cartAdapter?.setData(it1) }
+    }
 
 }

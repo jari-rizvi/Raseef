@@ -59,9 +59,9 @@ class CartAdapter(var arrayList: ArrayList<Cart>, val onCartListener: OnCartList
                 onCartListener.onSubClickListener(position)
             }
 
-//        holder.binding.btnDelete.setOnClickListener {
-//            onCartListener.onDeleteClickListener(position)
-//        }
+        holder.binding.btnDelete.setOnClickListener {
+            onCartListener.onDeleteClickListener(position)
+        }
 
 
         }

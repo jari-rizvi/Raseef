@@ -47,5 +47,6 @@ class MainRepository @Inject constructor(
     suspend fun getAllProducts2(): List<MusicModel> = localDataSource.getAllProducts2()
 
     suspend fun insertCartProduct(cartTable: MusicModel) = localDataSource.insert(cartTable)
+    suspend fun deleteCartItem(Id: Int) = localDataSource.deleteByProductId(Id)
 
 }
