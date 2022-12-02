@@ -22,8 +22,8 @@ android {
         applicationId "com.teamx.raseef"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 3
-        versionName "1.4"
+        versionCode 4
+        versionName "1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -76,6 +76,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 
     //Room Library
     implementation "androidx.room:room-runtime:2.4.3"

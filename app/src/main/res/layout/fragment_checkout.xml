@@ -94,7 +94,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textView55"
             app:layout_constraintVertical_bias="0.05">
 
-
             <TextView
                 android:id="@+id/orderId"
                 style="@style/open_sans_regular_small"
@@ -254,7 +253,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView58" />
-
 
         <TextView
             android:id="@+id/btnPaynow"

@@ -1,28 +1,27 @@
-package com.teamx.rassef.ui.fragments.login
+package com.teamx.raseef.ui.fragments.cnfrmlocation
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
-import com.teamx.raseef.R
 import com.teamx.raseef.BR
+import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.databinding.FragmentAllowLocationBinding
+import com.teamx.raseef.databinding.*
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class AllowLocationFragment() : BaseFragment<FragmentAllowLocationBinding, LoginViewModel>() {
+class ConfirmLocationFragment() : BaseFragment<FragmentConfirmLocaionBinding, LoginViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_allow_location
+        get() = R.layout.fragment_confirm_locaion
     override val viewModel: Class<LoginViewModel>
         get() = LoginViewModel::class.java
     override val bindingVariable: Int
         get() = BR.viewModel
-
 
     private lateinit var options: NavOptions
 
@@ -39,13 +38,12 @@ class AllowLocationFragment() : BaseFragment<FragmentAllowLocationBinding, Login
             }
         }
 
-        mViewDataBinding.btnAllowLocation.setOnClickListener {
+        mViewDataBinding.btnCnfrmLocation.setOnClickListener {
             navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.homeFragment, null, options)
         }
-        mViewDataBinding.btnBack.setOnClickListener {
-            popUpStack()
-        }
+
+
 
 
     }

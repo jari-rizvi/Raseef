@@ -32,6 +32,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="done">Done</string>
     <string name="settings">Settings</string>
+    <string name="confirm_location">Confirm Location</string>
     <string name="language">Language</string>
     <string name="rate_our_app">Rate Our App</string>
     <string name="debit_card">Debit Card</string>

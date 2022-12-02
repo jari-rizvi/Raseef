@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/tempFragment">
 
     <fragment
         android:id="@+id/tempFragment"
@@ -132,6 +132,10 @@
         android:id="@+id/cartFragment"
         android:name="com.teamx.raseef.ui.fragments.cart.CartFragment"
         android:label="CartFragment" />
+    <fragment
+        android:id="@+id/confirmLocationFragment"
+        android:name="com.teamx.raseef.ui.fragments.cnfrmlocation.ConfirmLocationFragment"
+        android:label="ConfirmLocationFragment" />
 
 
 </navigation>
