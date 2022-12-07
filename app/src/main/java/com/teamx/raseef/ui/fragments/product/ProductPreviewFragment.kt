@@ -107,6 +107,12 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
 
         }
 
+
+        mViewDataBinding.btnButnow.setOnClickListener {
+            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+            navController.navigate(R.id.checkoutFragment, null, options)
+        }
+
         val str = sharedViewModel.productBySlug
 //        mViewModel.productPreview("62a3633db41c6704082d77a7")
 
