@@ -18,7 +18,6 @@ import com.teamx.raseef.ui.fragments.paymentMethod.PaymentAdapter
 import com.teamx.raseef.utils.PrefHelper
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 class CheckoutFragment() : BaseFragment<FragmentCheckoutBinding, LoginViewModel>(),
     OnTopSellerListener {
