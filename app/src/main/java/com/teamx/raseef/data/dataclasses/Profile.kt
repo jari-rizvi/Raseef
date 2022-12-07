@@ -1,4 +1,4 @@
-package com.teamx.raseef.dataclasses
+package com.teamx.raseef.data.dataclasses
 
 import androidx.annotation.Keep
 

@@ -22,8 +22,8 @@ android {
         applicationId "com.teamx.raseef"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 4
-        versionName "1.5"
+        versionCode 6
+        versionName "1.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -134,10 +134,10 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
     // Preferences DataStore
-    implementation "androidx.datastore:datastore-preferences:1.0.0-alpha06"
+    implementation "androidx.datastore:datastore-preferences:1.1.0-alpha01"
 
     // Proto DataStore
-    implementation "androidx.datastore:datastore-core:1.0.0-alpha06"
+    implementation "androidx.datastore:datastore-core:1.1.0-alpha01"
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'

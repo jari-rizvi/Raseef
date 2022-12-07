@@ -44,8 +44,6 @@ class ConfirmLocationFragment() : BaseFragment<FragmentConfirmLocaionBinding, Lo
         }
 
 
-
-
     }
 
 

@@ -1,15 +1,13 @@
-package com.teamx.rassef.ui.fragments.login
+package com.teamx.raseef.ui.fragments.contactus
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.NavOptions
-import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentContactUsBinding
-import com.teamx.raseef.databinding.FragmentLoginBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -7,19 +7,16 @@ import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.teamx.raseef.BR
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.data.dataclasses.dashboard.PopularShop
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.*
 import com.teamx.raseef.dummyData.Categories
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
-import com.teamx.raseef.ui.fragments.Home.OnTopShopListener
 import com.teamx.raseef.utils.DialogHelperClass
 import com.teamx.raseef.data.models.productsShop.Doc
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,8 +40,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     lateinit var productAdapter: ProductByShopAdapter
     lateinit var productArrayList: ArrayList<Doc>
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -104,7 +99,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
             }
         })
 
-
         mViewModel.productsByShopResponse.observe(requireActivity(), Observer {
             when (it.status) {
                 Resource.Status.LOADING -> {
@@ -137,10 +131,8 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
             }
         })
 
-
         productRecyclerview()
         categoriesRecyclerview()
-
 
     }
 

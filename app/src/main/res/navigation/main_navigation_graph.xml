@@ -41,7 +41,7 @@
         android:label="OrderSucessFragment" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.AboutUsFragment"
+        android:name="com.teamx.raseef.ui.fragments.aboutUs.AboutUsFragment"
         android:label="AboutUsFragment" />
     <fragment
         android:id="@+id/notificationFragment"
@@ -49,7 +49,7 @@
         android:label="NotificationFragment" />
     <fragment
         android:id="@+id/contactUsFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.ContactUsFragment"
+        android:name="com.teamx.raseef.ui.fragments.contactus.ContactUsFragment"
         android:label="ContactUsFragment" />
     <fragment
         android:id="@+id/languageFragment"
@@ -57,7 +57,7 @@
         android:label="LanguageFragment" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.teamx.raseef.fragments.settings.SettingsFragment"
+        android:name="com.teamx.raseef.ui.fragments.settings.SettingsFragment"
         android:label="SettingsFragment" />
     <fragment
         android:id="@+id/paymentFragment"
@@ -81,7 +81,7 @@
         android:label="ShopHomePageFragment" />
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.UserProfileFragment"
+        android:name="com.teamx.raseef.ui.fragments.userprofile.UserProfileFragment"
         android:label="UserProfileFragment" />
     <fragment
         android:id="@+id/reviewListFragment"
@@ -136,6 +136,14 @@
         android:id="@+id/confirmLocationFragment"
         android:name="com.teamx.raseef.ui.fragments.cnfrmlocation.ConfirmLocationFragment"
         android:label="ConfirmLocationFragment" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.teamx.raseef.ui.fragments.PrivacyPolicyFragment.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment" />
+    <fragment
+        android:id="@+id/nearByFragment"
+        android:name="com.teamx.raseef.ui.fragments.nearby.NearByFragment"
+        android:label="NearByFragment" />
 
 
 </navigation>

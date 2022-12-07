@@ -22,11 +22,8 @@ class IntroAdapter(private val arrayList : ArrayList<IntroModel>):RecyclerView.A
         holder.binding.tvHead.text = intro.title
         holder.binding.tvDesc.text = intro.description
 
-        holder.itemView.setOnClickListener {
+        holder.itemView.setOnClickListener {}
 
-
-
-        }
     }
 
     override fun getItemCount(): Int {
@@ -34,9 +31,7 @@ class IntroAdapter(private val arrayList : ArrayList<IntroModel>):RecyclerView.A
 
         return arrayList.size
 
-
     }
-
 
 }
 

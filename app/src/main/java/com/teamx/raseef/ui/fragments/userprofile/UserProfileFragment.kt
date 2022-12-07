@@ -1,4 +1,4 @@
-package com.teamx.rassef.ui.fragments.login
+package com.teamx.raseef.ui.fragments.userprofile
 
 import android.os.Bundle
 import android.util.Log
@@ -7,13 +7,11 @@ import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.squareup.picasso.Picasso
 import com.teamx.raseef.BR
-import com.teamx.raseef.MainApplication.Companion.context
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.dataclasses.dashboard.PopularProduct

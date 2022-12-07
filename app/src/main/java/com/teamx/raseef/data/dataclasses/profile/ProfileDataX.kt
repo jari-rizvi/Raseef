@@ -1,6 +1,6 @@
 package com.teamx.raseef.dataclasses.profile
 
-import com.teamx.raseef.dataclasses.Profile
+import com.teamx.raseef.data.dataclasses.Profile
 
 import androidx.annotation.Keep
 

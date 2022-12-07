@@ -1,28 +1,27 @@
-package com.teamx.raseef.ui.fragments.aboutUs
+package com.teamx.raseef.ui.fragments.nearby
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
 import androidx.navigation.navOptions
-import com.teamx.raseef.R
 import com.teamx.raseef.BR
+import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
-import com.teamx.raseef.databinding.FragmentAboutUsBinding
+import com.teamx.raseef.databinding.*
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class AboutUsFragment() : BaseFragment<FragmentAboutUsBinding, LoginViewModel>() {
-
+class NearByFragment() : BaseFragment<FragmentNearbyBinding, LoginViewModel>() {
 
     override val layoutId: Int
-        get() = R.layout.fragment_about_us
+        get() = R.layout.fragment_nearby
     override val viewModel: Class<LoginViewModel>
         get() = LoginViewModel::class.java
     override val bindingVariable: Int
         get() = BR.viewModel
-
 
     private lateinit var options: NavOptions
 
@@ -39,12 +38,13 @@ class AboutUsFragment() : BaseFragment<FragmentAboutUsBinding, LoginViewModel>()
             }
         }
 
+//        mViewDataBinding.btnCnfrmLocation.setOnClickListener {
+//            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+//            navController.navigate(R.id.homeFragment, null, options)
+//        }
+
 
     }
-
-
-
-
 
 
 }

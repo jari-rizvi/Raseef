@@ -18,6 +18,10 @@ import com.teamx.raseef.dataclasses.login.LoginData
 import com.teamx.raseef.data.models.productBySlug.ProductBySlugData
 import com.teamx.raseef.data.models.productsShop.ShopProductsData
 import com.teamx.raseef.data.models.shopBySlug.ShopBySlugData
+import com.teamx.raseef.dataclasses.profile.ProfileData
+import com.teamx.raseef.dataclasses.profile.ProfileDataX
+import com.teamx.raseef.dataclasses.profile.UploadModelData
+import okhttp3.MultipartBody
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -62,6 +66,22 @@ interface ApiService {
         @Path("slug") slug: String,
         @Header("Authorization") basicCredentials: String = "Bearer $TOKENER" ?: ""
     ): Response<ProductBySlugData>
+
+    @Multipart
+    @POST(NetworkCallPoints.UPLOAD_ATTACH)
+    suspend fun uploadAttachment(@Part filePart: MultipartBody.Part): Response<UploadModelData>
+
+
+    @GET(NetworkCallPoints.PROFILE_USER)
+    suspend fun editProfile(
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER" ?: ""
+    ): Response<ProfileDataX>
+
+    @PUT(NetworkCallPoints.PROFILE_USER)
+    suspend fun updateProfile(
+        @Body params: JsonObject?,
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER" ?: ""
+    ): Response<ProfileData>
 
     @GET(NetworkCallPoints.GET_ALL_REVIEWS)
     suspend fun getRatingList(

@@ -15,7 +15,8 @@ class NetworkCallPoints {
         const val PRODUCTS_BY_SHOP_ID ="products";
         const val PRODUCTS_BY_SLUG ="products/{slug}";
 
-
+        const val PROFILE_USER = "me"
+        const val UPLOAD_ATTACH = "attachments/images"
 
         //Reviews
         const val GET_ALL_REVIEWS = "reviews"

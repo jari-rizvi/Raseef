@@ -60,12 +60,10 @@ class IntroFragment() : BaseFragment<FragmentIntroBinding, LoginViewModel>() {
 
         initializeFeatureProducts()
 
-
     }
 
 
     private fun initializeFeatureProducts() {
-
         featureProductArrayList = ArrayList()
         featureProductArrayList.add(IntroModel("Order Head","lksjdalkjdlksjlksajdlksajdkjsalkjdslksjdalkjdlksjlksajdlksajdkjsalkjdsalkjsalkjsadlkjdsaalkjsalkjsadlkjdsa",R.drawable.starbuc))
         featureProductArrayList.add(IntroModel("Order Head","lksjdalkjdlksjlksajdlksajdkjsalkjdlksjdalkjdlksjlksajdlksajdkjsalkjdsalkjsalkjsadlkjdsasalkjsalkjsadlkjdsa",R.drawable.starbuc))
@@ -92,8 +90,5 @@ class IntroFragment() : BaseFragment<FragmentIntroBinding, LoginViewModel>() {
 
         tabLayoutMediator!!.attach()
     }
-
-
-
 
 }

@@ -36,10 +36,10 @@
 
             <TextView
                 android:id="@+id/textView19"
+                style="@style/open_sans_light_white_large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
-                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.45"
@@ -76,7 +76,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <ImageView
                 android:id="@+id/btnAddPicture"
                 android:layout_width="0dp"
@@ -106,18 +105,19 @@
 
             <TextView
                 android:id="@+id/tvEmail"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="Full Name"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.06"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/userName"
+                style="@style/open_sans_secondary_medium_small"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -143,10 +143,11 @@
                 android:background="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/userName" />
 
             <TextView
                 android:id="@+id/textView"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -156,7 +157,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
 
             <EditText
-                android:id="@+id/etemail"
+                android:id="@+id/userEmail"
+
+                style="@style/open_sans_secondary_medium_small"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -166,7 +169,7 @@
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your email"
                 android:imeOptions="actionNext"
-                android:inputType="textPassword"
+                android:inputType="textEmailAddress"
                 android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -181,21 +184,23 @@
                 android:background="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etemail" />
+                app:layout_constraintTop_toBottomOf="@+id/userEmail" />
 
             <TextView
                 android:id="@+id/tvMob"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Mobile Number"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@+id/etemail"
+                app:layout_constraintStart_toStartOf="@+id/userEmail"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
             <EditText
-                android:id="@+id/etMob"
+                android:id="@+id/PhoneNumber"
+                style="@style/open_sans_secondary_medium_small"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -205,7 +210,7 @@
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your Phone Number"
                 android:imeOptions="actionNext"
-                android:inputType="textPassword"
+                android:inputType="phone"
                 android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,22 +225,24 @@
                 android:background="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etMob"
+                app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
                 tools:layout_editor_absoluteX="10dp" />
 
             <TextView
                 android:id="@+id/textView8"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Password"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@+id/etMob"
+                app:layout_constraintStart_toStartOf="@+id/PhoneNumber"
                 app:layout_constraintTop_toBottomOf="@+id/view4" />
 
 
             <EditText
                 android:id="@+id/etPass"
+                style="@style/open_sans_secondary_medium_small"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -265,6 +272,7 @@
 
             <TextView
                 android:id="@+id/textView44"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -276,6 +284,7 @@
 
             <EditText
                 android:id="@+id/etCarPlate"
+                style="@style/open_sans_secondary_medium_small"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -285,7 +294,7 @@
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your password"
                 android:imeOptions="actionNext"
-                android:inputType="textPassword"
+                android:inputType="phone"
                 android:maxLines="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -304,13 +313,28 @@
 
             <TextView
                 android:id="@+id/textView63"
+                style="@style/open_sans_regular_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Car Image"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:text="Add Car Image"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/etCarPlate"
                 app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+
+            <TextView
+                android:id="@+id/btnUpdate"
+                style="@style/open_sans_light_white_large"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/button_gredient"
+                android:gravity="center"
+                android:text="Update"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

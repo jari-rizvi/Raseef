@@ -107,7 +107,6 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
 
         }
 
-
         val str = sharedViewModel.productBySlug
 //        mViewModel.productPreview("62a3633db41c6704082d77a7")
 
@@ -204,8 +203,6 @@ class ProductPreviewFragment() : BaseFragment<FragmentProductBinding, ProductPre
 
     private fun reviewAdapter(){
         reviewListArrayList = ArrayList()
-//        reviewListArrayList.add(FaqData("How to use pay on arrival ?","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus massa at nisi aliquam venenatis. Curabitur efficitur augue a metus lacinia rhoncus eget a felis. Pellentesq"))
-
 
         val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         mViewDataBinding.reviewRecyclerView.setLayoutManager(linearLayoutManager)

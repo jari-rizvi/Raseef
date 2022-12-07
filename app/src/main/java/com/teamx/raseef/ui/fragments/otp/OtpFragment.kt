@@ -2,7 +2,6 @@ package com.teamx.rassef.ui.fragments.login
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContentProviderCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation

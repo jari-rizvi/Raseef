@@ -5,6 +5,7 @@ import com.teamx.raseef.data.local.db.AppDao
 import com.teamx.raseef.data.local.dbModel.CartTable
 import com.teamx.raseef.data.models.MusicModel
 import com.teamx.raseef.data.remote.ApiService
+import okhttp3.MultipartBody
 import retrofit2.http.Body
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -35,6 +36,15 @@ class MainRepository @Inject constructor(
     suspend fun productsByShopId(@Query("shop") id: String) = apiService.productsByShopID(id)
 
     suspend fun productsBySlug(@Path("slug") slug: String) = apiService.productsBySlug(slug)
+
+    suspend fun updateProfile(@Body param: JsonObject) = apiService.updateProfile(param)
+
+    suspend fun updateImgProfile(param: MultipartBody.Part) = apiService.uploadAttachment(param)
+
+
+
+    suspend fun editProfile(/*@Query("id") id: String, @Body param: JsonObject*/) =
+        apiService.editProfile(/*id,param*/)
 
     suspend fun getRatingList() = apiService.getRatingList(/*id, page, limit*/)
 

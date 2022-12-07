@@ -1,6 +1,6 @@
 package com.teamx.raseef.dataclasses.allreviews
 
-import com.teamx.raseef.dataclasses.Profile
+import com.teamx.raseef.data.dataclasses.Profile
 
 import androidx.annotation.Keep
 

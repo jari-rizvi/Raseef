@@ -1,11 +1,11 @@
-package com.teamx.raseef.fragments.settings
+package com.teamx.raseef.ui.fragments.settings
 
 import android.os.Bundle
 import android.view.View
-import androidx.databinding.library.baseAdapters.BR
 import androidx.navigation.NavOptions
 import androidx.navigation.navOptions
 import com.teamx.raseef.R
+import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentSettingsBinding
 import com.teamx.raseef.ui.fragments.temp.TempViewModel

@@ -1,6 +1,6 @@
 package com.teamx.raseef.dataclasses.login
 
-import com.teamx.raseef.dataclasses.Profile
+import com.teamx.raseef.data.dataclasses.Profile
 import com.teamx.raseef.dataclasses.profile.AddresX
 
 import androidx.annotation.Keep
