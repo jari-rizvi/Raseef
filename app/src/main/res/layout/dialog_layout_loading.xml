@@ -7,14 +7,14 @@
     app:cardCornerRadius="12dp"
     app:cardUseCompatPadding="true">
 
-    <com.github.ybq.android.spinkit.SpinKitView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/spin_kit"
-        style="@style/SpinKitView.Small.Circle"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        app:SpinKit_Color="@color/colorPrimary" />
+<!--    <com.github.ybq.android.spinkit.SpinKitView-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/spin_kit"-->
+<!--        style="@style/SpinKitView.Small.Circle"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:SpinKit_Color="@color/colorPrimary" />-->
 
 
 </androidx.cardview.widget.CardView>

@@ -138,7 +138,7 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     //Spin Kit
-    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+//    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
     implementation 'io.github.chaosleung:pinview:1.4.4'
     //Circular Image View

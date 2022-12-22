@@ -38,10 +38,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notifications"
-                android:textColor="@color/white"
+                style="@style/header_txt_regular_white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -67,7 +67,8 @@
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_60sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:background="@drawable/card_background"
             app:layout_constraintVertical_bias="0.81"
@@ -82,22 +83,22 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:text="Message"
-            app:layout_constraintVertical_bias="0.94"
             app:layout_constraintBottom_toTopOf="@+id/editText2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:background="@drawable/card_background"
             app:layout_constraintBottom_toTopOf="@+id/textView22"
             app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/_7sdp"
             app:layout_constraintVertical_bias="0.96" />
 
         <TextView
@@ -106,23 +107,23 @@
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_height="wrap_content"
             android:text="Subject"
-            app:layout_constraintVertical_bias="0.93"
             app:layout_constraintBottom_toTopOf="@+id/editText3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            android:layout_marginBottom="@dimen/_5sdp"/>
 
         <EditText
             android:id="@+id/editText4"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:background="@drawable/card_background"
-            app:layout_constraintVertical_bias="0.96"
+            app:layout_constraintVertical_bias="0.92"
             app:layout_constraintBottom_toTopOf="@+id/textView23"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            android:layout_marginBottom="@dimen/_7sdp" />
 
 
         <TextView
@@ -131,25 +132,23 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:text="Email"
-            app:layout_constraintHorizontal_bias="0.96"
             app:layout_constraintBottom_toTopOf="@+id/editText4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            app:layout_constraintVertical_bias="0.93" />
+            android:layout_marginBottom="@dimen/_5sdp" />
 
 
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:background="@drawable/card_background"
-            app:layout_constraintVertical_bias="0.96"
             app:layout_constraintBottom_toTopOf="@+id/textView24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            android:layout_marginBottom="@dimen/_7sdp"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <TextView
@@ -161,8 +160,7 @@
             app:layout_constraintBottom_toTopOf="@+id/editText5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            app:layout_constraintVertical_bias="0.83" />
+            android:layout_marginBottom="@dimen/_5sdp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

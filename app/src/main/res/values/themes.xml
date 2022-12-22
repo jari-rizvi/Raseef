@@ -16,10 +16,11 @@
 
 
 
-
-
-
-
+    <style name="header_txt_regular_white" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/helvetica</item>
+    </style>
 
 
 </resources>
