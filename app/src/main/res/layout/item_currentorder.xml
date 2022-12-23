@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/card_border"
         android:minHeight="@dimen/_180sdp">
@@ -22,7 +22,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:text="Order # 454545"
-            android:textColor="#424242"
+            android:textColor="@color/dark_gray"
             android:textSize="@dimen/_14ssp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +46,7 @@
             android:text="Formal Pants"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             android:layout_marginLeft="@dimen/_5sdp"
-            android:textColor="#424242"
+            android:textColor="@color/dark_gray"
             android:textSize="@dimen/_16ssp"
             app:layout_constraintBottom_toTopOf="@+id/textView30"
             app:layout_constraintTop_toTopOf="@+id/imageView10"
@@ -58,6 +58,7 @@
             android:layout_height="wrap_content"
             android:text="kjdsjdsk"
             android:textSize="@dimen/_10ssp"
+            android:textColor="@color/dark_gray"
             app:layout_constraintBottom_toTopOf="@+id/textView31"
             app:layout_constraintStart_toStartOf="@+id/textView29"
             app:layout_constraintTop_toBottomOf="@+id/textView29" />
@@ -68,6 +69,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="@dimen/_10ssp"
+            android:textColor="@color/dark_gray"
             app:layout_constraintBottom_toTopOf="@+id/textView32"
             app:layout_constraintStart_toStartOf="@+id/textView30"
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
@@ -110,11 +112,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Qty: 1"
+            android:textColor="@color/dark_gray"
             app:layout_constraintBottom_toBottomOf="@+id/textView32"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="@dimen/_15sdp"
             app:layout_constraintTop_toBottomOf="@+id/textView31" />
-
 
         <View
             android:id="@+id/view"
@@ -160,7 +162,7 @@
             android:gravity="center"
             android:text="Processing"
             android:textColor="@color/white"
-            android:textSize="@dimen/_8sdp"
+            android:textSize="@dimen/_8ssp"
             app:layout_constraintBottom_toBottomOf="@+id/textView26"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"

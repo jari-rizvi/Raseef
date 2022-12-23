@@ -41,9 +41,10 @@
                 android:layout_height="wrap_content"
                 android:text="Payment Method"
                 android:textColor="@color/white"
+                style="@style/header_txt_regular_white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 

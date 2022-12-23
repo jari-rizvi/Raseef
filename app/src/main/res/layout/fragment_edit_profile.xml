@@ -36,14 +36,14 @@
 
             <TextView
                 android:id="@+id/textView19"
+                style="@style/header_txt_regular_white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.45"
-                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.2" />
 
@@ -95,14 +95,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLat"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:elevation="@dimen/_1sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
             app:layout_constraintVertical_bias="0.041">
-
 
             <TextView
                 android:id="@+id/tvEmail"
@@ -110,7 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="Full Name"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.06"
                 app:layout_constraintStart_toStartOf="parent"
@@ -134,7 +134,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-
             <View
                 android:id="@+id/view2"
                 android:layout_width="@dimen/_280sdp"
@@ -151,7 +150,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Email Address"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="@+id/view2"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -189,7 +189,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Mobile Number"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="@+id/etemail"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
@@ -229,7 +230,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Password"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="@+id/etMob"
                 app:layout_constraintTop_toBottomOf="@+id/view4" />
 
@@ -269,7 +271,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="Car Plate  Number"
-                android:textColor="@color/black"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="@+id/etPass"
                 app:layout_constraintTop_toBottomOf="@+id/view5" />
 
@@ -306,15 +309,47 @@
                 android:id="@+id/textView63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Car Image"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="@color/black"
+                android:text="Add Car Image"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="@+id/etCarPlate"
                 app:layout_constraintTop_toBottomOf="@+id/view6" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="(Optional)"
+                android:textColor="@color/light_gray_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@+id/textView63"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="center"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:src="@drawable/ic_sharp_add_24"
+                app:tint="#fa6109"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline8"
+                android:background="@drawable/add_car_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp"
+                app:layout_constraintGuide_percent="0.95"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
