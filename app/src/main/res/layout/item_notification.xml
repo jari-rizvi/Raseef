@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_5sdp"
             android:maxLines="1"
-            android:textColor="@color/normal_gray"
+            android:textColor="@color/light_gray_color"
             android:text="@string/your_order_has_been_placed_successfully"
             app:layout_constraintBottom_toTopOf="@+id/notification_time"
             app:layout_constraintEnd_toEndOf="parent"
