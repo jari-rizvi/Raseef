@@ -28,10 +28,10 @@
                 android:layout_height="@dimen/_45sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintHorizontal_bias="0.10"
+                app:layout_constraintVertical_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.3">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profilePicture"
@@ -81,8 +81,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0336-6830224"
-                android:textSize="@dimen/_8ssp"
                 android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
                 app:layout_constraintBottom_toBottomOf="@+id/userProfile"
                 app:layout_constraintStart_toStartOf="@+id/userName"
                 app:layout_constraintTop_toBottomOf="@+id/userName" />
@@ -179,8 +179,8 @@
             android:id="@+id/constraintLayout5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/card_background"
             android:elevation="@dimen/_2sdp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
@@ -193,9 +193,9 @@
                 android:id="@+id/textView49"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:text="@string/my_orders"
                 android:textColor="@color/dark_gray"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:textSize="@dimen/_13ssp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/imageView16"
@@ -305,11 +305,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            android:background="@drawable/card_background"
-            android:paddingVertical="@dimen/_10sdp"
-            android:elevation="@dimen/_2sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/card_background"
+            android:elevation="@dimen/_2sdp"
+            android:paddingVertical="@dimen/_10sdp"
             app:layout_constraintBottom_toTopOf="@+id/textView53"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -439,19 +439,45 @@
             android:text="Keep Shopping"
             android:textColor="@color/dark_gray"
             android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
+            android:id="@+id/recyclerView"
+            android:layout_width="360dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/textView54"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView53"
+            tools:listitem="@layout/item_service" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Stores"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="360dp"
             android:layout_height="0dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView53"
+            app:layout_constraintTop_toBottomOf="@+id/textView54"
             tools:listitem="@layout/item_service" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

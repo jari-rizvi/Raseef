@@ -112,6 +112,10 @@
         android:id="@+id/introFragment"
         android:name="com.teamx.raseef.ui.fragments.intro.IntroFragment"
         android:label="IntroFragment" />
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.teamx.rassef.ui.fragments.login.OtpFragment"
+        android:label="OtpFragment" />
 
 
 </navigation>

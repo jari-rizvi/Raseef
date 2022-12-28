@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class NotificationFragment() : BaseFragment<FragmentNotificationBinding, LoginViewModel>() {
+class NotificationFragment : BaseFragment<FragmentNotificationBinding, LoginViewModel>() {
 
     override val layoutId: Int
         get() = R.layout.fragment_notification
@@ -25,8 +25,8 @@ class NotificationFragment() : BaseFragment<FragmentNotificationBinding, LoginVi
         get() = BR.viewModel
 
     private lateinit var options: NavOptions
-    lateinit var notificationAdapter: NotificationAdapter
-    lateinit var notificationArrayList: ArrayList<Notifications>
+    private lateinit var notificationAdapter: NotificationAdapter
+    private lateinit var notificationArrayList: ArrayList<Notifications>
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,23 +46,22 @@ class NotificationFragment() : BaseFragment<FragmentNotificationBinding, LoginVi
         initalizeAdapter()
 
     }
+
     private fun initalizeAdapter() {
 
         notificationArrayList = ArrayList()
-        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
-        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
-        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
-        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
 
+        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
+        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
+        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
+        notificationArrayList.add(Notifications("Your Order has been Placed successfully.","2 days ago",R.drawable.notification,"Smiley’s Store, #1982984"))
 
         val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-        mViewDataBinding.notificationRecyclerView.setLayoutManager(linearLayoutManager)
+        mViewDataBinding.notificationRecyclerView.layoutManager = linearLayoutManager
 
         notificationAdapter = NotificationAdapter(context,notificationArrayList)
         mViewDataBinding.notificationRecyclerView.adapter = notificationAdapter
+
     }
-
-
-
 
 }

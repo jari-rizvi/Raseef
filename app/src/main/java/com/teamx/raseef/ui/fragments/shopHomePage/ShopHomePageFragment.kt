@@ -13,6 +13,7 @@ import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.*
 import com.teamx.raseef.dummyData.Categories
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
+import com.teamx.raseef.ui.fragments.reviewlist.ReviewListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.log
 
@@ -31,6 +32,8 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     lateinit var categoriesAdapter: CategoriesAdapter
     lateinit var categoriesArrayList2: ArrayList<Categories>
+
+    private lateinit var productAdapter: ProductByShopAdapter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -59,12 +62,12 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     private fun productRecyclerview() {
 //        productArrayList = ArrayList()
-//
-//        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-//        mViewDataBinding.ProductRecycler.layoutManager = linearLayoutManager
-//
-//        productAdapter = ProductByShopAdapter(productArrayList,this)
-//        mViewDataBinding.ProductRecycler.adapter = productAdapter
+
+        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        mViewDataBinding.recyclerView.layoutManager = linearLayoutManager
+
+        productAdapter = ProductByShopAdapter(context)
+        mViewDataBinding.recyclerView.adapter = productAdapter
 
     }
 

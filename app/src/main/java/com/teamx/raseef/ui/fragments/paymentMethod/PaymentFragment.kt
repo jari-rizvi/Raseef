@@ -30,7 +30,7 @@ class PaymentFragment : BaseFragment<FragmentPaymentMethodBinding, LoginViewMode
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        paymentAdapter();
+        paymentAdapter()
 
     }
 
@@ -58,7 +58,7 @@ class PaymentFragment : BaseFragment<FragmentPaymentMethodBinding, LoginViewMode
 //        }
 
         val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-        mViewDataBinding.paymentMethodRecyclerview.setLayoutManager(linearLayoutManager)
+        mViewDataBinding.paymentMethodRecyclerview.layoutManager = linearLayoutManager
 
         paymentAdapter = PaymentAdapter(paymentArrayList, this)
         mViewDataBinding.paymentMethodRecyclerview.adapter = paymentAdapter

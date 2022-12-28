@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_80sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:elevation="0.5dp"
         android:layout_marginStart="@dimen/_5sdp"
@@ -19,8 +20,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout10"
-            android:layout_width="@dimen/_90sdp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -28,9 +29,9 @@
 
             <ImageView
                 android:id="@+id/img"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_10sdp"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +113,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/subProduct"
                 app:layout_constraintStart_toEndOf="@+id/addProduct"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView

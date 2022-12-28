@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.teamx.raseef.databinding.ItemCategoriesBinding
 import com.teamx.raseef.dummyData.Categories
 
-class CategoriesAdapter(val arrayList: ArrayList<Categories>, val onTopCategoriesListener: OnTopCategoriesListener) : RecyclerView.Adapter<CategoriesAdapter.TopCategoriesViewHolder>() {
+class CategoriesAdapter(val arrayList: ArrayList<Categories>,
+                        val onTopCategoriesListener: OnTopCategoriesListener) : RecyclerView.Adapter<CategoriesAdapter.TopCategoriesViewHolder>() {
 
 
 

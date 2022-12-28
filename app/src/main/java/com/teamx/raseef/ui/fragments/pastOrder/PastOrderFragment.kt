@@ -5,6 +5,8 @@ import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.teamx.raseef.R
 import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
@@ -13,22 +15,22 @@ import com.teamx.raseef.databinding.FragmentForgotBinding
 import com.teamx.raseef.databinding.FragmentLoginBinding
 import com.teamx.raseef.databinding.FragmentPastordersBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
+import com.teamx.raseef.ui.fragments.notification.NotificationAdapter
+import com.teamx.raseef.ui.fragments.notification.Notifications
+import com.teamx.raseef.ui.fragments.pastOrder.PastOrderAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
 class PastOrderFragment() : BaseFragment<FragmentPastordersBinding, LoginViewModel>() {
 
-    override val layoutId: Int
-        get() = R.layout.fragment_pastorders
-    override val viewModel: Class<LoginViewModel>
-        get() = LoginViewModel::class.java
-    override val bindingVariable: Int
-        get() = BR.viewModel
+    override val layoutId: Int get() = R.layout.fragment_pastorders
+    override val viewModel: Class<LoginViewModel> get() = LoginViewModel::class.java
+    override val bindingVariable: Int get() = BR.viewModel
 
+    private lateinit var notificationAdapter: PastOrderAdapter
 
     private lateinit var options: NavOptions
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,13 +44,20 @@ class PastOrderFragment() : BaseFragment<FragmentPastordersBinding, LoginViewMod
             }
         }
 
-
-
+        initalizeAdapter()
     }
 
+    private fun initalizeAdapter() {
 
+        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
+        mViewDataBinding.pastOrderRecyclerView.layoutManager = linearLayoutManager
 
+        notificationAdapter = PastOrderAdapter(context)
+
+        mViewDataBinding.pastOrderRecyclerView.adapter = notificationAdapter
+
+    }
 
 
 }

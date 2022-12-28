@@ -4,13 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.databinding.adapters.TextViewBindingAdapter.setText
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.squareup.picasso.Picasso
 import com.teamx.raseef.BR
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.databinding.FragmentUserProfileBinding
+import com.teamx.raseef.ui.fragments.shopHomePage.ProductByShopAdapter
 import com.teamx.raseef.ui.fragments.singup.SignupViewModel
+import com.teamx.raseef.ui.fragments.userprofile.UserProfileAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -23,6 +27,8 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, SignupVie
         get() = SignupViewModel::class.java
     override val bindingVariable: Int
         get() = BR.viewModel
+
+    private lateinit var userProfileFragment: UserProfileAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,10 +50,20 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, SignupVie
 
         }
 
+        productRecyclerview()
+
     }
 
 
+    private fun productRecyclerview() {
 
+        val linearLayoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+        mViewDataBinding.recyclerView.layoutManager = linearLayoutManager
+
+        userProfileFragment = UserProfileAdapter(context)
+        mViewDataBinding.recyclerView.adapter = userProfileFragment
+
+    }
 
 
 
