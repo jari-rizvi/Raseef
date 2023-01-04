@@ -1,4 +1,4 @@
-package com.teamx.rassef.ui.fragments.login
+package com.teamx.raseef.ui.fragments.singup
 
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +14,6 @@ import com.teamx.raseef.BR
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.FragmentSignupBinding
-import com.teamx.raseef.ui.fragments.singup.SignupViewModel
 import com.teamx.raseef.utils.DialogHelperClass
 import com.teamx.raseef.utils.snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,7 +21,7 @@ import org.json.JSONException
 
 
 @AndroidEntryPoint
-class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() {
+class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>() {
 
     override val layoutId: Int
         get() = R.layout.fragment_signup
@@ -60,10 +59,10 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
 
 
     private fun initialization() {
-        name = mViewDataBinding.etName.getText().toString().trim()
-        userEmail = mViewDataBinding.etemail.getText().toString().trim()
-        password = mViewDataBinding.etPass.getText().toString().trim()
-        userNumber = mViewDataBinding.etMob.getText().toString().trim()
+        name = mViewDataBinding.etName.text.toString().trim()
+        userEmail = mViewDataBinding.etemail.text.toString().trim()
+        password = mViewDataBinding.etPass.text.toString().trim()
+        userNumber = mViewDataBinding.etMob.text.toString().trim()
 
     }
 
@@ -115,7 +114,7 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
         }
     }
 
-    fun isValidate(): Boolean {
+    private fun isValidate(): Boolean {
 
         if (mViewDataBinding.etName.text.toString().trim().isEmpty()) {
             mViewDataBinding.root.snackbar(getString(R.string.enter_name))

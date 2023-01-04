@@ -23,7 +23,7 @@ class DialogHelperClass {
             val dialog = Dialog(context)
             dialog.setContentView(R.layout.dialog_layout_error)
             val errorTextMessage = dialog.findViewById<TextView>(R.id.tv_error_message)
-            errorTextMessage.setText(errorMessage)
+            errorTextMessage.text = errorMessage
             dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.show()
         }

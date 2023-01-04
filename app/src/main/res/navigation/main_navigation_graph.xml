@@ -18,7 +18,7 @@
         android:label="LogInFragment" />
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.SignupFragment"
+        android:name="com.teamx.raseef.ui.fragments.singup.SignupFragment"
         android:label="SignupFragment" />
     <fragment
         android:id="@+id/forgotFragment"
@@ -86,7 +86,7 @@
         android:label="ShopHomePageFragment" />
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="com.teamx.rassef.ui.fragments.login.UserProfileFragment"
+        android:name="com.teamx.raseef.ui.fragments.userprofile.UserProfileFragment"
         android:label="UserProfileFragment" />
     <fragment
         android:id="@+id/reviewListFragment"

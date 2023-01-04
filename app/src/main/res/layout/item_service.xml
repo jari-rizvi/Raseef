@@ -8,7 +8,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/_100sdp"
+        android:layout_width="@dimen/_120sdp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint3"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/_150sdp"
             android:background="@drawable/card_background"
             android:backgroundTint="@android:color/transparent"
             android:elevation="@dimen/_2sdp"
@@ -36,12 +36,14 @@
             <ImageView
                 android:id="@+id/cvrimg"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/starbuc" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -98,46 +100,42 @@
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout12"
                 app:srcCompat="@drawable/wishlist" />
 
-            <TextView
-                android:id="@+id/serivceName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Formal Shirts"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/price"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="@+id/constraintLayout12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.9" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Aed 9"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/serivceName"
-                app:layout_constraintEnd_toEndOf="@+id/btnFav"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/serivceName"
-                app:layout_constraintTop_toTopOf="@+id/serivceName" />
-
             <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline1"
+        <TextView
+            android:id="@+id/serivceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_15sdp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.90" />
+            android:elevation="@dimen/_3sdp"
+            android:text="Formal Shirts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageAdd"
+            app:layout_constraintEnd_toStartOf="@+id/price"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_3sdp"
+            android:text="Aed 9"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/serivceName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/serivceName"
+            app:layout_constraintTop_toTopOf="@+id/serivceName" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -147,15 +145,24 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.80" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
         <ImageView
+            android:id="@+id/imageAdd"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:elevation="@dimen/_3sdp"
             android:src="@drawable/add"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
