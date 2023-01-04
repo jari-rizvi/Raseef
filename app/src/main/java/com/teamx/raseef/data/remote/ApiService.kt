@@ -27,6 +27,9 @@ import retrofit2.http.*
 
 interface ApiService {
 
+
+    //Get Post Update Delete
+
     @POST(NetworkCallPoints.LOGIN)
     suspend fun login(@Body params: JsonObject?): Response<LoginData>
 
