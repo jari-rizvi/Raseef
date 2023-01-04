@@ -4,7 +4,6 @@ import com.teamx.raseef.dataclasses.Shop
 
 import androidx.annotation.Keep
 
- 
 @Keep
 data class Doc(
     val __v: Int,

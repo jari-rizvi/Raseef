@@ -114,7 +114,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
                             productArrayList.addAll(it.docs)
                             productAdapter.notifyDataSetChanged()
 
-
 //                            discountArrayList.addAll(it.docs)
 //                            discountAdapter.notifyDataSetChanged()
 
@@ -147,7 +146,6 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     }
 
-
     private fun categoriesRecyclerview() {
         categoriesArrayList2 = ArrayList()
         categoriesArrayList2.add(Categories("Popular", true))
@@ -178,12 +176,9 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
             cat.isChecked = false
         }
 
-
-        categoriesArrayList2.get(position).isChecked = true
+        categoriesArrayList2[position].isChecked = true
 
         categoriesAdapter.notifyDataSetChanged()
     }
-
-
 
 }

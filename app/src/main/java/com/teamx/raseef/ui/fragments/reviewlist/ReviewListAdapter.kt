@@ -1,13 +1,12 @@
 package com.teamx.raseef.ui.fragments.reviewlist
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.teamx.raseef.databinding.ItemReviewlistBinding
 import com.teamx.raseef.dataclasses.allreviews.Doc
 
-class ReviewListAdapter(val reviewArrayList: ArrayList<Doc>) :
+class ReviewListAdapter(private val reviewArrayList: ArrayList<Doc>) :
     RecyclerView.Adapter<OrderViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
@@ -18,7 +17,12 @@ class ReviewListAdapter(val reviewArrayList: ArrayList<Doc>) :
     override fun onBindViewHolder(holder: OrderViewHolder, position: Int) {
 
         val ratingList: Doc = reviewArrayList[position]
-        holder.bind.userReview.text = ratingList.comment.toString()
+
+        holder.bind.textView26.text = ratingList._id
+        holder.bind.tvName.text = ratingList.product.name
+        holder.bind.textView31.text = ratingList.product.name
+
+        holder.bind.userReview.text = ratingList.comment
         holder.bind.userName.text = ratingList.user.name
 
 //        holder.itemView.setOnClickListener{

@@ -22,7 +22,7 @@ import org.json.JSONException
 
 
 @AndroidEntryPoint
-class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() {
+class SignupFragment : BaseFragment<FragmentSignupBinding, SignupViewModel>() {
 
     override val layoutId: Int
         get() = R.layout.fragment_signup
@@ -60,18 +60,18 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
 
 
     private fun initialization() {
-        name = mViewDataBinding.etName.getText().toString().trim()
-        userEmail = mViewDataBinding.etemail.getText().toString().trim()
-        password = mViewDataBinding.etPass.getText().toString().trim()
-        userNumber = mViewDataBinding.etMob.getText().toString().trim()
+        name = mViewDataBinding.etName.text.toString().trim()
+        userEmail = mViewDataBinding.etemail.text.toString().trim()
+        password = mViewDataBinding.etPass.text.toString().trim()
+        userNumber = mViewDataBinding.etMob.text.toString().trim()
 
     }
 
-     fun signup() {
+    fun signup() {
 
         initialization()
 
-        if (!userNumber!!.isEmpty() || !password!!.isEmpty() || name!!.isNotEmpty() || !userEmail!!.isNotEmpty()) {
+        if (userNumber!!.isNotEmpty() || password!!.isNotEmpty() || name!!.isNotEmpty() || userEmail!!.isEmpty()) {
 
             val params = JsonObject()
             try {
@@ -97,13 +97,14 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
                         it.data?.let { data ->
 
                             val bundle = Bundle()
-                            bundle.putString("phone",data.phone_number)
-                            bundle.putString("Sid",data.twilio.sid)
-                            bundle.putString("otpid",data.id)
+                            bundle.putString("phone", data.phone_number)
+                            bundle.putString("Sid", data.twilio.sid)
+                            bundle.putString("otpid", data.id)
 
-
-                            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                            navController.navigate(R.id.otpRegisterFragment, bundle,options)
+                            navController = Navigation.findNavController(
+                                requireActivity(), R.id.nav_host_fragment
+                            )
+                            navController.navigate(R.id.otpRegisterFragment, bundle, options)
                         }
                     }
                     Resource.Status.ERROR -> {
@@ -115,7 +116,7 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
         }
     }
 
-    fun isValidate(): Boolean {
+    private fun isValidate(): Boolean {
 
         if (mViewDataBinding.etName.text.toString().trim().isEmpty()) {
             mViewDataBinding.root.snackbar(getString(R.string.enter_name))
@@ -134,9 +135,11 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
             mViewDataBinding.root.snackbar(getString(R.string.enter_email))
             return false
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(mViewDataBinding.etemail.text.toString().trim()).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(mViewDataBinding.etemail.text.toString().trim())
+                .matches()
+        ) {
             mViewDataBinding.root.snackbar(getString(R.string.invalid_email))
-            return  false
+            return false
         }
         if (mViewDataBinding.etMob.text.toString().trim().isEmpty()) {
             mViewDataBinding.root.snackbar(getString(R.string.enter_your_password))
@@ -157,7 +160,5 @@ class SignupFragment() : BaseFragment<FragmentSignupBinding, SignupViewModel>() 
         signup()
         return true
     }
-
-
 
 }

@@ -21,17 +21,18 @@ class SignupViewModel @Inject constructor(
     private val networkHelper: NetworkHelper
 ) : BaseViewModel() {
 
-
     private val _signupResponse = MutableLiveData<Resource<RegisterData>>()
-    val signupResponse: LiveData<Resource<RegisterData>>
-        get() = _signupResponse
 
-    fun signup(param : JsonObject) {
+    val signupResponse: LiveData<Resource<RegisterData>> get() = _signupResponse
+
+    fun signup(param: JsonObject) {
         viewModelScope.launch {
+
             _signupResponse.postValue(Resource.loading(null))
+
             if (networkHelper.isNetworkConnected()) {
                 try {
-                    mainRepository.signup(param) .let {
+                    mainRepository.signup(param).let {
                         if (it.isSuccessful) {
                             _signupResponse.postValue(Resource.success(it.body()!!))
                         } else if (it.code() == 500 || it.code() == 404 || it.code() == 400 || it.code() == 422) {
@@ -44,9 +45,11 @@ class SignupViewModel @Inject constructor(
                 } catch (e: Exception) {
                     _signupResponse.postValue(Resource.error("${e.message}", null))
                 }
-            } else _signupResponse.postValue(Resource.error("No internet connection", null))
+            } else {
+                _signupResponse.postValue(Resource.error("No internet connection", null))
+            }
+
         }
     }
-
 
 }

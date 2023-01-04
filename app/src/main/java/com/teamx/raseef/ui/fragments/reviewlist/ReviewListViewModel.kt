@@ -14,13 +14,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ReviewListViewModel @Inject constructor(
-    private val mainRepository: MainRepository,
-    private val networkHelper: NetworkHelper
+    private val mainRepository: MainRepository, private val networkHelper: NetworkHelper
 ) : BaseViewModel() {
 
     private val _reviewListResponse = MutableLiveData<Resource<AllReviews>>()
-    val reviewListResponse: LiveData<Resource<AllReviews>>
-        get() = _reviewListResponse
+    val reviewListResponse: LiveData<Resource<AllReviews>> get() = _reviewListResponse
 
     fun getReviewList(slug: String, page: Int, limit: Int) {
         viewModelScope.launch {
@@ -35,8 +33,7 @@ class ReviewListViewModel @Inject constructor(
                         } else {
                             _reviewListResponse.postValue(
                                 Resource.error(
-                                    "Some thing went wrong",
-                                    null
+                                    "Some thing went wrong", null
                                 )
                             )
                         }

@@ -23,7 +23,6 @@ class CartViewModel @Inject constructor(
     private val networkHelper: NetworkHelper
 ) : BaseViewModel() {
 
-
     private val _cartTableResponse = MutableLiveData<Resource<List<MusicModel>>>()
     val cartResponse: LiveData<Resource<List<MusicModel>>>
         get() = _cartTableResponse
@@ -37,7 +36,6 @@ class CartViewModel @Inject constructor(
                     mainRepository.getAllProducts2().let {
                         Log.d("TAG", "getCarts:2 ")
                         _cartTableResponse.postValue(Resource.success(it))
-
                     }
                 } catch (e: Exception) {
                     Log.d("TAG", "getCarts:3${e.printStackTrace()} ")

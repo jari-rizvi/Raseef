@@ -5,10 +5,10 @@ import androidx.annotation.Keep
 
 @Keep
 data class AddReviewData(
-    val comment: String,
-    val photos: List<String>,
-    val pivotId: String,
-    val product: String,
-    val rating: Int,
-    val shop: String
+    var comment: String,
+    var photos: List<String>,
+    var pivotId: String,
+    var product: String,
+    var rating: Int,
+    var shop: String
 )
