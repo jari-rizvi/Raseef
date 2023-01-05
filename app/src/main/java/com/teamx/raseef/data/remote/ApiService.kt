@@ -54,7 +54,8 @@ interface ApiService {
 
     @GET(NetworkCallPoints.SHOP_BY_SLUG)
     suspend fun shopBySlug(
-        @Path("slug") slug: String): Response<ShopBySlugData>
+        @Path("slug") slug: String
+    ): Response<ShopBySlugData>
 
     @GET(NetworkCallPoints.PRODUCTS_BY_SHOP_ID)
     suspend fun productsByShopID(
@@ -88,8 +89,7 @@ interface ApiService {
         /*       @Path("id") id: String,
                @Query("page") page: Int,
                @Query("limit") limit: Int,*/
-        @Header("Authorization") basicCredentials: String =
-            "Bearer $TOKENER"
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
     ): Response<AllReviews>
 
     @GET(NetworkCallPoints.HOME)
@@ -99,7 +99,6 @@ interface ApiService {
     suspend fun getOrders(
         @Query("page") page: Int,
         @Query("limit") limit: Int,
-        @Header("Authorization") basicCredentials: String =
-            "Bearer $TOKENER"
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
     ): Response<AllOrdersData>
 }

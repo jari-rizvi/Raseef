@@ -18,11 +18,15 @@ class ReviewListViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     private val _reviewListResponse = MutableLiveData<Resource<AllReviews>>()
+
     val reviewListResponse: LiveData<Resource<AllReviews>> get() = _reviewListResponse
 
     fun getReviewList(slug: String, page: Int, limit: Int) {
+
         viewModelScope.launch {
+
             _reviewListResponse.postValue(Resource.loading(null))
+
             if (networkHelper.isNetworkConnected()) {
                 try {
                     mainRepository.getRatingList(/*id, page, limit*/).let {
