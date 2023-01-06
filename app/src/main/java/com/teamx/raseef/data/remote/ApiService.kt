@@ -76,7 +76,7 @@ interface ApiService {
     @GET(NetworkCallPoints.PROFILE_USER)
     suspend fun editProfile(
         @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
-    ): Response<ProfileDataX>
+    ): Response<ProfileData>
 
     @PUT(NetworkCallPoints.PROFILE_USER)
     suspend fun updateProfile(

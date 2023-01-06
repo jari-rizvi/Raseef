@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavOptions
 import androidx.navigation.navOptions
+import com.facebook.internal.logging.LogEvent
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.google.gson.JsonObject
@@ -19,6 +20,7 @@ import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.FragmentEditProfileBinding
 import com.teamx.raseef.data.dataclasses.Profile
 import com.teamx.raseef.utils.DialogHelperClass
+import com.teamx.raseef.utils.PrefHelper
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -41,7 +43,6 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
         get() = BR.viewModel
 
     private lateinit var options: NavOptions
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,9 +69,8 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
         mViewDataBinding.profilePicture.setOnClickListener {
             fetchImageFromGallery()
         }
+
         subscribeToNetworkLiveData()
-
-
 
     }
 
@@ -93,22 +93,27 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
                         data.address?.let {
 
                             for (address in it) {
-                                addressString = addressString + address.address.street_address +
-                                        " " + address.address.city +
-                                        " " + address.address.state +
-                                        " " + address.address.country +
-                                        " " + "Zip: " + address.address.zip + "\n"
+                                addressString =
+                                    addressString + address.address.street_address + " " + address.address.city + " " + address.address.state + " " + address.address.country + " " + "Zip: " + address.address.zip + "\n"
                             }
                         }
                         val str = data.name ?: ""
+
                         mViewDataBinding.userName.setText(str)
-                        mViewDataBinding.userName.setText(str)
+
 //                        data.contact?.let { contact ->
 //                            mViewDataBinding.editPhoneNumber.setText(contact)
 //                        }
+
                         data.email?.let { email ->
                             mViewDataBinding.userEmail.setText(email)
                         }
+
+                        data.contact?.let { contact ->
+                            mViewDataBinding.PhoneNumber.setText(contact)
+                        }
+
+
 //                        mViewDataBinding.editAddress.setText(addressString)
 //                        data.gender?.let { gender ->
 //
@@ -134,8 +139,8 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
                             mViewDataBinding.etPass.setText(profile.bio)
                             strImg = profile.avatar
                             strId = profile._id
-                            Picasso.get().load(profile.avatar)
-                                .into(mViewDataBinding.profilePicture)
+
+                            Picasso.get().load(profile.avatar).into(mViewDataBinding.profilePicture)
                         }
 
                         Log.d("TAG", "subscribeToNetworkLiveData:2 $data")
@@ -164,10 +169,9 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
                 Resource.Status.SUCCESS -> {
                     loadingDialog.dismiss()
                     it.data?.let { data ->
+
                         val snackBar = Snackbar.make(
-                            mViewDataBinding.btnUpdate,
-                            "Updated",
-                            Snackbar.LENGTH_SHORT
+                            mViewDataBinding.consRoot, "Updated", Snackbar.LENGTH_SHORT
                         )
                         snackBar.show()
                     }
@@ -179,40 +183,55 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
                 }
             }
         }
-
-
     }
 
     var strImg = ""
     var strId = ""
+    var strContact = ""
     private fun jsonObjectOfProfile(): JsonObject {
 
         val obj = JsonObject()
         try {
 
-            var genderStr = "Male"
-      /*       genderStr = if (mViewDataBinding.radioMale.isChecked) {
-                 "Male"
-             } else if (mViewDataBinding.radioFemale.isChecked) {
-                 "Female"
-             } else {
-                 "Others"
-             }*/
+            val genderStr = "Male"
+            /*       genderStr = if (mViewDataBinding.radioMale.isChecked) {
+                       "Male"
+                   } else if (mViewDataBinding.radioFemale.isChecked) {
+                       "Female"
+                   } else {
+                       "Others"
+                   }*/
+//
+//            mViewModel.viewModelScope.launch(Dispatchers.Main) {
+//                dataStoreProvider.saveUserDetails(
+//                    mViewDataBinding.userName.text.toString(),
+//                    mViewDataBinding.userEmail.text.toString(),
+//                    strImg,
+//                    mViewDataBinding.PhoneNumber.text.toString()
+//                )
+//            }
 
-            mViewModel.viewModelScope.launch(Dispatchers.IO) {
-                dataStoreProvider.saveUserDetails(
-                    mViewDataBinding.userName.text.toString(),
-                    mViewDataBinding.userEmail.text.toString(),
-                    strImg, mViewDataBinding.PhoneNumber.text.toString()
-                )
-            }
+            PrefHelper.getInstance(requireContext()).saveProfile(
+                mViewDataBinding.userName.text.toString(),
+                mViewDataBinding.userEmail.text.toString(),
+                strImg,
+                mViewDataBinding.PhoneNumber.text.toString()
+            )
+
+            PrefHelper.getInstance(requireContext()).name?.let { Log.e("PrefHelper", it) }
+            PrefHelper.getInstance(requireContext()).email?.let { Log.e("PrefHelper", it) }
+            PrefHelper.getInstance(requireContext()).avatar?.let { Log.e("PrefHelper", it) }
+            PrefHelper.getInstance(requireContext()).number?.let { Log.e("PrefHelper", it) }
 
             obj.addProperty("name", mViewDataBinding.userName.text.toString())
+
             obj.addProperty("gender", genderStr)
+
             obj.add(
                 "profile",
                 Gson().toJsonTree(Profile(strId, strImg, mViewDataBinding.etPass.text.toString()))
             )
+
 
 
         } catch (e: JSONException) {
@@ -233,39 +252,7 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
             uri?.let {
                 Picasso.get().load(it).into(mViewDataBinding.profilePicture)
                 uploadWithRetrofit(it)
-/*                val stream = requireContext().contentResolver.openInputStream(it)
-                if (stream != null) {
-//                    mViewModel.updateImgProfile(stream, "${File(it.toString()).name}")
-                }
-                var str = ""
 
-                str = it.toString()
-
-                Log.d("1235", "boddy:$str ")
-                val file = File(str)
-                Log.d("1235", "boddy:${file.name} ")
-                Log.d("1235", "boddy:${file.extension} ")
-                val filePart: MultipartBody.Part = MultipartBody.Part.createFormData(
-                    "attachment",
-                    file.name,
-                    RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file)
-                )
-                val isp: InputStream? = requireActivity().contentResolver.openInputStream(uri)
-                val body = MultipartBody.Builder().setType(MultipartBody.FORM)
-                    .addFormDataPart(
-                        "attachment",
-                        file.name + file.extension,
-                        RequestBody.create(
-                            "application/octet-stream".toMediaType()*//* MultipartBody.FORM*//*,
-                            isp!!.readBytes()
-                        )
-                    )
-                    .build()
-
-                Log.d("1235", "bodyy:${body.parts[0].body} ")
-                mViewModel.updateImgProfile(body.parts[0])
-//                mViewModel.updateImgProfile(prepareFilePart("attachment", it))
-//                red(it)*/
             }
 
         }
@@ -306,9 +293,7 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
         val requestBody = file.asRequestBody("image/*".toMediaTypeOrNull())
 
         val filePart: MultipartBody.Part = MultipartBody.Part.createFormData(
-            "attachment",
-            file.name,
-            requestBody
+            "attachment", file.name, requestBody
         )
         mViewModel.updateImgProfile(filePart)
 

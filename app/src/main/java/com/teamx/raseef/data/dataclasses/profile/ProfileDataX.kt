@@ -25,7 +25,7 @@ data class ProfileDataX(
 data class ProfileData(
     var __v: Int?,
     var _id: String?,
-    var address: List<String>?,
+    var address: List<AddresX>?,
     var createdAt: String?,
     var email: String?,
     var is_active: Boolean?,

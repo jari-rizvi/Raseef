@@ -68,19 +68,19 @@
 
             <EditText
                 android:id="@+id/etEmail"
-                android:layout_width="wrap_content"
+                style="@style/open_sans_secondary_medium_small"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/at"
                 android:drawablePadding="@dimen/_8sdp"
-                style="@style/open_sans_secondary_medium_small"
                 android:hint="Enter your Email / Phone Number"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:maxLength="20"
                 android:maxLines="1"
-                app:layout_constraintStart_toStartOf="@+id/tvEmail"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
 
@@ -107,17 +107,18 @@
 
             <EditText
                 android:id="@+id/etPass"
-                android:layout_width="wrap_content"
+                style="@style/open_sans_secondary_medium_small"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/padlock"
                 android:drawablePadding="@dimen/_8sdp"
                 android:hint="Enter your Password"
-                style="@style/open_sans_secondary_medium_small"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
                 android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 

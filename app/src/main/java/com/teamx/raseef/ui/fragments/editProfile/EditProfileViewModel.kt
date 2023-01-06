@@ -21,13 +21,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class EditProfileViewModel @Inject constructor(
-    private val mainRepository: MainRepository,
-    private val networkHelper: NetworkHelper
+    private val mainRepository: MainRepository, private val networkHelper: NetworkHelper
 ) : BaseViewModel() {
 
-    private val _editProfileResponse = MutableLiveData<Resource<ProfileDataX>>()
-    val editProfileResponse: LiveData<Resource<ProfileDataX>>
-        get() = _editProfileResponse
+    private val _editProfileResponse = MutableLiveData<Resource<ProfileData>>()
+
+    val editProfileResponse: LiveData<Resource<ProfileData>> get() = _editProfileResponse
 
     fun editProfile(/*id: String, param: JsonObject*/) {
         viewModelScope.launch {
@@ -43,8 +42,7 @@ class EditProfileViewModel @Inject constructor(
                         } else {
                             _editProfileResponse.postValue(
                                 Resource.error(
-                                    "Some thing went wrong",
-                                    it.body()
+                                    "Some thing went wrong", it.body()
                                 )
                             )
                         }
@@ -107,8 +105,7 @@ class EditProfileViewModel @Inject constructor(
                         } else {
                             _updateImgProfileResponse.postValue(
                                 Resource.error(
-                                    "Some thing went wrong",
-                                    it.body()
+                                    "Some thing went wrong", it.body()
                                 )
                             )
                         }
@@ -120,8 +117,7 @@ class EditProfileViewModel @Inject constructor(
                 }
             } else _updateImgProfileResponse.postValue(
                 Resource.error(
-                    "No internet connection",
-                    null
+                    "No internet connection", null
                 )
             )
         }
