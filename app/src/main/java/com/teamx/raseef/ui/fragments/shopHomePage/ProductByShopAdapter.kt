@@ -1,13 +1,13 @@
 package com.teamx.raseef.ui.fragments.shopHomePage
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.teamx.raseef.databinding.ItemProductsBinding
-import com.teamx.raseef.databinding.ItemServiceBinding
 import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
 import com.teamx.raseef.data.models.productsShop.Doc
+import com.teamx.raseef.databinding.ItemProductsBinding
 
 class ProductByShopAdapter(val arrayList: ArrayList<Doc>, val onTopProductListener: OnTopProductListener) : RecyclerView.Adapter<ProductByShopAdapter.ShopProductViewHolder>() {
 
@@ -28,6 +28,23 @@ class ProductByShopAdapter(val arrayList: ArrayList<Doc>, val onTopProductListen
         holder.binding.type.text = product.slug
         holder.binding.totalAmount.text = product.price.toString()
         Picasso.get().load(product.image).into(holder.binding.img)
+
+        product.product_order_types.forEach {
+            if (it == "CASH_ON_DELIVERY"){
+                holder.binding.cashOnDelivery.visibility = View.VISIBLE
+            }
+
+            if (it == "PAY_ON_ARRIVAL"){
+                holder.binding.payOnArrival.visibility = View.VISIBLE
+            }
+
+            if (it == "ONLINE_PAYMENTS"){
+                holder.binding.onlinePayment.visibility = View.VISIBLE
+            }
+        }
+
+
+
 
         holder.itemView.setOnClickListener {
             onTopProductListener.onTopproductClick(position)

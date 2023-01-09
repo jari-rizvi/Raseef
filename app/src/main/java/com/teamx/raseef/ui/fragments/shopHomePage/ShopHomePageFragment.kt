@@ -125,13 +125,13 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
                                     if (categoriesArrayList2.isEmpty()) {
                                         categoriesArrayList2.add(Categories(it.name, true))
                                     } else {
-                                        var isAdd : Boolean = false
+                                        var isAdd: Boolean = false
                                         categoriesArrayList2.forEach { cat ->
-                                            if (cat.categoriesName.equals(it.name)){
+                                            if (cat.categoriesName.equals(it.name)) {
                                                 isAdd = true
                                             }
                                         }
-                                        if (!isAdd){
+                                        if (!isAdd) {
                                             categoriesArrayList2.add(Categories(it.name, false))
                                         }
                                     }
@@ -168,7 +168,7 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
 
     }
 
-    private fun productRecyclerview(productArrayList : ArrayList<Doc>) {
+    private fun productRecyclerview(productArrayList: ArrayList<Doc>) {
 
 
         val linearLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -206,30 +206,23 @@ class ShopHomePageFragment() : BaseFragment<FragmentShopHomePageBinding, ShopByS
     }
 
     override fun onTopSellerClick(position: Int) {
-        for(cat in categoriesArrayList2){
+        for (cat in categoriesArrayList2) {
             cat.isChecked = false
         }
         categoriesArrayList2[position].isChecked = true
 
         filterShopArrayList.clear()
 
-        productArrayList.forEach {doc ->
-            doc.categories.forEach {cat ->
-                if (cat.name.equals(categoriesArrayList2[position].categoriesName)){
+        productArrayList.forEach { doc ->
+            doc.categories.forEach { cat ->
+                if (cat.name == categoriesArrayList2[position].categoriesName) {
                     filterShopArrayList.add(doc)
                     productRecyclerview(filterShopArrayList)
                 }
             }
         }
 
-//            filterShopArrayList =
-//                productArrayList.filter { it.categories.forEach {
-//                    it.name.equals(categoriesArrayList2[position].categoriesName)
-//                } } as ArrayList<PopularShop>
-
-
-
-            Log.e("filterShopArrayList", filterShopArrayList.size.toString())
+        Log.e("filterShopArrayList", filterShopArrayList.size.toString())
 
 
 

@@ -24,10 +24,10 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            app:layout_constraintHorizontal_bias="0.0"
             android:text="Toppejkfdjsldk"
             app:layout_constraintBottom_toTopOf="@+id/totalAmount"
             app:layout_constraintEnd_toEndOf="@+id/name"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -49,10 +49,10 @@
 
         <TextView
             android:id="@+id/totalAmount"
+            style="@style/open_sans_orange_bold_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="88"
-            style="@style/open_sans_orange_bold_small"
             android:textSize="@dimen/_14sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/type"
@@ -62,7 +62,38 @@
             app:layout_constraintVertical_bias="0.08" />
 
 
+        <TextView
+            android:id="@+id/cash_on_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/pay_on_arrival"
+            app:layout_constraintEnd_toStartOf="@+id/img"
+            app:layout_constraintStart_toEndOf="@+id/rating"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/pay_on_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/online_payment"
+            app:layout_constraintEnd_toEndOf="@+id/cash_on_delivery"
+            app:layout_constraintStart_toStartOf="@+id/cash_on_delivery"
+            app:layout_constraintTop_toBottomOf="@+id/cash_on_delivery" />
+
+        <TextView
+            android:id="@+id/online_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/pay_on_arrival"
+            app:layout_constraintStart_toStartOf="@+id/pay_on_arrival"
+            app:layout_constraintTop_toBottomOf="@+id/pay_on_arrival" />
 
         <ImageView
             android:id="@+id/img"
@@ -96,8 +127,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4.5"
-            android:textStyle="bold"
             android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/img"
             app:layout_constraintHorizontal_bias="0.1"
@@ -107,12 +138,12 @@
 
         <TextView
             android:id="@+id/textView7"
+            style="@style/open_sans_orange_bold_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_2sdp"
             android:text="AED"
             android:textSize="@dimen/_10sdp"
-            android:paddingStart="@dimen/_2sdp"
-            style="@style/open_sans_orange_bold_small"
             app:layout_constraintBottom_toBottomOf="@+id/totalAmount"
             app:layout_constraintStart_toEndOf="@+id/totalAmount"
             app:layout_constraintTop_toTopOf="@+id/totalAmount" />

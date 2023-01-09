@@ -18,9 +18,10 @@ class CategoriesAdapter(val arrayList: ArrayList<Categories>, val onTopCategorie
 
     override fun onBindViewHolder(holder: TopCategoriesViewHolder, position: Int) {
         val categories : Categories = arrayList[position]
-        holder.binding.categoryName.text = categories.categoriesName
+
+        holder.binding.checkedTextView.text = categories.categoriesName
         holder.binding.checkedTextView.isChecked = categories.isChecked
-        holder.binding.categoryName.isChecked = categories.isChecked
+
 
         holder.itemView.setOnClickListener {
             onTopCategoriesListener.onTopSellerClick(position)

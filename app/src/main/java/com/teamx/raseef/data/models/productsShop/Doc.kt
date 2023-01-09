@@ -18,6 +18,7 @@ data class Doc(
     val length: String,
     val name: String,
     val orders: List<String>,
+    val product_order_types: List<String>,
     val price: Int,
     val product_type: String,
     val quantity: Int,
