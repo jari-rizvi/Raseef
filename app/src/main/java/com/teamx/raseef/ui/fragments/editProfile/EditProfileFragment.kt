@@ -7,6 +7,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
 import androidx.navigation.navOptions
 import com.facebook.internal.logging.LogEvent
 import com.google.android.material.snackbar.Snackbar
@@ -57,6 +58,9 @@ class EditProfileFragment() : BaseFragment<FragmentEditProfileBinding, EditProfi
             }
         }
 
+        mViewDataBinding.txtChange.setOnClickListener {
+
+        }
 
         mViewDataBinding.btnBack.setOnClickListener {
             popUpStack()

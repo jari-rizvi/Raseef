@@ -68,9 +68,14 @@ class LogInFragment() : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
             navController.navigate(R.id.signupFragment, null, options)
         }
 
+//        mViewDataBinding.btnForgot.setOnClickListener {
+//            navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+//            navController.navigate(R.id.forgotFragment, null, options)
+//        }
+
         mViewDataBinding.btnForgot.setOnClickListener {
             navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-            navController.navigate(R.id.forgotFragment, null, options)
+            navController.navigate(R.id.forgotEmailFragment, null, options)
         }
 
         mViewDataBinding.btnGmail.setOnClickListener {

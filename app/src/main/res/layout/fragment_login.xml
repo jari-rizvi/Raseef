@@ -83,7 +83,6 @@
                 app:layout_constraintStart_toStartOf="@+id/view2"
                 app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-
             <View
                 android:id="@+id/view2"
                 android:layout_width="@dimen/_230sdp"

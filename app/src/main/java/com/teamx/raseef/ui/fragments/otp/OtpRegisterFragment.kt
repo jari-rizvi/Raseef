@@ -55,20 +55,24 @@ class OtpRegisterFragment() : BaseFragment<FragmentOTPRegisterBinding, OtpViewMo
             resendOtp()
 
         }
+
+        initialization()
     }
 
-    fun initialization() {
+    private fun initialization() {
         val bundle = arguments
         if (bundle != null) {
             phoneNumber = bundle.getString("phone").toString()
             sid = bundle.getString("Sid").toString()
             otpid = bundle.getString("otpid")
 
+            mViewDataBinding.txtPhoneNumber.text = phoneNumber
+
         }
     }
 
-    fun verifyotp() {
-        initialization()
+    private fun verifyotp() {
+
 
         val code = mViewDataBinding.pinView.text.toString()
         if (sid!!.isNotEmpty() || otpid!!.isNotEmpty() || phoneNumber!!.isNotEmpty()) {
@@ -112,9 +116,9 @@ class OtpRegisterFragment() : BaseFragment<FragmentOTPRegisterBinding, OtpViewMo
         }
     }
 
-    fun resendOtp() {
+    private fun resendOtp() {
 
-        initialization()
+//        initialization()
 
         if (phoneNumber!!.isNotEmpty()) {
             val params = JsonObject()

@@ -15,13 +15,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="@dimen/_100sdp"
             android:background="@drawable/user_topbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
 
             <ImageView
                 android:id="@+id/btnBack"
@@ -52,48 +51,48 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/constraintLayout"-->
-<!--            android:layout_width="@dimen/_60sdp"-->
-<!--            android:layout_height="@dimen/_60sdp"-->
-<!--            android:background="@drawable/border_background"-->
-<!--            android:elevation="@dimen/_1sdp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"-->
-<!--            app:layout_constraintVertical_bias="0.12">-->
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:id="@+id/constraintLayout"-->
+        <!--            android:layout_width="@dimen/_60sdp"-->
+        <!--            android:layout_height="@dimen/_60sdp"-->
+        <!--            android:background="@drawable/border_background"-->
+        <!--            android:elevation="@dimen/_1sdp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"-->
+        <!--            app:layout_constraintVertical_bias="0.12">-->
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profilePicture"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/border_background"
-                android:elevation="@dimen/_5sdp"
-                android:padding="@dimen/_2sdp"
-                android:src="@mipmap/ic_launcher"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border_background"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
 
-            <ImageView
-                android:id="@+id/btnAddPicture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="@dimen/_5sdp"
-                android:src="@drawable/camera"
-                app:layout_constraintVertical_bias="1"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintBottom_toBottomOf="@+id/profilePicture"
-                app:layout_constraintEnd_toEndOf="@+id/profilePicture"
-                app:layout_constraintStart_toStartOf="@+id/profilePicture"
-                app:layout_constraintTop_toTopOf="@+id/profilePicture" />
+        <ImageView
+            android:id="@+id/btnAddPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp"
+            android:src="@drawable/camera"
+            app:layout_constraintBottom_toBottomOf="@+id/profilePicture"
+            app:layout_constraintEnd_toEndOf="@+id/profilePicture"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@+id/profilePicture"
+            app:layout_constraintTop_toTopOf="@+id/profilePicture"
+            app:layout_constraintVertical_bias="1" />
 
 
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -170,8 +169,8 @@
                 android:layout_marginTop="@dimen/_4sdp"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/at"
-                android:enabled="false"
                 android:drawablePadding="@dimen/_8sdp"
+                android:enabled="false"
                 android:hint="Enter your email"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
@@ -179,7 +178,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
             <View
                 android:id="@+id/view3"
@@ -202,7 +200,6 @@
                 app:layout_constraintStart_toStartOf="@+id/userEmail"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-
             <EditText
                 android:id="@+id/PhoneNumber"
                 style="@style/open_sans_secondary_medium_small"
@@ -210,10 +207,10 @@
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_4sdp"
-                android:enabled="false"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/mobile"
                 android:drawablePadding="@dimen/_8sdp"
+                android:enabled="false"
                 android:hint="Enter your Phone Number"
                 android:imeOptions="actionNext"
                 android:inputType="phone"
@@ -245,7 +242,6 @@
                 app:layout_constraintStart_toStartOf="@+id/PhoneNumber"
                 app:layout_constraintTop_toBottomOf="@+id/view4" />
 
-
             <EditText
                 android:id="@+id/etPass"
                 style="@style/open_sans_secondary_medium_small"
@@ -253,10 +249,10 @@
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_4sdp"
-                android:enabled="false"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/padlock"
                 android:drawablePadding="@dimen/_8sdp"
+                android:enabled="false"
                 android:hint="Enter your password"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
@@ -265,6 +261,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+            <TextView
+                android:id="@+id/txtChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toBottomOf="@+id/etPass"
+                app:layout_constraintEnd_toEndOf="@+id/etPass"
+                app:layout_constraintTop_toTopOf="@+id/etPass" />
 
             <View
                 android:id="@+id/view5"

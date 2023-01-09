@@ -1,8 +1,11 @@
 package com.teamx.raseef.ui.fragments.Home
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
@@ -15,12 +18,13 @@ import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.dataclasses.dashboard.PopularShop
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.*
+import com.teamx.raseef.dataclasses.login.LoginData
 import com.teamx.raseef.utils.DialogHelperClass
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
-class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
-    OnTopShopListener {
+class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(), OnTopShopListener {
 
     override val layoutId: Int
         get() = R.layout.fragment_home
@@ -32,6 +36,7 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
     lateinit var shopAdapter: ShopAdapter
     lateinit var shopArrayList: ArrayList<PopularShop>
+    lateinit var filterShopArrayList: ArrayList<PopularShop>
 
     private lateinit var options: NavOptions
 
@@ -53,13 +58,35 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
         mViewDataBinding.imageView5.setOnClickListener {
             navController = Navigation.findNavController(
-                requireActivity(),
-                R.id.nav_host_fragment
+                requireActivity(), R.id.nav_host_fragment
             )
             navController.navigate(R.id.editProfileFragment, null, options)
         }
 
+        mViewDataBinding.search.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
 
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                if (s.isNotEmpty()) {
+
+                    filterShopArrayList =
+                        shopArrayList.filter { it.name.startsWith(s) } as ArrayList<PopularShop>
+
+                    shopRecyclerview(filterShopArrayList)
+
+                    Log.e("filterShopArrayList", filterShopArrayList.size.toString())
+
+                } else {
+                    shopRecyclerview(shopArrayList)
+                }
+            }
+
+            override fun afterTextChanged(s: Editable) {
+
+            }
+        })
 
         mViewModel.home()
 
@@ -67,7 +94,7 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
             when (it.status) {
                 Resource.Status.LOADING -> {
                     loadingDialog.show()
-                    Log.e("ajdhsdsahkjhsd","start")
+                    Log.e("ajdhsdsahkjhsd", "start")
 
                 }
 
@@ -86,19 +113,21 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
 
                 Resource.Status.ERROR -> {
                     loadingDialog.dismiss()
-                    Log.e("ajdhsdsahkjhsd","end")
+                    Log.e("ajdhsdsahkjhsd", "end")
 
                     DialogHelperClass.errorDialog(requireContext(), it.message!!)
                 }
             }
         })
+        filterShopArrayList = ArrayList()
+        shopArrayList = ArrayList()
 
-        shopRecyclerview()
+        shopRecyclerview(shopArrayList)
 
     }
 
-    private fun shopRecyclerview() {
-        shopArrayList = ArrayList()
+    private fun shopRecyclerview(shopArrayList: ArrayList<PopularShop>) {
+
 
         val linearLayoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
         mViewDataBinding.ShopRecycler.layoutManager = linearLayoutManager
@@ -109,14 +138,16 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, HomeViewModel>(),
     }
 
     override fun onTopshopClick(position: Int) {
+
+        Log.d("TAG", "onTopshopClick: ${shopArrayList[position].slug}")
         sharedViewModel.setShopBySlug(shopArrayList[position].slug)
         sharedViewModel.setShopById(shopArrayList[position]._id)
 
 
         navController = Navigation.findNavController(
-            requireActivity(),
-            R.id.nav_host_fragment
+            requireActivity(), R.id.nav_host_fragment
         )
+
         navController.navigate(R.id.shopHomePageFragment, null, options)
     }
 
