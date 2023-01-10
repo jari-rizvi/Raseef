@@ -1,8 +1,11 @@
 package com.teamx.raseef.data.models.productBySlug
 
 import androidx.annotation.Keep
+import com.teamx.raseef.data.dataclasses.dashboard.Variation
+import com.teamx.raseef.data.dataclasses.dashboard.VariationOption
+import com.teamx.raseef.data.dataclasses.dashboard.VariationS
 
- 
+
 @Keep
 data class ProductBySlugData(
     val __v: Int,
@@ -18,7 +21,7 @@ data class ProductBySlugData(
     val length: String,
     val name: String,
     val orders: List<String>,
-    val price: Int,
+    val price: Double? = 0.0,
     val product_type: String,
     val quantity: Int,
     val rating_count: List<RatingCount>,
@@ -32,7 +35,7 @@ data class ProductBySlugData(
     val type: Type,
     val unit: String,
     val updatedAt: String,
-    val variation_options: List<Any>,
-    val variations: List<Any>,
+    val variation_options: List<VariationOption>,
+    val variations: List<VariationS>,
     val width: String
 )

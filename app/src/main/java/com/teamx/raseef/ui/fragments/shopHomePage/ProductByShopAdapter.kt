@@ -9,7 +9,7 @@ import com.teamx.raseef.ui.fragments.Home.OnTopProductListener
 import com.teamx.raseef.data.models.productsShop.Doc
 import com.teamx.raseef.databinding.ItemProductsBinding
 
-class ProductByShopAdapter(val arrayList: ArrayList<Doc>, val onTopProductListener: OnTopProductListener) : RecyclerView.Adapter<ProductByShopAdapter.ShopProductViewHolder>() {
+class ProductByShopAdapter(val arrayList: ArrayList<Doc>, private val onTopProductListener: OnTopProductListener) : RecyclerView.Adapter<ProductByShopAdapter.ShopProductViewHolder>() {
 
 
 

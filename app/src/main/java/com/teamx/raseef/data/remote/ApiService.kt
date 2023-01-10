@@ -63,9 +63,7 @@ interface ApiService {
     ): Response<ShopProductsData>
 
     @GET(NetworkCallPoints.PRODUCTS_BY_SLUG)
-    suspend fun productsBySlug(
-        @Path("slug") slug: String,
-        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
+    suspend fun productsBySlug(@Path("slug") slug: String, @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
     ): Response<ProductBySlugData>
 
     @Multipart

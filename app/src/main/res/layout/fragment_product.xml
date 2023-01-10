@@ -60,8 +60,8 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/coverImg"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="39dp">
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -70,18 +70,16 @@
                 <TextView
                     android:id="@+id/productName"
                     style="@style/open_sans_secondary_bold_small"
-                    android:layout_width="@dimen/_150sdp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:ellipsize="end"
                     android:maxLines="1"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:text="Formal Pants"
                     android:textSize="@dimen/_16sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.16"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.03" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <TextView
@@ -89,13 +87,12 @@
                     style="@style/open_sans_secondary_grey_small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:text="Laundary"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/productName"
-                    app:layout_constraintTop_toBottomOf="@+id/productName"
-                    app:layout_constraintVertical_bias="0.01" />
+                    app:layout_constraintTop_toBottomOf="@+id/productName" />
 
                 <TextView
                     android:id="@+id/textView57"
@@ -114,13 +111,12 @@
                     style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:numStars="5"
                     android:rating="3"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/productType"
                     app:layout_constraintTop_toBottomOf="@+id/productType"
-                    app:layout_constraintVertical_bias="0.02"
                     app:mrb_progressTint="@color/ratingBarColor" />
 
                 <TextView
@@ -128,12 +124,11 @@
                     style="@style/open_sans_bold_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:text="55"
                     android:textSize="@dimen/_18sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/ratingBar"
-                    app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-                    app:layout_constraintVertical_bias="0.01" />
+                    app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
                 <TextView
                     android:id="@+id/textView59"
@@ -148,16 +143,26 @@
                     app:layout_constraintStart_toEndOf="@+id/productPrice"
                     app:layout_constraintTop_toTopOf="@+id/productPrice" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/btnadd"
+                    app:layout_constraintHorizontal_bias="0.968"
+                    app:layout_constraintStart_toStartOf="@+id/productPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout7"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_25sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnadd"
                     app:layout_constraintStart_toStartOf="@+id/productPrice"
-                    app:layout_constraintTop_toBottomOf="@+id/productPrice"
-                    app:layout_constraintVertical_bias="0.01">
-
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView2">
 
                     <TextView
                         android:id="@+id/textView60"
@@ -177,7 +182,6 @@
                         android:layout_height="wrap_content"
                         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique tincidunt nunc eget venenatis. Duis accumsan lobortis sagittis. Cras sed eleifend purus, et condimentum augue. Aenean laoreet lacus quis"
                         android:visibility="gone"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView60"
@@ -190,7 +194,7 @@
                         android:visibility="gone"
                         app:layout_constraintBottom_toTopOf="@+id/productDescriptio"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.92"
+                        app:layout_constraintHorizontal_bias="1"
                         app:layout_constraintStart_toEndOf="@+id/textView60"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_arrow_up" />
@@ -202,7 +206,7 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toTopOf="@+id/productDescriptio"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.92"
+                        app:layout_constraintHorizontal_bias="1"
                         app:layout_constraintStart_toEndOf="@+id/textView60"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_arrow_down" />
@@ -212,25 +216,22 @@
 
                 <View
                     android:id="@+id/view"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="0.5dp"
-                    android:layout_marginHorizontal="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@color/textSecondaryColor"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout8"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_25sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/view"
                     app:layout_constraintStart_toStartOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/view"
-                    app:layout_constraintVertical_bias="0.01">
-
+                    app:layout_constraintTop_toBottomOf="@+id/view">
 
                     <TextView
                         android:id="@+id/review"
@@ -248,12 +249,11 @@
                         android:id="@+id/reviewRecyclerView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:visibility="gone"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/review"
-                        app:layout_constraintVertical_bias="0.1" />
+                        app:layout_constraintTop_toBottomOf="@+id/review" />
 
                     <ImageView
                         android:id="@+id/btnReview"
@@ -262,7 +262,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         app:layout_constraintBottom_toTopOf="@+id/reviewRecyclerView"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.93"
+                        app:layout_constraintHorizontal_bias="1"
                         app:layout_constraintStart_toEndOf="@+id/review"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_arrow_down" />
@@ -272,10 +272,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone"
                         app:layout_constraintBottom_toTopOf="@+id/reviewRecyclerView"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.93"
-                        android:visibility="gone"
+                        app:layout_constraintHorizontal_bias="1"
                         app:layout_constraintStart_toEndOf="@+id/review"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_arrow_up" />
@@ -285,113 +285,142 @@
 
                 <View
                     android:id="@+id/view1"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="0.5dp"
-                    android:layout_marginHorizontal="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@color/textSecondaryColor"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
-                <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view1"
-                    app:layout_constraintVertical_bias="0.1">
+                <TextView
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/button_border_orange_filled"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnButnow"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="@+id/view1"
+                    app:layout_constraintTop_toBottomOf="@+id/view1" />
 
-                    <TextView
-                        android:id="@+id/btnAddToCart"
-                        android:layout_width="@dimen/_90sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_border_orange_filled"
-                        android:gravity="center"
-                        android:text="@string/add_to_cart"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/btnButnow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/button_border_orange"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="Buy Now"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAddToCart"
+                    app:layout_constraintEnd_toEndOf="@+id/view1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnAddToCart"
+                    app:layout_constraintTop_toTopOf="@+id/btnAddToCart" />
 
-                    <TextView
-                        android:id="@+id/btnButnow"
-                        android:layout_width="@dimen/_90sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_border_orange"
-                        android:gravity="center"
-                        android:text="Buy Now"
-                        android:textColor="@color/orange"
-                        android:textStyle="bold" />
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/linearLayout"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginHorizontal="@dimen/_10sdp"-->
+                <!--                    android:layout_marginTop="@dimen/_5sdp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/constraintLayout8"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/view1"-->
+                <!--                    app:layout_constraintVertical_bias="0.1">-->
 
-                </LinearLayout>
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/btnAddToCart"-->
+                <!--                        android:layout_width="@dimen/_90sdp"-->
+                <!--                        android:layout_height="@dimen/_40sdp"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_10sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/button_border_orange_filled"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="@string/add_to_cart"-->
+                <!--                        android:textColor="@color/white"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/btnButnow"-->
+                <!--                        android:layout_width="@dimen/_90sdp"-->
+                <!--                        android:layout_height="@dimen/_40sdp"-->
+                <!--                        android:layout_marginHorizontal="@dimen/_10sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/button_border_orange"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="Buy Now"-->
+                <!--                        android:textColor="@color/orange"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                </LinearLayout>-->
 
                 <TextView
                     android:id="@+id/tvSimilar"
                     style="@style/open_sans_secondary_regular_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:text="@string/similar_services"
                     android:textSize="@dimen/_16sdp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                    app:layout_constraintVertical_bias="0.09" />
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAddToCart" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/ProductRecycler"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_20sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSimilar"
-                    app:layout_constraintVertical_bias="0.03" />
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/view1"
+                    app:layout_constraintStart_toStartOf="@+id/view1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSimilar" />
 
 
                 <ImageView
                     android:id="@+id/btnremove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_50sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
-                    app:layout_constraintStart_toEndOf="@+id/productName"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/add" />
-
-                <ImageView
-                    android:id="@+id/btnadd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnremove"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/btnremove"
-                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintBottom_toBottomOf="@+id/productName"
+                    app:layout_constraintEnd_toStartOf="@+id/quantity"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toTopOf="@+id/productName"
                     app:srcCompat="@drawable/add" />
 
                 <TextView
                     android:id="@+id/quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
                     android:text="1"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnadd"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnremove"
                     app:layout_constraintEnd_toStartOf="@+id/btnadd"
-                    app:layout_constraintStart_toEndOf="@+id/btnremove"
-                    app:layout_constraintTop_toTopOf="@+id/btnadd" />
+                    app:layout_constraintTop_toTopOf="@+id/btnremove" />
+
+                <ImageView
+                    android:id="@+id/btnadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnremove"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:layout_constraintTop_toTopOf="@+id/btnremove"
+                    app:srcCompat="@drawable/add" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

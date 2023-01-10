@@ -5,7 +5,7 @@ data class VariationOption(
     val createdAt: String,
     val is_disable: Boolean,
     val options: List<Option>,
-    val price: Int,
+    val price: Double = 0.0,
     val quantity: Int,
     val sale_price: Int,
     val sku: String,
