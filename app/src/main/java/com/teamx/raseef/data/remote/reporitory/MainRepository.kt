@@ -47,6 +47,8 @@ class MainRepository @Inject constructor(
 
     suspend fun home() = apiService.home()
 
+    suspend fun notification() = apiService.notification()
+
     suspend fun getOrderList(@Query("page") page: Int, @Query("limit") limit: Int) =
         apiService.getOrders(page, limit)
 

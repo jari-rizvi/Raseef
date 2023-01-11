@@ -302,6 +302,9 @@
 
     </style>
 
+        <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+            <item name="fontFamily">@font/open_sans_regular</item>
+        </style>
 
 
 </resources>

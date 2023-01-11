@@ -21,14 +21,14 @@ class PaymentAdapter(val arrayList: ArrayList<PaymentMethod>, val onTopSellerLis
         val payment : PaymentMethod = arrayList[position]
         holder.binding.paymentName.text = payment.paymentName
         holder.binding.paymentImage.setImageResource(payment.paymentImage)
-        holder.binding.paymentType.setChecked(row_index == position)
+        holder.binding.paymentType.isChecked = row_index == position
 //        holder.binding.paymentType.isChecked = payment.value
 
         holder.itemView.setOnClickListener {
             onTopSellerListener.onTopSellerClick(position)
-            row_index = position
-
-            notifyDataSetChanged()
+//            row_index = position
+//
+//            notifyDataSetChanged()
         }
 
     }

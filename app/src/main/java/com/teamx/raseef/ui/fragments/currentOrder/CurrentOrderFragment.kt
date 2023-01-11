@@ -1,6 +1,7 @@
 package com.teamx.raseef.ui.fragments.currentOrder
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.navOptions
@@ -10,6 +11,7 @@ import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import com.teamx.raseef.BR
+import com.teamx.raseef.data.dataclasses.allorders.DocXX
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.databinding.FragmentCurrentordersBinding
 import com.teamx.raseef.dataclasses.allorders.DocX
@@ -29,7 +31,8 @@ class CurrentOrderFragment : BaseFragment<FragmentCurrentordersBinding, CurrentO
 
 
     lateinit var orderListAdapter: OrderListAdapter
-    lateinit var orderListArrayList: ArrayList<DocX>
+
+    lateinit var orderListArrayList: ArrayList<DocXX>
 
 
     private lateinit var options: NavOptions
@@ -58,7 +61,15 @@ class CurrentOrderFragment : BaseFragment<FragmentCurrentordersBinding, CurrentO
                     it.data?.let { data ->
 
                         orderListArrayList.clear()
+
+//                        data.docs.forEach {
+//                            if (it.order_status.equals("ORDER_PROCESSING")){
+//
+//                            }
+//                        }
                         orderListArrayList.addAll(data.docs)
+                        Log.e("orderListArrayList", "$orderListArrayList")
+                        Log.e("orderListArrayList", "${orderListArrayList.size}")
                         orderListAdapter.notifyDataSetChanged()
 
                     }

@@ -12,8 +12,12 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.teamx.raseef.R;
+import com.teamx.raseef.constants.AppConstants;
 import com.teamx.raseef.databinding.ItemNotificationBinding;
+import com.teamx.raseef.dataclasses.notification.Doc;
+import com.teamx.raseef.dataclasses.notification.NotificationData;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -30,10 +34,10 @@ import java.util.regex.Pattern;
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.NoticationViewHolder> {
 
     private Context context;
-    private ArrayList<Notifications> notificationArrayList;
+    private ArrayList<Doc> notificationArrayList;
     private  List<String> wordCollectionList;
 
-    public NotificationAdapter(Context context, ArrayList<Notifications> notificationArrayList) {
+    public NotificationAdapter(Context context, ArrayList<Doc> notificationArrayList) {
         this.context = context;
         this.notificationArrayList = notificationArrayList;
     }
@@ -48,11 +52,12 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     @Override
     public void onBindViewHolder(@NonNull @NotNull NoticationViewHolder holder, int position) {
 
-        Notifications notification = notificationArrayList.get(position);
+        Doc notification = notificationArrayList.get(position);
 //        Picasso.get().load(AppConstants.imagePath(notification.getDisplayImage())).into(holder.itemNotificationBinding.notificationImage);
 
-        holder.itemNotificationBinding.notificationImage.setImageResource(notification.getNotificationImage());
-        holder.itemNotificationBinding.notificationDescription.setText(linkifyHashtags(notification.getNotificationDescription()));
+//        holder.itemNotificationBinding.notificationImage.setImageResource(notification);
+
+        holder.itemNotificationBinding.notificationDescription.setText(linkifyHashtags(notification.getDescription()));
 
         Timestamp stamp = new Timestamp(System.currentTimeMillis());
         Date date = new Date(stamp.getTime());
@@ -70,7 +75,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
                 holder.itemNotificationBinding.notificationContent.setText(notificationFullMessage);
             }*/
-        wordCollectionList = Arrays.asList(notification.getBoldWords().split(","));
+//        wordCollectionList = Arrays.asList(notification.getBoldWords().split(","));
 //
 //        final SpannableStringBuilder sb = new SpannableStringBuilder(notification.getNotificationDescription());
 //        Typeface CUSTOM_TYPEFACE = ResourcesCompat.getFont(context, R.font.noah_bold);

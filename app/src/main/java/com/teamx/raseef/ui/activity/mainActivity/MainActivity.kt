@@ -1,20 +1,15 @@
 package com.teamx.raseef.ui.activity.mainActivity
 
-import android.content.ContentValues
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.teamx.raseef.BR
 import com.teamx.raseef.MainApplication
 import com.teamx.raseef.R
@@ -49,7 +44,35 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initialising()
+
+        bottomNav = findViewById<BottomNavigationView>(R.id.bottomnavigationbar)
+
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+
+        setupBottomNavMenu(navController!!)
+
+        navController!!.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+
+                R.id.homeFragment -> {
+                    bottomNav?.visibility = View.VISIBLE
+                }
+                R.id.cartFragment -> {
+                    bottomNav?.visibility = View.VISIBLE
+                }
+                R.id.userProfileFragment -> {
+                    bottomNav?.visibility = View.VISIBLE
+                }
+                R.id.notificationFragment -> {
+                    bottomNav?.visibility = View.VISIBLE
+                }
+                else -> {
+                    bottomNav?.visibility = View.GONE
+                }
+            }
+
+        }
+
 //
 //        mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
 //            .requestEmail()
@@ -135,4 +158,28 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
 
     override fun attachBaseContext(newBase: Context?) =
         super.attachBaseContext(MainApplication.localeManager!!.setLocale(newBase!!))
+}
+
+var bottomNav: BottomNavigationView? = null
+
+private fun setupBottomNavMenu(navController: NavController) {
+    bottomNav?.setupWithNavController(navController)
+    bottomNav?.setOnItemSelectedListener {
+        when (it.itemId) {
+            R.id.profile -> {
+                navController.navigate(R.id.userProfileFragment, null)
+            }
+            R.id.home -> {
+                navController.navigate(R.id.homeFragment, null)
+            }
+            R.id.cart -> {
+                navController.navigate(R.id.cartFragment, null)
+            }
+            R.id.notification -> {
+                navController.navigate(R.id.notificationFragment, null)
+            }
+        }
+        return@setOnItemSelectedListener true
+    }
+
 }

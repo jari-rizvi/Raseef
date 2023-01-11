@@ -4,6 +4,7 @@ package com.teamx.raseef.data.remote
 import com.google.gson.JsonObject
 import com.teamx.raseef.constants.NetworkCallPoints
 import com.teamx.raseef.constants.NetworkCallPoints.Companion.TOKENER
+import com.teamx.raseef.data.dataclasses.allorders.OrderAllData
 import com.teamx.raseef.data.dataclasses.dashboard.DashboardData
 import com.teamx.raseef.data.models.ResetPass.ResetPassData
 import com.teamx.raseef.data.models.SignUp.RegisterData
@@ -17,6 +18,7 @@ import com.teamx.raseef.dataclasses.login.LoginData
 import com.teamx.raseef.data.models.productBySlug.ProductBySlugData
 import com.teamx.raseef.data.models.productsShop.ShopProductsData
 import com.teamx.raseef.data.models.shopBySlug.ShopBySlugData
+import com.teamx.raseef.dataclasses.notification.NotificationData
 import com.teamx.raseef.dataclasses.profile.ProfileData
 import com.teamx.raseef.dataclasses.profile.ProfileDataX
 import com.teamx.raseef.dataclasses.profile.UploadModelData
@@ -93,10 +95,15 @@ interface ApiService {
     @GET(NetworkCallPoints.HOME)
     suspend fun home(): Response<DashboardData>
 
+    @GET(NetworkCallPoints.NOTIFICATION)
+    suspend fun notification(
+        @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
+    ): Response<NotificationData>
+
     @GET(NetworkCallPoints.ORDER_LIST)
     suspend fun getOrders(
         @Query("page") page: Int,
         @Query("limit") limit: Int,
         @Header("Authorization") basicCredentials: String = "Bearer $TOKENER"
-    ): Response<AllOrdersData>
+    ): Response<OrderAllData>
 }

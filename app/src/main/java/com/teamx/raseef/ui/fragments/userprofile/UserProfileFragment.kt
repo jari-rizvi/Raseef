@@ -65,6 +65,7 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, HomeViewM
         }
 
         mViewDataBinding.btnCurrent.setOnClickListener {
+
             navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
             navController.navigate(R.id.currentOrderFragment, null, options)
         }
@@ -174,12 +175,23 @@ class UserProfileFragment() : BaseFragment<FragmentUserProfileBinding, HomeViewM
 
     }
 
-    override fun onTopshopClick(position: Int) {
-        TODO("Not yet implemented")
-    }
+
 
     override fun onTopproductClick(position: Int) {
-        TODO("Not yet implemented")
+
+        sharedViewModel.setProductBySlug(productArrayList[position].slug)
+
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+        navController.navigate(R.id.productPreviewFragment, null, options)
+
+    }
+
+    override fun onTopshopClick(position: Int) {
+
+        sharedViewModel.setShopBySlug(shopArrayList[position].slug)
+        sharedViewModel.setShopById(shopArrayList[position]._id)
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+        navController.navigate(R.id.shopHomePageFragment, null, options)
     }
 
 }

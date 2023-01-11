@@ -54,14 +54,12 @@ class TempFragment : BaseFragment<FragmentTempBinding, TempViewModel>() {
                     /*NetworkCallPointsNest.*/TOKENER = token.toString()
 
                     if (token == null) {
-                        navController =
-                            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+                        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
                         navController.navigate(R.id.introFragment, null, options)
 
 
                     } else {
-                        navController =
-                            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+                        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
                         navController.navigate(R.id.homeFragment, null, options)
 
 

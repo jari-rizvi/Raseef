@@ -87,5 +87,9 @@ class CheckoutFragment() : BaseFragment<FragmentCheckoutBinding, LoginViewModel>
 
     }
 
+    override fun onTopSellerSelectClick(position: Int) {
+        TODO("Not yet implemented")
+    }
+
 
 }

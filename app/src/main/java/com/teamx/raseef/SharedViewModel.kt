@@ -55,8 +55,8 @@ class SharedViewModel : BaseViewModel() {
     }
 
     private val _shopBySlug = MutableLiveData<String>()
-    val shopBySlug: LiveData<String>
-        get() = _shopBySlug
+
+    val shopBySlug: LiveData<String> get() = _shopBySlug
 
     fun setShopBySlug(_shopBySlug: String) {
         this._shopBySlug.value = _shopBySlug

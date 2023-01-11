@@ -13,6 +13,7 @@ class PrefHelper private constructor() {
         private lateinit var sharedPreferences: SharedPreferences
 
         private val PLACE_OBJ = "place_obj"
+        private val PAYTYPE = "pay_type"
 
         fun getInstance(context: Context): PrefHelper {
             if (!::sharedPreferences.isInitialized) {
@@ -27,6 +28,12 @@ class PrefHelper private constructor() {
         }
     }
 
+    val paymentMathod: String? get() = sharedPreferences.getString(PAYTYPE, "0")
+
+
+    fun savePaymentMethod(pay_type: String) {
+        sharedPreferences.edit().putString(PAYTYPE, pay_type).apply()
+    }
 
     val payment: Int get() = sharedPreferences.getInt(PLACE_OBJ, 1)
 

@@ -6,6 +6,7 @@ class NetworkCallPoints {
         const val LOGIN ="token";
         const val SIGN_UP ="register/phone";
         const val HOME ="dashboard";
+        const val NOTIFICATION ="notifications";
         const val OTP_VERIFY ="register/phone-verify";
         const val OTP_VERIFY_FORGOT ="verify-forget-password-token";
         const val RESEND_OTP_VERIFY ="register/resend-otp";

@@ -5,21 +5,14 @@ import android.view.View
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.navOptions
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.teamx.raseef.BR
 import com.teamx.raseef.R
 import com.teamx.raseef.baseclasses.BaseFragment
 import com.teamx.raseef.data.models.IntroModel
-import com.teamx.raseef.databinding.FragmentCartBinding
-import com.teamx.raseef.databinding.FragmentEditProfileBinding
 import com.teamx.raseef.databinding.FragmentIntroBinding
-import com.teamx.raseef.databinding.FragmentNotificationBinding
 import com.teamx.raseef.ui.fragments.login.LoginViewModel
-import com.teamx.raseef.ui.fragments.notification.NotificationAdapter
-import com.teamx.raseef.ui.fragments.notification.Notifications
 import dagger.hilt.android.AndroidEntryPoint
 
 

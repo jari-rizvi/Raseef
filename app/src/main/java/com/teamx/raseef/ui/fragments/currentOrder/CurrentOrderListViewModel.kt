@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.teamx.raseef.baseclasses.BaseViewModel
+import com.teamx.raseef.data.dataclasses.allorders.OrderAllData
 import com.teamx.raseef.data.remote.Resource
 import com.teamx.raseef.data.remote.reporitory.MainRepository
 import com.teamx.raseef.dataclasses.allorders.AllOrdersData
@@ -18,8 +19,8 @@ class CurrentOrderListViewModel @Inject constructor(
     private val networkHelper: NetworkHelper
 ) : BaseViewModel() {
 
-    private val _orderListResponse = MutableLiveData<Resource<AllOrdersData>>()
-    val orderListResponse: LiveData<Resource<AllOrdersData>>
+    private val _orderListResponse = MutableLiveData<Resource<OrderAllData>>()
+    val orderListResponse: LiveData<Resource<OrderAllData>>
         get() = _orderListResponse
 
     fun getOrderList(page: Int, limit: Int) {
